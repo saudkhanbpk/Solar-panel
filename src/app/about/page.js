@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import SolarSystemCard from '../Components/SolarSystemCard'
 
 const About = () => {
   return (
+
     <div>
       <div className="flex justify-center text-center items-center bg-[url(/solar.jpg)]  bg-cover bg-center h-64 ">
         <h1 className='text-6xl font-extrabold text-[#082E6F] '>ABOUT US</h1>
@@ -173,7 +173,7 @@ const About = () => {
         <h2 className='text-3xl font-bold text-gray-800 mb-4'>Innovation</h2>
         <p>We continually stay updated with the latest solar technology trends to bring you cutting-edge solutions that maximize efficiency and performance.</p>
       </div>
-      <SolarSystemCard/>
+      
     </div>
   )
 }
