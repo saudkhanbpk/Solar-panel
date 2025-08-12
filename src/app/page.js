@@ -1,8 +1,8 @@
 'use client';
-import Calltoexpert from './Components/Calltoexpert';
-import ApplicationForm from './Components/Form'
-import CustomSlider from './Components/Slider';
-import { mainSliderSettings, gridSliderSettings } from './Config/Sliderconfig';
+import Calltoexpert from '../Components/Calltoexpert';
+import ApplicationForm from '../Components/Form'
+import CustomSlider from '../Components/Slider';
+import { mainSliderSettings, gridSliderSettings } from '../Config/Sliderconfig';
 import React from 'react';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';

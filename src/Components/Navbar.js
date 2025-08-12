@@ -31,11 +31,11 @@ export default function Navbar() {
         },
         {
             name: 'Solar Packages',
-            path: '/solar-packages',
+            path: '#',
             submenu: [
-                { name: 'Residential Packages', path: '/solar-packages/residential' },
-                { name: 'Commercial Packages', path: '/solar-packages/commercial' },
-                { name: 'Industrial Packages', path: '/solar-packages/industrial' },
+                { name: 'solar-hybrid', path: '/solar-packages/solar-hybrid' },
+                { name: 'Solar on-Gride system', path: '/solar-packages/solar' },
+                { name: 'solar Hybriad system with fox Ess', path: '/solar-packages/solar-foxEss' },
             ],
         },
         {
@@ -124,7 +124,8 @@ export default function Navbar() {
                             {navItems.map((item) => (
                                 <div key={item.name} className="relative group">
                                     <Link
-                                        href={item.path}
+                                        aria-disabled={item.path ?? "/solar-package"}
+                                        href={item?.path}
                                         className={`flex items-center px-4 py-2 font-medium ${scrolled ? 'text-gray-800 hover:text-green-600' : 'text-gray-800 hover:text-green-600'} transition-colors`}
                                     >
                                         {item.name}

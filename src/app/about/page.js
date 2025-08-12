@@ -6,12 +6,12 @@ const About = () => {
 
     <div>
       <div className="flex justify-center text-center items-center bg-[url(/solar.jpg)]  bg-cover bg-center h-64 ">
-        <h1 className='text-6xl font-extrabold text-[#082E6F] '>ABOUT US</h1>
+        <h1 className='text-6xl font-extrabold text-[#082E6F]  '>ABOUT US</h1>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* About Us Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-[#082E6F] mb-6 text-center">ABOUT US</h2>
+          <h2 className="text-3xl font-bold text-[#082E6F] mb-6 text-center border-l-[5px] border-r-[5px] border-gray-800">ABOUT US</h2>
           <div className="bg-white rounded-lg shadow-md p-8">
             <p className="text-gray-600 leading-relaxed text-lg">
               Alpha Solar was established in 2012 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision for over 10 years.

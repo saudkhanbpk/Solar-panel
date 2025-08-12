@@ -5,7 +5,7 @@ const SolarSystemCard = () => {
   return (
     <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl my-8 border border-gray-200">
       {/* Header Section */}
-      <div className="bg-yellow-500 p-4 text-center">
+      <div className="bg-[#82C800] p-4 text-center">
         <h2 className="text-2xl font-bold text-white">6kW Hybrid Solar System Price in Pakistan</h2>
       </div>
       
@@ -24,31 +24,31 @@ const SolarSystemCard = () => {
           
           <ul className="space-y-2">
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">Solar Hybrid System</span>
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">10x575-585W Tier1 Solar Modules</span>
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">1x 6kW Solarmax/Primax Inverter (48v)</span>
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">4x185AH 12v Tubular Batteries</span>
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">Alpha Solar Mounting Structure G.I Sheet 14Gage</span>
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">DC Wire, AC & DC Breakers, Box etc.</span>
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-500 mr-2">•</span>
+              <span className="text-[#82C800] mr-2">•</span>
               <span className="text-gray-700">Installation and 02 Years Free After Sales Services</span>
             </li>
             <li className="flex items-start text-sm text-gray-500">
@@ -72,7 +72,7 @@ const SolarSystemCard = () => {
 
         {/* CTA Button */}
         <div className="mt-6 text-center">
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+          <button className="bg-[#82C800] hover:bg-[#82C800] text-white font-bold py-3 px-8 rounded-full transition duration-300">
             Get Quote Now
           </button>
         </div>
