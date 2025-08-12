@@ -23,11 +23,11 @@ export default function Navbar() {
         {
             name: 'About Us',
             path: '/about',
-            submenu: [
-                { name: 'Company Profile', path: '/about/companyprofile' },
-                { name: 'Our Team', path: '/about-us/team' },
-                { name: 'Certifications', path: '/about-us/certifications' },
-            ],
+            // submenu: [
+            //     { name: 'Company Profile', path: '/about/companyprofile' },
+            //     { name: 'Our Team', path: '/about-us/team' },
+            //     { name: 'Certifications', path: '/about-us/certifications' },
+            // ],
         },
         {
             name: 'Solar Packages',
