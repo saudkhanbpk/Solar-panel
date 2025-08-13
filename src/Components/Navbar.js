@@ -40,13 +40,16 @@ export default function Navbar() {
         },
         {
             name: 'Products',
-            path: '/products',
+            path: '#',
             submenu: [
                 { name: 'Solar Panels', path: '/products/solar-panels' },
-                { name: 'Inverters', path: '/products/inverters' },
-                { name: 'Batteries', path: '/products/batteries' },
-                { name: 'Mounting Structures', path: '/products/mounting' },
-                { name: 'Accessories', path: '/products/accessories' },
+                { name: 'Solar Inverters', path: '/products/inverters' },
+                { name: 'Solar Batteries', path: '/products/batteries' },
+                { name: 'Solar Water Heater', path: '/products/heater' },
+                { name: 'Solar Street Light', path: '/products/lights' },
+                {name:'Solar Charge Controller',path:'/products/charge'},
+                {name:'DC Home System',path:'/products/dc'},
+                {name:'Solar Panel Price In Pakistan|Daliy Updates',path:'/products/price'} 
             ],
         },
         {
