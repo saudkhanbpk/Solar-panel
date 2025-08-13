@@ -75,18 +75,16 @@ const HomePage = () => {
       <div className="card lg:card-side bg-[#EBF9EA] shadow-sm min-h-[180px] rounded-xl overflow-hidden">
         {/* Content Section */}
         <div className="card-body flex flex-col items-center justify-center text-center p-4 lg:p-6 w-full lg:w-1/2">
-          <div className="max-w-md mx-auto space-y-2">
-            <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-gray-800 px-2">
+          <div className="max-w-md mx-auto space-y-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl  border border-gray-200/50">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold px-2 bg-gradient-to-r from-green-600 to-emerald-800 bg-clip-text text-transparent">
               Powering Tomorrow's World
             </h1>
-            <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed line-clamp-2 px-2">
-              Alpha Solar, One of Pakistan's pioneers in solar energy, offers cost-effective and top-notch solar solutions to residential, commercial and agricultural entities.
+
+            <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed px-2">
+              Alpha Solar, one of Pakistan's pioneers in solar energy, offers <span className="font-medium text-emerald-700">cost-effective</span> and <span className="font-medium text-emerald-700">top-notch solar solutions</span> to residential, commercial and agricultural entities.
             </p>
-            <div className="pt-2 md:pt-3">
-              <button className="bg-[#5AA86C] hover:bg-[#4a8a5a] text-white font-lg py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm">
-                Contact Us
-              </button>
-            </div>
+
+      
           </div>
         </div>
 
@@ -515,8 +513,8 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      
-         <div className="w-full p-4 bg-white rounded-xl shadow-sm mt-4">
+
+      <div className="w-full p-4 bg-white rounded-xl shadow-sm mt-4">
 
         <CustomSlider settings={mainSliderSettings}>
           {[1, 2, 3, 4, 5, 6].map((item) => (
@@ -528,7 +526,7 @@ const HomePage = () => {
           ))}
         </CustomSlider>
       </div>
-    
+
     </div>
   );
 };
