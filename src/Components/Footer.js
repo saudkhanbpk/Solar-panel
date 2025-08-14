@@ -44,10 +44,11 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold">Follow Us</h3>
                         <ul className="space-y-2">
+
+                            <li><a href="/admindeshboard" className="hover:text-gray-300 transition">Admin</a></li>
                             <li><a href="#" className="hover:text-gray-300 transition">Privacy</a></li>
                             <li><a href="#" className="hover:text-gray-300 transition">Terms</a></li>
                             <li><a href="#" className="hover:text-gray-300 transition">Cookie Policy</a></li>
-                            <li><a href="#" className="hover:text-gray-300 transition">GDPR</a></li>
                         </ul>
                     </div>
 
@@ -71,7 +72,7 @@ const Footer = () => {
 
                 {/* Bottom section */}
                 <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-center items-center">
-                    
+
                     <p className="mt-4 md:mt-0 text-gray-400 text-sm">
                         &copy; {new Date().getFullYear()} Your Company. All rights reserved.
                     </p>

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { PhoneIcon, ChevronDownIcon, XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline';
+import path from 'path';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -75,6 +76,10 @@ export default function Navbar() {
             name: 'Contact Us',
             path: '/contact',
         },
+        {
+            name:'Deshboard',
+            path: '/admindeshboard',
+        },
     ];
 
     return (
@@ -124,7 +129,8 @@ export default function Navbar() {
 
                         {/* Desktop Navigation */}
                         <nav className="hidden lg:flex items-center space-x-1  border-b-gray-100">
-                            {navItems.map((item) => (
+                            {navItems.filter(item => item.name !== 'Deshboard')
+                            .map((item) => (
                                 <div key={item.name} className="relative group">
                                     <Link
                                         aria-disabled={item.path ?? "/solar-package"}
