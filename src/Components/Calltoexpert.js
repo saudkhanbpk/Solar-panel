@@ -4,8 +4,8 @@ const Calltoexpert = () => {
     return (
         <div>
          
-            <div className="px-4 sm:px-6 lg:px-8">
-                <div className="bg-[#5AA86C] max-w-7xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12 rounded-xl shadow-lg">
+            <div className="px-4 sm:px-6 lg:px-8 m-2">
+                <div className="bg-[#5AA86C] max-w-6xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12 rounded-xl shadow-lg">
                     <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6"> 
                         <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-white leading-tight">
                             Speak to Our Solar Energy Experts
