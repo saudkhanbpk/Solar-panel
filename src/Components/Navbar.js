@@ -14,7 +14,7 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: '', path: '/' },
     { name: 'About Us', path: '/about' },
     {
       name: 'Solar Packages',
