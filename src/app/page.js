@@ -6,6 +6,11 @@ import { mainSliderSettings, gridSliderSettings } from '../Config/Sliderconfig';
 import React from 'react';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import {mainlogo} from '../Components/statis';
+import {images} from '../Components/statis';
+
+
+
 
 
 const HomePage = () => {
@@ -84,7 +89,7 @@ const HomePage = () => {
               Alpha Solar, one of Pakistan's pioneers in solar energy, offers <span className="font-medium text-emerald-700">cost-effective</span> and <span className="font-medium text-emerald-700">top-notch solar solutions</span> to residential, commercial and agricultural entities.
             </p>
 
-      
+
           </div>
         </div>
 
@@ -105,10 +110,14 @@ const HomePage = () => {
       <div className="w-full p-4 bg-white rounded-xl shadow-sm mt-4">
 
         <CustomSlider settings={mainSliderSettings}>
-          {[1, 2, 3, 4, 5, 6].map((item) => (
+          {mainlogo.map((item) => (
             <div key={`main-${item}`} className="px-2 ">
-              <div className="bg-[#EBF9EA] h-40 flex items-center justify-center rounded-xl border-2 border-[#5AA86C]">
-                <h3 className='text-2xl font-bold text-[#5AA86C]'> {item}</h3>
+              <div className=" h-36 flex items-center justify-center ">
+                <img
+                  src={item}
+                  alt="Logo"
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
           ))}
@@ -242,10 +251,14 @@ const HomePage = () => {
             <h2 className="text-2xl font-bold mb-4 text-center">Our Services Grid</h2>
 
             <CustomSlider settings={gridSliderSettings}>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 2, 3].map((item) => (
+              {images.map((item) => (
                 <div key={`grid-${item}`} className="px-2 mt-1.5 mb-1.5">
-                  <div className="bg-[#EBF9EA] h-40 flex items-center justify-center rounded-xl border-2 border-[#5AA86C]">
-                    <h3 className='text-2xl font-bold text-[#5AA86C]'> {item}</h3>
+                  <div className=" h-36 flex items-center justify-center ">
+                    <img
+                  src={item}
+                  alt="Logo"
+                  className="max-h-full max-w-full object-contain"
+                />
                   </div>
                 </div>
               ))}
@@ -517,10 +530,14 @@ const HomePage = () => {
       <div className="w-full p-4 bg-white rounded-xl shadow-sm mt-4">
 
         <CustomSlider settings={mainSliderSettings}>
-          {[1, 2, 3, 4, 5, 6].map((item) => (
+          {mainlogo.map((item) => (
             <div key={`main-${item}`} className="px-2 ">
-              <div className="bg-[#EBF9EA] h-40 flex items-center justify-center rounded-xl border-2 border-[#5AA86C]">
-                <h3 className='text-2xl font-bold text-[#5AA86C]'> {item}</h3>
+              <div className=" h-36 flex items-center justify-center">
+                  <img
+                  src={item}
+                  alt="Logo"
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
           ))}

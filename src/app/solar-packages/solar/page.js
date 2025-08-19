@@ -4,8 +4,7 @@ import SolarSystemCard from '../../../Components/SolarSystemCard'
 const solar = () => {
   return (
     <div>
-      <div className="flex justify-center text-center items-center bg-[url(/solar.jpg)]  bg-cover bg-center h-64 ">
-        <h1 className='text-6xl font-extrabold text-[#082E6F] '>ON GRID SOLAR SYSTEM</h1>
+      <div className="flex justify-center text-center items-center bg-[url(/on-gride.png)]  bg-cover bg-center h-64 ">
       </div>
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>

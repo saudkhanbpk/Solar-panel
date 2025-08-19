@@ -1,5 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';S
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -7,10 +8,11 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Column 1 */}
-                    <div className="space-y-4">
-                        <h1 className='text-lg font-semibold'>SOLAR COMAPNY LOGO</h1>
+                    <div className="">
+                        <img src="/companylogo.png" alt="Solar Company Logo" className='h-48 w-auto p-0 mt-[-90px] mb-[-50] object-contain'/>
+
                         <div>
-                            <p className='text-left'>
+                            <p className='text-left mt-0'>
                                 Alpha Solar, One of Pakistan’s pioneers in solar energy, offers cost-effective and top-notch solar solutions to residential, commercial and agricultural entities.
                             </p>
                         </div>

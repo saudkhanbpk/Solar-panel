@@ -4,9 +4,9 @@ export const mainSliderSettings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 3000,
-  autoplaySpeed: 3000,
-  cssEase: "ease-in-out",
+  speed: 1000,
+  autoplaySpeed: 1000,
+  cssEase: "linear",
   responsive: [
     {
       breakpoint: 1024,
@@ -32,7 +32,7 @@ export const gridSliderSettings = {
   autoplay: true,
   speed: 3000,
   autoplaySpeed: 3000,
-  cssEase: "ease-in-out",
+  cssEase: "linear",
   responsive: [
     {
       breakpoint: 1024,

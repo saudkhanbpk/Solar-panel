@@ -84,7 +84,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <img src="/images/logo.png" alt="Solar Company Logo" className="h-12" />
+              <img src="/companylogo.png" alt="Solar Company Logo" className="h-48 bg-none" />
             </Link>
 
             {/* Desktop Navigation */}
