@@ -53,9 +53,10 @@ export default function Navbar() {
             { name: '10kW Solar System', path: '/solar-solutions/domestic/10kwsolar-system' },
           ],
         },
-        { name: 'Industrial Solutions', path: '/solar-solutions/industrial' },
-        { name: 'Solar Water Pumps', path: '/solar-solutions/water-pumps' },
-        { name: 'Off-Grid Solutions', path: '/solar-solutions/off-grid' },
+        { name: 'Industrial ', path: '/solar-solutions/industrial' },
+        { name: 'Commercial ', path: '/solar-solutions/commercial' },
+        { name: 'Agricalture', path: '/solar-solutions/agricalture' },
+        { name: 'Filling Stations', path: '/solar-solutions/filling-station' },
       ],
     },
     { name: 'Projects', path: '/projects' },
@@ -101,7 +102,7 @@ export default function Navbar() {
                     <div className="absolute left-0 mt-0 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-200">
                       <div className="mt-2 bg-white shadow-lg rounded-md p-2 border border-gray-100">
                         {item.submenu.map(subItem => (
-                          <div key={subItem.name} className="relative group">
+                          <div key={subItem.name} className="relative group/sub">
                             <Link href={subItem.path} className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-600 rounded transition-colors">
                               {subItem.name}
                               {subItem.submenu && <ChevronDownIcon className="h-4 w-4 ml-1 inline-block" />}
@@ -109,7 +110,7 @@ export default function Navbar() {
 
                             {/* Second level submenu (like Domestic → 3kW) */}
                             {subItem.submenu && (
-                              <div className="absolute left-full top-0 mt-0 w-56 origin-top-left scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                              <div className="absolute left-full top-0 mt-0 w-56 origin-top-left scale-95 opacity-0 invisible group-hover/sub:scale-100 group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200">
                                 <div className="bg-white shadow-lg rounded-md p-2 border border-gray-100">
                                   {subItem.submenu.map(thirdItem => (
                                     <Link key={thirdItem.name} href={thirdItem.path} className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-600 rounded transition-colors">

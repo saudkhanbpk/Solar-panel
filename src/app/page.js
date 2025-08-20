@@ -6,8 +6,8 @@ import { mainSliderSettings, gridSliderSettings } from '../Config/Sliderconfig';
 import React from 'react';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import {mainlogo} from '../Components/statis';
-import {images} from '../Components/statis';
+import { mainlogo } from '../Components/statis';
+import { images } from '../Components/statis';
 
 
 
@@ -133,71 +133,50 @@ const HomePage = () => {
         {/* Centered Cards Grid */}
         <div className='flex justify-center'>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-6 w-full max-w-7xl">
-            {/* Card 1 (duplicate as needed) */}
-            <div className="card bg-base-100 shadow-sm mx-auto w-full max-w-xs">
-              <figure>
-                <svg class="w-2xl h-2xl text-[#5AA86C] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
-                </svg>
-              </figure>
+
+            {/* Card 1 */}
+            <div className="card bg-base-100  mx-auto w-64">
+              <img src="/Domestic.png" alt="Domestic" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-4">
                 <h2 className="text-sm text-center">DOMESTIC</h2>
               </div>
             </div>
 
-
-
-            {/* Card 3 */}
-            <div className="card bg-base-100 shadow-sm mx-auto w-full max-w-xs">
-              <figure>
-                <svg class="w-2xl h-2xl text-[#5AA86C] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
-                </svg>
-
-              </figure>
+            {/* Card 2 */}
+            <div className="card bg-base-100  mx-auto w-64">
+              <img src="/Commercial.png" alt="commercial" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-4">
                 <h2 className="text-sm text-center">COMMERCIAL</h2>
               </div>
             </div>
 
-            {/* Card 4 */}
-            <div className="card bg-base-100 shadow-sm mx-auto w-full max-w-xs">
-              <figure>
-                <svg class="w-2xl h-2xl text-[#5AA86C] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
-                </svg>
-              </figure>
+            {/* Card 3 */}
+            <div className="card bg-base-100  mx-auto w-64">
+              <img src="/Industrial.png" alt="Industrial" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-4">
                 <h2 className="text-sm text-center">INDUSTRIAL</h2>
               </div>
             </div>
 
-            {/* Card 5 */}
-            <div className="card bg-base-100 shadow-sm mx-auto w-full max-w-xs">
-              <figure>
-                <svg class="w-2xl h-2xl text-[#5AA86C] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
-                </svg>
-              </figure>
+            {/* Card 4 */}
+            <div className="card bg-base-100  mx-auto w-64">
+              <img src="/Agriculture.png" alt="agriculture" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-4">
                 <h2 className="text-sm text-center">AGRICULTURE</h2>
               </div>
             </div>
 
-            {/* Card 6 */}
-            <div className="card bg-base-100 shadow-sm mx-auto w-full max-w-xs">
-              <figure>
-                <svg class="w-2xl h-2xl text-[#5AA86C] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="180" height="180" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
-                </svg>
-              </figure>
+            {/* Card 5 */}
+            <div className="card bg-base-100  mx-auto w-64">
+              <img src="/Services.png" alt="services" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-4">
-                <h2 clasSName="text-sm text-center">SERVICES</h2>
+                <h2 className="text-sm text-center">SERVICES</h2>
               </div>
             </div>
           </div>
         </div>
       </div>
+
 
       <div className="FAQ">
         <div className="flex flex-col items-center justify-center text-center p-4">
@@ -255,10 +234,10 @@ const HomePage = () => {
                 <div key={`grid-${item}`} className="px-2 mt-1.5 mb-1.5">
                   <div className=" h-36 flex items-center justify-center ">
                     <img
-                  src={item}
-                  alt="Logo"
-                  className="max-h-full max-w-full object-contain"
-                />
+                      src={item}
+                      alt="Logo"
+                      className="max-h-full max-w-full object-contain"
+                    />
                   </div>
                 </div>
               ))}
@@ -533,7 +512,7 @@ const HomePage = () => {
           {mainlogo.map((item) => (
             <div key={`main-${item}`} className="px-2 ">
               <div className=" h-36 flex items-center justify-center">
-                  <img
+                <img
                   src={item}
                   alt="Logo"
                   className="max-h-full max-w-full object-contain"

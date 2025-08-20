@@ -2,27 +2,38 @@ import React from 'react'
 
 const Calltoexpert = () => {
     return (
-        <div>
-         
-            <div className="px-4 sm:px-6 lg:px-8 m-2">
-                <div className="bg-[#5AA86C] max-w-6xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-12 rounded-xl shadow-lg">
-                    <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6"> 
-                        <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-white leading-tight">
-                            Speak to Our Solar Energy Experts
+        <div className="px-4 sm:px-6 lg:px-8 m-2">
+            <div className="bg-[#1e3a8a] max-w-6xl mx-auto py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-12 rounded-xl shadow-lg relative overflow-hidden">
+                {/* Green accent bar at the top */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-[#84cc16]"></div>
+                
+                <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5">
+                    <div className="text-left">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 sm:mb-4">
+                            Speak to an Expert
                         </h2>
-
-                        <p className="text-white/90 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-                            Get personalized advice for your solar energy needs. Our experts are ready to help you find the perfect solution for your home or business.
+                        
+                        <p className="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-4 sm:mb-5">
+                            Let's get started with your project – receive a free consultation and an estimated quotation from experts.
                         </p>
-
-                        <div className="pt-2 sm:pt-4">
+                        
+                        <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
+                            <div className="text-white">
+                                <span className="font-medium">Contact: </span>
+                                <span className="text-white/90">0343-3813810</span>
+                            </div>
+                            <div className="text-white">
+                                <span className="font-medium">Email: </span>
+                                <span className="text-white/90">sales@alphasolar.com.pk</span>
+                            </div>
+                        </div>
+                        
+                        <div>
                             <a
-                                href="https://alphasolar.com.pk/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block bg-white text-[#5AA86C] hover:bg-gray-50 font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                                href="tel:0343-3813810"
+                                className="inline-block bg-[#84cc16] hover:bg-[#65a30d] text-white font-semibold py-3 px-8 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg uppercase tracking-wide"
                             >
-                                Contact Now
+                                REQUEST A CALL
                             </a>
                         </div>
                     </div>
@@ -32,4 +43,4 @@ const Calltoexpert = () => {
     )
 }
 
-export default Calltoexpert;
+export default Calltoexpert
