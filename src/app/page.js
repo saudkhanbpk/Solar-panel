@@ -294,7 +294,7 @@ const HomePage = () => {
 
         <figure className=" w-[80vw] bg-[#FFFFFF] shadow-2xl mx-auto m-[5px]">
           <Image
-            src="/Our-expertise.jpg"
+            src="/our-Expertise.png"
             alt="Our project workflow diagram"
             width={1920} // set a large width for full-width image
             height={1080}
