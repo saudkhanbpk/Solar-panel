@@ -3,11 +3,11 @@ import React from 'react'
 const Calltoexpert = () => {
     return (
         <div className="px-4 sm:px-6 lg:px-8 m-2">
-            <div className="bg-[#1e3a8a] max-w-6xl mx-auto py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-12 rounded-xl shadow-lg relative overflow-hidden">
+            <div className="bg-[#1e3a8a] max-w-5xl mx-auto py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-12 border rounded-lg relative overflow-hidden">
                 {/* Green accent bar at the top */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#84cc16]"></div>
                 
-                <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5">
+                <div className="max-w-4xl  space-y-4 sm:space-y-5">
                     <div className="text-left">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3 sm:mb-4">
                             Speak to an Expert

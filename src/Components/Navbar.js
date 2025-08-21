@@ -59,9 +59,18 @@ export default function Navbar() {
         { name: 'Filling Stations', path: '/solar-solutions/filling-station' },
       ],
     },
+    {name:'Services',
+      path:'/services',
+      submenu: [
+        { name: 'Solar Consultancy', path: '/services/#solar-consultancy' },
+        { name: 'Solar System Installation', path: '/services/#solar-installation' },
+        { name: 'Solar Maintenance', path: '/services/#solar-maintenance' },
+        { name: 'Solar System Cleaning', path: '/services/#solar-cleaning' },
+        { name: 'Net Metering', path: '/services/net-metering' },
+        
+      ],
+    },
     { name: 'Projects', path: '/projects' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact Us', path: '/contact' },
     { name: 'Deshboard', path: '/admindeshboard' },
   ];
 
