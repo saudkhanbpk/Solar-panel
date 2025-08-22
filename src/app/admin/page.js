@@ -2,6 +2,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import SolarSystemForm from '../../Components/admin/pakagesform'
 
 const page = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -17,30 +18,9 @@ const page = () => {
   const [newProduct, setNewProduct] = useState({ name: '', category: '', price: '', stock: '' });
   const [newPackage, setNewPackage] = useState({ name: '', products: [], price: '' });
 
-  const handleAddProduct = (e) => {
-    e.preventDefault();
-    const product = {
-      id: products.length + 1,
-      name: newProduct.name,
-      category: newProduct.category,
-      price: parseFloat(newProduct.price),
-      stock: parseInt(newProduct.stock)
-    };
-    setProducts([...products, product]);
-    setNewProduct({ name: '', category: '', price: '', stock: '' });
-  };
+ 
 
-  const handleAddPackage = (e) => {
-    e.preventDefault();
-    const pkg = {
-      id: packages.length + 1,
-      name: newPackage.name,
-      products: newPackage.products,
-      price: parseFloat(newPackage.price)
-    };
-    setPackages([...packages, pkg]);
-    setNewPackage({ name: '', products: [], price: '' });
-  };
+ 
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -360,86 +340,7 @@ const page = () => {
 
           {activeTab === 'packages' && (
             <div>
-              <div className="bg-white p-6 rounded-lg shadow mb-6">
-                <h3 className="text-lg font-semibold mb-4">Create New Package</h3>
-                <form onSubmit={handleAddPackage} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Package Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                      value={newPackage.name}
-                      onChange={(e) => setNewPackage({...newPackage, name: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Products</label>
-                    <select 
-                      multiple
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 h-32"
-                      value={newPackage.products}
-                      onChange={(e) => {
-                        const options = Array.from(e.target.selectedOptions, option => option.value);
-                        setNewPackage({...newPackage, products: options});
-                      }}
-                      required
-                    >
-                      <option value="Solar Panel 300W">Solar Panel 300W</option>
-                      <option value="Solar Panel 400W">Solar Panel 400W</option>
-                      <option value="Inverter 3kW">Inverter 3kW</option>
-                      <option value="Inverter 5kW">Inverter 5kW</option>
-                      <option value="Battery 5kWh">Battery 5kWh</option>
-                      <option value="Battery 10kWh">Battery 10kWh</option>
-                    </select>
-                    <p className="text-sm text-gray-500 mt-1">Hold Ctrl/Cmd to select multiple products</p>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Price ($)</label>
-                    <input 
-                      type="number" 
-                      step="0.01"
-                      className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                      value={newPackage.price}
-                      onChange={(e) => setNewPackage({...newPackage, price: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div className="flex items-end">
-                    <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
-                      Create Package
-                    </button>
-                  </div>
-                </form>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-lg font-semibold mb-4">Solar Packages</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {packages.map(pkg => (
-                    <div key={pkg.id} className="border rounded-lg p-4">
-                      <h4 className="text-lg font-semibold mb-2">{pkg.name}</h4>
-                      <p className="text-gray-600 mb-3">Products included:</p>
-                      <ul className="list-disc list-inside mb-4">
-                        {pkg.products.map((product, index) => (
-                          <li key={index} className="text-gray-700">{product}</li>
-                        ))}
-                      </ul>
-                      <div className="flex justify-between items-center">
-                        <span className="text-xl font-bold text-green-600">${pkg.price.toFixed(2)}</span>
-                        <div>
-                          <button className="text-blue-600 hover:text-blue-800 mr-2">
-                            <i className="fas fa-edit"></i>
-                          </button>
-                          <button className="text-red-600 hover:text-red-800">
-                            <i className="fas fa-trash"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <SolarSystemForm />
             </div>
           )}
 

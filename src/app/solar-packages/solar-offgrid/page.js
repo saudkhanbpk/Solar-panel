@@ -1,5 +1,5 @@
 import React from 'react'
-import SolarSystemCard from '../../../Components/SolarSystemCard'
+import SolarSystemCard from '../../../Components/pakages'
 
 const page = () => {
   return (

@@ -20,11 +20,11 @@ const Calltoexpert = () => {
                         <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
                             <div className="text-white">
                                 <span className="font-medium">Contact: </span>
-                                <span className="text-white/90">0343-3813810</span>
+                                <span className="text-white/90">03322332249</span>
                             </div>
                             <div className="text-white">
                                 <span className="font-medium">Email: </span>
-                                <span className="text-white/90">sales@alphasolar.com.pk</span>
+                                <span className="text-white/90">Info.gogreen@gmail.com</span>
                             </div>
                         </div>
                         

@@ -1,6 +1,6 @@
 // "use client"
 import React from 'react'
-import SolarSystemCard from '../../../Components/SolarSystemCard'
+import SolarSystemCard from '../../../Components/pakages'
 
 const Hybrid = () => {
   return (

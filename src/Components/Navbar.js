@@ -76,9 +76,9 @@ export default function Navbar() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <a href="tel:+923001234567" className="flex items-center hover:text-green-200">
-              <PhoneIcon className="h-4 w-4 mr-1" /> +92 545584977 2
+              <PhoneIcon className="h-4 w-4 mr-1" /> +923322332249
             </a>
-            <a href="mailto:info@yoursolar.com" className="hover:text-green-200">solarpanel.com</a>
+            <a href="" className="text-[#82c701] font-bold ">GO GREEN </a>
           </div>
         </div>
       </div>

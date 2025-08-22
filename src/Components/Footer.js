@@ -13,7 +13,7 @@ const Footer = () => {
 
                         <div>
                             <p className='text-left mt-0'>
-                                Alpha Solar, One of Pakistan’s pioneers in solar energy, offers cost-effective and top-notch solar solutions to residential, commercial and agricultural entities.
+                            <b className='text-[#82c701]'>GO GREEN POWER WITH SUN</b>, One of Pakistan’s pioneers in solar energy, offers cost-effective and top-notch solar solutions to residential, commercial and agricultural entities.
                             </p>
                         </div>
 
