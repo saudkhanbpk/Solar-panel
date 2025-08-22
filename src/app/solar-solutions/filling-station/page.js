@@ -12,16 +12,16 @@ const page = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 {/* Intro */}
                 <div className="py-8">
-                    <h1 className="text-center text-3xl font-bold text-gray-800 mb-8 border-l-[5px] border-r-[5px] border-gray-800">
+                    <h1 className="text-center text-3xl font-bold text-[#082E6F] mb-8 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-6 py-2 rounded-lg shadow-md bg-white">
                         FILLING STATION SOLAR SOLUTIONS
                     </h1>
-                    <p className="mb-4">
+                    <p className="mb-4 text-gray-700 leading-relaxed">
                         Filling stations run 24/7 and consume massive amounts of electricity 
                         for lighting, fuel dispensers, cooling systems, and security. 
                         With rising energy prices, solar energy offers an ideal solution 
                         to cut costs while keeping operations smooth and reliable.
                     </p>
-                    <p>
+                    <p className="text-gray-700 leading-relaxed">
                         Our filling station solar systems ensure continuous power supply, 
                         reduce dependency on the grid, and help station owners save 
                         significantly on monthly bills. Built with durability and efficiency 
@@ -36,19 +36,19 @@ const page = () => {
                 </div>
 
                 {/* Section 1 */}
-                <div className="flex flex-col lg:flex-row justify-center items-start gap-8 mb-8 ">
+                <div className="flex flex-col lg:flex-row justify-center items-start gap-8 mb-12">
                     <div className="w-full lg:w-1/2">
                         <img
                             src="/fillingenergy.png"
                             alt="Filling Station Solar"
-                            className="w-full h-auto"
+                            className="w-full h-auto rounded-xl shadow-lg"
                         />
                     </div>
                     <div className="w-full lg:w-1/2">
-                        <h2 className="text-3xl font-bold mb-4">
+                        <h2 className="text-3xl font-bold text-[#082E6F] mb-4">
                             Reliable and Cost-Effective Solar Power for Stations
                         </h2>
-                        <div className="space-y-4 text-gray-700">
+                        <div className="space-y-4 text-gray-700 leading-relaxed">
                             <p>
                                 Filling stations often face the challenge of high 
                                 operational costs due to constant electricity usage. 
@@ -56,9 +56,9 @@ const page = () => {
                                 also guarantees reliable energy without interruptions.
                             </p>
                             <p>
-                                At Alpha Solar, we design customized solutions for 
-                                filling stations that come with 2 years of after-sales 
-                                service and a 25-year warranty on solar panels. 
+                                At <span className="text-[#82C701] font-semibold">GO GREEN POWER WITH SUN SOLAR</span>, we design customized solutions for 
+                                filling stations that come with <span className="text-[#082E6F] font-medium">2 years of after-sales service</span> 
+                                and a <span className="text-[#082E6F] font-medium">25-year warranty</span> on solar panels. 
                                 This ensures long-term savings while maintaining 
                                 uninterrupted operations.
                             </p>
@@ -67,12 +67,12 @@ const page = () => {
                 </div>
 
                 {/* Section 2 */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-8">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
                     <div className="w-full lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#082E6F] mb-6">
                             Power Your Filling Station with Clean, Affordable Energy
                         </h2>
-                        <div className="space-y-4 text-gray-700">
+                        <div className="space-y-4 text-gray-700 leading-relaxed">
                             <p>
                                 By going solar, filling stations cut electricity costs, 
                                 ensure 24/7 lighting and fuel dispensing, and contribute 
@@ -91,36 +91,36 @@ const page = () => {
                         <img
                             src="/savemoney-solar.png"
                             alt="Solar Energy for Filling Stations"
-                            className="w-full h-auto"
+                            className="w-full h-auto rounded-xl shadow-lg"
                         />
                     </div>
                 </div>
 
-                {/* Workflow (unchanged content as per request) */}
+                {/* Workflow */}
                 <div>
-                    <h1 className='text-center text-3xl font-bold text-gray-800 mb-8 border-l-[5px] border-r-[5px] border-gray-800'>
+                    <h1 className="text-center text-3xl font-bold text-[#082E6F] mb-10 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-6 py-2 bg-white rounded-lg shadow-md">
                         OUR PROJECT WORKFLOW PROCESS
                     </h1>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                        <div className="bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition duration-300">
-                            <h2 className="flex items-center gap-2 lg:gap-0 md:gap-2 text-xl font-semibold text-gray-800 mb-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition duration-300 border-t-4 border-[#82C701]">
+                            <h2 className="flex items-center gap-2 text-xl font-semibold text-[#082E6F] mb-4">
                                 <img src="/fast-forward.png" alt="forward arrow" className="h-6 ml-2" />
                                 Site Assessment and Designing
                             </h2>
-                            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                                 Our workflow starts with a face-to-face consultation and site assessment to evaluate feasibility, followed by a CAD drawing tailored to your location and conditions. Design approval by you kicks off installation.
                             </p>
                         </div>
 
-                        <div className='bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition duration-300'>
-                            <h2 className='flex gap-2 text-xl font-semibold text-gray-800 mb-4'>
+                        <div className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition duration-300 border-t-4 border-[#082E6F]">
+                            <h2 className="flex items-center gap-2 text-xl font-semibold text-[#082E6F] mb-4">
                                 <img src="/fast-forward.png" alt="forward arrow" className="h-6 ml-2" />
                                 System Installation
                             </h2>
-                            <p className='text-gray-600 leading-relaxed text-sm md:text-base'>
+                            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                                 Installations are carried out by certified professionals in four stages:
                             </p>
-                            <ul className='list-decimal pl-5 text-gray-600 leading-relaxed text-sm md:text-base'>
+                            <ul className="list-decimal pl-5 text-gray-700 leading-relaxed text-sm md:text-base">
                                 <li>Fasten structure to the roof</li>
                                 <li>Secure panels to the structure</li>
                                 <li>Complete external wiring to inverter</li>
@@ -128,12 +128,12 @@ const page = () => {
                             </ul>
                         </div>
 
-                        <div className='bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition duration-300'>
-                            <h2 className='text-xl font-semibold text-gray-800 mb-4 gap-2 flex'>
+                        <div className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition duration-300 border-t-4 border-[#82C701]">
+                            <h2 className="flex items-center gap-2 text-xl font-semibold text-[#082E6F] mb-4">
                                 <img src="/fast-forward.png" alt="forward arrow" className="h-6 ml-2" />
                                 After Sale Services
                             </h2>
-                            <p className='text-gray-600 leading-relaxed text-sm md:text-base'>
+                            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                                 Post-installation, our 2-year after-sales package includes online system monitoring and maintenance to keep your system performing reliably over time.
                             </p>
                         </div>

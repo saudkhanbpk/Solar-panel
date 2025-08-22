@@ -4,12 +4,12 @@ import React from 'react';
 const DomasticCards = () => {
   // Solar company logos (replace with your actual image paths)
   const solarLogos = [
-    '/logos/longi.png',
-    '/logos/jinko.png',
-    '/logos/canadian-solar.png',
-    '/logos/jasolar.png',
-    '/logos/trina.png',
-    '/logos/foxess.png'
+    '/logo1.png',
+    '/logo2.png',
+    '/logo3.png',
+    '/logo4.png',
+    '/logo5.png',
+    '/logo6.png'
   ];
 
   return (

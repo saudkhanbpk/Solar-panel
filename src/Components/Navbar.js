@@ -21,8 +21,8 @@ export default function Navbar() {
       path: '#',
       submenu: [
         { name: 'Solar Hybrid', path: '/solar-packages/solar-hybrid' },
-        { name: 'Solar On-Grid System', path: '/solar-packages/solar' },
-        { name: 'Solar Hybrid System with Fox Ess', path: '/solar-packages/solar-foxEss' },
+        { name: 'Solar On-Grid System', path: '/solar-packages/solar-ongrid' },
+        { name: 'Solar OFF-Grid System', path: '/solar-packages/solar-offgrid' },
       ],
     },
     {
@@ -32,18 +32,13 @@ export default function Navbar() {
         { name: 'Solar Panels', path: '/products/solar-panels' },
         { name: 'Solar Inverters', path: '/products/inverters' },
         { name: 'Solar Batteries', path: '/products/batteries' },
-        { name: 'Solar Water Heater', path: '/products/heater' },
-        { name: 'Solar Street Light', path: '/products/lights' },
-        { name: 'Solar Charge Controller', path: '/products/charge' },
-        { name: 'DC Home System', path: '/products/dc' },
-        { name: 'Solar Panel Price in Pakistan | Daily Updates', path: '/products/price' },
       ],
     },
     {
       name: 'Solar Solutions',
       path: '#',
       submenu: [
-        { name: 'Why Solar Solution', path: '/solar-solutions/why-solar-solution' },
+        { name: 'Why Solar Energy?', path: '/solar-solutions/why-solar-solution' },
         {
           name: 'Domestic',
           path: '#',
@@ -62,16 +57,16 @@ export default function Navbar() {
     {name:'Services',
       path:'/services',
       submenu: [
-        { name: 'Solar Consultancy', path: '/services/#solar-consultancy' },
-        { name: 'Solar System Installation', path: '/services/#solar-installation' },
-        { name: 'Solar Maintenance', path: '/services/#solar-maintenance' },
-        { name: 'Solar System Cleaning', path: '/services/#solar-cleaning' },
+        { name: 'Solar Consultancy', path: '/services#solar-consultancy' },
+        { name: 'Solar System Installation', path: '/services#solar-installation' },
+        { name: 'Solar Maintenance', path: '/services#solar-maintenance' },
+        { name: 'Solar System Cleaning', path: '/services#solar-cleaning' },
         { name: 'Net Metering', path: '/services/net-metering' },
         
       ],
     },
     { name: 'Projects', path: '/projects' },
-    { name: 'Deshboard', path: '/admindeshboard' },
+    { name: 'Deshboard', path: '/admin' },
   ];
 
   return (
