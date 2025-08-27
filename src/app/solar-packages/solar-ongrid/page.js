@@ -1,5 +1,5 @@
 import React from 'react'
-import SolarSystemCard from '../../../Components/pakages'
+import SolarPackageCards from '../../../Components/SolarSystemCard'
 
 const Solar = () => {
   return (
@@ -25,15 +25,8 @@ const Solar = () => {
         <h1 className="text-center text-3xl font-bold text-[#082E6F] mb-10 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-4">
           On-Grid Solar Systems
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
+        <div className=" gap-8">
+          <SolarPackageCards category="Solar On-Grid System" />
         </div>
       </div>
     </div>

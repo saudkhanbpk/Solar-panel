@@ -1,6 +1,6 @@
 // "use client"
 import React from 'react'
-import SolarSystemCard from '../../../Components/pakages'
+import SolarPackageCards from '../../../Components/SolarSystemCard'
 
 const Hybrid = () => {
   return (
@@ -37,13 +37,8 @@ const Hybrid = () => {
         <h1 className='text-center text-3xl font-extrabold text-[#082E6F] mb-8 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-lg'>
           Hybrid Solar Systems
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
-          <SolarSystemCard />
+        <div className=" gap-8">
+           <SolarPackageCards category="Solar Hybrid System" />
         </div>
       </div>
     </div>

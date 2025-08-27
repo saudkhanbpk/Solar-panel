@@ -1,85 +1,122 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-import React from 'react';
-// import Image from 'next/image';
+const SolarPackageCards = ({category}) => {
+  const [packages, setPackages] = useState([]);
 
-const SolarSystemCard = () => {
+  // Fetch API
+  const fetchPackages = async () => {
+    try {
+           const res = await axios.get("http://localhost:3000/api/pakages");
+           setPackages(res.data);
+    } catch (error) {
+             console.log({ error: error.message });
+    }
+  };
+
+  useEffect(() => {
+    fetchPackages();
+  }, []);
+  
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl my-8 border border-gray-200">
-      {/* Header Section */}
-      <div className="bg-[#82C800] p-4 text-center">
-        <h2 className="text-2xl font-bold text-white">6kW Hybrid Solar System Price in Pakistan</h2>
-      </div>
-      
-      {/* Main Content */}
-      <div className="p-6">
-        {/* System Capacity Badge */}
-        <div className="flex justify-center mb-6">
-          <span className="inline-block bg-gray-100 rounded-full px-6 py-3 text-xl font-semibold text-gray-800">
-            6kW
-          </span>
-        </div>
-
-        {/* System Details */}
-        <div className="mb-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">System Details</h3>
-          
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">Solar Hybrid System</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">10x575-585W Tier1 Solar Modules</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">1x 6kW Solarmax/Primax Inverter (48v)</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">4x185AH 12v Tubular Batteries</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">Alpha Solar Mounting Structure G.I Sheet 14Gage</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">DC Wire, AC & DC Breakers, Box etc.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#82C800] mr-2">•</span>
-              <span className="text-gray-700">Installation and 02 Years Free After Sales Services</span>
-            </li>
-            <li className="flex items-start text-sm text-gray-500">
-              <span className="mr-2">*</span>
-              <span>Battery Prices are not Included</span>
-            </li>
-          </ul>
-        </div>
-
-        {/* Price Section */}
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <div className="text-center">
-            <span className="text-gray-600 text-sm">From</span>
-            <div className="flex justify-center items-baseline mt-1">
-              <span className="text-3xl font-bold text-gray-800">Rs.500,000/-</span>
-              <span className="ml-2 text-gray-500">to</span>
-              <span className="ml-2 text-3xl font-bold text-gray-800">Rs.528,000/-</span>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="mt-6 text-center">
-          <button className="bg-[#82C800] hover:bg-[#82C800] text-white font-bold py-3 px-8 rounded-full transition duration-300">
-            Get Quote Now
-          </button>
-        </div>
-      </div>
-    </div>
+   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+           {packages?.filter((pkg) => pkg.category === category).map((pkg) => (
+             <div
+               key={pkg._id}
+               className="relative flex flex-col bg-white rounded-2xl overflow-hidden hover:shadow-lg transition duration-300"
+             >
+               
+               {/* Header Section */}
+               <div className="bg-gradient-to-r from-[#83C700] to-[#6C9E33] text-white text-center py-4 px-6">
+                 <h2 className="text-2xl font-bold">
+                   {pkg.capacity} {pkg.category} Price in Pakistan
+                 </h2>
+               </div>
+   
+               {/* Main Content Section */}
+               <div className="flex flex-col md:flex-row">
+                 {/* Left Side - Image and System Info */}
+                 <div className="w-full md:w-[60%] bg-[#6C9E33] p-6 flex flex-col">
+                   {/* System Title */}
+                   <div className="text-white mb-4">
+                     <h3 className="text-4xl font-bold text-white">
+                       {pkg.capacity}
+                     </h3>
+                     <h4 className="text-xl font-medium">
+                       Solar Hybrid System
+                     </h4>
+                   </div>
+   
+                   {/* Image Container */}
+                   <div className="flex-1 flex items-center justify-center">
+                     <img
+                       src="/cardpic.png"
+                       alt="Solar Package"
+                       className="w-full h-auto object-contain max-h-64"
+                     />
+                   </div>
+   
+                   {/* Additional branding space if needed */}
+                   <div className="mt-4 text-center">
+                     <p className="text-white text-sm opacity-75">{pkg.model}</p>
+                   </div>
+                 </div>
+   
+                 {/* Right Side - System Details */}
+                 <div className="w-full md:w-[40%] p-6 bg-white">
+                   <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6">System Details</h3>
+   
+                   {/* Details List */}
+                   <ul className="text-gray-700 text-sm space-y-3 mb-6">
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-[#6C9E33] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span>{pkg.solarModules}</span>
+                     </li>
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-[#6C9E33] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span>{pkg.inverter}</span>
+                     </li>
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-[#6C9E33] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span>{pkg.batteries}</span>
+                     </li>
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-[#6C9E33] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span>{pkg.mountingStructure}</span>
+                     </li>
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-[#6C9E33] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span>{pkg.wiringComponents}</span>
+                     </li>
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-[#6C9E33] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span>{pkg.services}</span>
+                     </li>
+                     <li className="flex items-start">
+                       <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                       <span className="font-medium text-red-600">{pkg.batteryNote}</span>
+                     </li>
+                   </ul>
+   
+                   {/* Price Section */}
+                   <div className="bg-[#83C700] text-white text-center rounded-lg font-bold">
+                     <div className="text-lg">
+                       FROM RS {pkg.priceFrom}/-
+                     </div>
+                     <div className="text-lg">
+                       TO RS {pkg.priceTo}/-
+                     </div>
+                   </div>
+                   <div className='mt-6 bg-blue-900 text-white text-center '>
+                      <button className=' font-bold p-3'>GET QUOTE</button>
+                     </div>
+                 </div>
+               </div>
+             </div>
+           ))}
+         </div>
   );
 };
 
-export default SolarSystemCard;
+export default SolarPackageCards;
