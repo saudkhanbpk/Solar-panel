@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import swal from 'sweetalert';
 
 
 const SolarSystemForm = () => {
@@ -42,9 +43,13 @@ const SolarSystemForm = () => {
 
       if (res.ok) {
         const data = await res.json();
-        console.log(data);
-        alert("Solar system package saved successfully!");
-
+        swal({
+          title: "Good job!",
+          text: "Pakage added successfully!",
+          icon: "success",
+          button: true,
+          timer: 2000
+        })
         setFormData({
           capacity: "",
           category: "",
@@ -90,7 +95,13 @@ const SolarSystemForm = () => {
       }
       const data = await res.json();
       setReload(true)
-      console.log("pakage deleted sucessfully ", data);
+      swal({
+        title: "Good job!",
+        text: "Pakage deleted successfully!",
+        icon: "success",
+        button: true,
+        timer: 2000
+      })
 
     } catch (error) {
       console.error("error deleting", error);
@@ -107,11 +118,16 @@ const SolarSystemForm = () => {
 
       if (!res.ok) throw new Error("Failed to update");
       const data = await res.json();
-      console.log("Updated:", data);
-      alert("pakage updated sucessfully");
-      // exit edit mode
-      setEditingId(null);
 
+      swal({
+        title: "Good job!",
+        text: "Pakage updated successfully!",
+        icon: "success",
+        button: true,
+        timer: 2000
+      })
+
+      setEditingId(null);
       setFormData({
         capacity: "",
         category: "",
@@ -333,7 +349,7 @@ const SolarSystemForm = () => {
                 onClick={() => handleDelete(pkg._id)}
                 className="p-2 rounded-full bg-red-100 hover:bg-red-200 text-red-600"
               >
-                <FaTrash size={16} className="bg-white"/>
+                <FaTrash size={16} className="bg-white" />
               </button>
             </div>
 

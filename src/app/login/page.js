@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import swal from 'sweetalert';
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -20,14 +22,21 @@ export default function LoginPage() {
       });
 
       const data = await res.json();
-      
+
 
       if (res.ok && data.token) {
         // ✅ Save token to localStorage
         localStorage.setItem("token", data.token);
         localStorage.setItem("email", data.email);
-        
-        router.push("/admin");
+        swal({
+          title: "Good job!",
+          text: "Login successfully!",
+          icon: "success",
+          button: false,   
+          timer: 2000      
+        }).then(() => {
+          router.push("/admin"); 
+        });
       } else {
         setError(data?.message || "Login failed");
       }
@@ -39,10 +48,10 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-10 rounded-xl shadow-lg w-full max-w-md border border-gray-200">
-        
+
         {/* Logo or Heading */}
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
-         GO GREEN
+          GO GREEN
         </h2>
         <p className="text-center text-gray-500 mb-8">
           Sign in to continue

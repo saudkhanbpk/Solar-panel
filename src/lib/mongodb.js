@@ -6,7 +6,7 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/solar_
 // To prevent multiple connections in dev mode
 let isConnected = false;
 
-export async function connectDB() {
+export default async function connectDB() {
   if (isConnected) {
     return;
   }

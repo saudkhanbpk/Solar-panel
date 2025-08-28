@@ -1,22 +1,38 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function ChangePassword() {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  const router =useRouter();
+
   const handleChangePassword = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/api/change-password", {
-        oldPassword,
-        newPassword,
-      });
+      const token = localStorage.getItem("token");
+      const email = localStorage.getItem("email");
+
+      const res = await axios.post(
+        `http://localhost:3000/api/change-password?email=${email}`,
+        {
+          oldPassword,
+          newPassword,
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       setMessage(res.data.message);
+    
+    if(res.status===200){
+      router.push("/admin");
+    }
     } catch (error) {
       if (error.response) {
         setMessage(error.response.data.message || "Error updating password");

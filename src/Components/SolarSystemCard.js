@@ -1,9 +1,14 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// import { useRouter } from 'next/router';
+import GetQuoteModal from '../Components/Get-quote';
 
 const SolarPackageCards = ({category}) => {
   const [packages, setPackages] = useState([]);
+  // const router = useRouter();
+
+  
 
   // Fetch API
   const fetchPackages = async () => {
@@ -108,14 +113,15 @@ const SolarPackageCards = ({category}) => {
                        TO RS {pkg.priceTo}/-
                      </div>
                    </div>
-                   <div className='mt-6 bg-blue-900 text-white text-center '>
-                      <button className=' font-bold p-3'>GET QUOTE</button>
+                   <div className='mt-6  text-center '>
+                       <GetQuoteModal />
                      </div>
                  </div>
                </div>
              </div>
            ))}
          </div>
+        
   );
 };
 

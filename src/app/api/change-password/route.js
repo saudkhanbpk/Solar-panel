@@ -7,20 +7,25 @@ import User from "../../../models/user.model";
 export async function POST(req) {
   try {
     await connectDB();
+
+    // ✅ get email from query string
+    const { searchParams } = new URL(req.url);
+    const email = searchParams.get("email");
+
+    // ✅ get passwords from body
     const { oldPassword, newPassword } = await req.json();
-   const email = localStorage.getItem(email);
-    const user = await User.findOne(email);
+    const user = await User.findOne({ email });
     if (!user) {
       return NextResponse.json({ message: "User not found" }, { status: 404 });
     }
 
-    // Check if old password matches
+    // check if old password matches
     const isMatch = await bcrypt.compare(oldPassword, user.password);
     if (!isMatch) {
       return NextResponse.json({ message: "Old password is incorrect" }, { status: 400 });
     }
 
-    // Hash new password
+    // hash new password
     const hashedPassword = await bcrypt.hash(newPassword, 10);
     user.password = hashedPassword;
     await user.save();
