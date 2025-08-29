@@ -33,6 +33,11 @@ const QuoteSchema = new mongoose.Schema(
       default: "",
       trim: true,
     },
+     status: {
+    type: String,
+    values: ["Processing", "Shipped", "Delivered"],
+    default: "Processing",
+  },
   },
   { timestamps: true } 
 );

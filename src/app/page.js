@@ -9,9 +9,11 @@ import { useState, useEffect } from 'react';
 import { mainlogo } from '../Components/statis';
 import { images } from '../Components/statis';
 import StatsSection from '../Components/State-Section';
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+   const router = useRouter();
 
   const faqs = [
     {
@@ -212,7 +214,8 @@ const HomePage = () => {
                     Combines solar with battery storage and grid connection for maximum efficiency and backup power.
                   </p>
                   <div className="mt-6 text-center">
-                    <button className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
+                    <button onClick={()=>router.push("/solar-packages/solar-hybrid")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
                   </div>
@@ -232,7 +235,8 @@ const HomePage = () => {
                     Reduce Your Electricity Bills with GO GREEN On-Grid System Packages
                   </p>
                   <div className="mt-6 text-center">
-                    <button className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
+                    <button onClick={()=>router.push("/solar-packages/solar-ongrid")} 
+                    className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
                   </div>
@@ -252,7 +256,8 @@ const HomePage = () => {
                     Net Metering in Pakistan
                   </p>
                   <div className="mt-6 text-center">
-                    <button className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
+                    <button onClick={()=>router.push("/services/net-metering")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
                   </div>

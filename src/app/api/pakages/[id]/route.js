@@ -7,6 +7,8 @@ export async function DELETE(req, { params }) {
     try {
         await connectDB();
         const { id } = await params;
+
+
         const deleted = await Pakages.findByIdAndDelete(id);
 
         if (!deleted) {

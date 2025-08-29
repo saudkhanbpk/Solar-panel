@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import SolarSystemForm from '../../Components/admin/pakagesform'
+import { Trash2 } from "lucide-react";
+import { calculateOrdersGrowth } from "../../Components/calculatordergrowth";
 
 
 const Page = () => {
@@ -10,11 +12,17 @@ const Page = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+  const [quotes, setQuotes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [ordersError, setOrdersError] = useState("");
   const router = useRouter();
 
+  const { percent, current, last } = calculateOrdersGrowth(quotes);
   // Check screen size on mount and resize
   useEffect(() => {
+
+    fetchQuotes();
+
     const token = localStorage.getItem("token");
     if (!token) {
       router.push("/login");
@@ -54,6 +62,71 @@ const Page = () => {
 
   };
 
+  const fetchQuotes = async () => {
+    setLoading(true);
+    setOrdersError("");
+    try {
+      const res = await fetch("http://localhost:3000/api/quote");
+      const data = await res.json();
+      if (data.success) {
+        setQuotes(data.data);
+      } else {
+        setOrdersError(data.error || "Failed to fetch orders");
+      }
+    } catch (error) {
+      console.error("Error fetching quotes:", error);
+      setOrdersError("Something went wrong while fetching orders.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    // if (!confirm("Are you sure you want to delete this order?")) return;
+
+    try {
+      const res = await fetch(`http://localhost:3000/api/quote/${id}`, {
+        method: "DELETE",
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        // ✅ remove from local state without refresh
+        setQuotes((prev) => prev.filter((q) => q._id !== id));
+      } else {
+        alert(data.error || "Failed to delete order");
+      }
+    } catch (error) {
+      console.error("Delete error:", error);
+      alert("Something went wrong while deleting the order.");
+    }
+  };
+
+  const updateOrderStatus = async (id, newStatus) => {
+    try {
+      const res = await fetch(`http://localhost:3000/api/quote/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Status updated successfully ✅");
+        setQuotes((prev) =>
+        prev.map((q) => (q._id === id ? { ...q, status: newStatus } : q))
+      );
+      } else {
+        alert("Failed to update status ❌");
+      }
+    } catch (error) {
+      console.error("Frontend update error:", error);
+      alert("Something went wrong");
+    }
+  };
+
   return (
     <div className="flex flex-col md:flex-row h-screen bg-gray-100">
       {/* Mobile Header */}
@@ -76,9 +149,10 @@ const Page = () => {
 
       {/* Sidebar */}
       <div
-        className={`${isSidebarOpen ? 'block' : 'hidden'} md:block fixed md:relative inset-0 z-50 md:z-auto w-64 bg-[#6AAF02] text-white md:translate-x-0 transition-transform duration-300 ease-in-out`}
+        className={`${isSidebarOpen ? 'block' : 'hidden'} md:block fixed md:relative inset-0 z-50 md:z-auto w-64 bg-[#6AAF02] text-white md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto`}
         style={{ height: isMobile ? '100vh' : 'auto' }}
       >
+
         <div className="p-4 border-b border-green-700 hidden md:block">
           <h1 className="text-xl font-bold text-green-700 ">GO GREEN </h1>
           <p className=" text-sm">Dashboard</p>
@@ -130,7 +204,8 @@ const Page = () => {
       )}
 
       {/* Main Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-y-auto">
+
         {/* Header */}
         <header className="bg-white shadow-sm p-4 flex justify-between items-center">
           <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
@@ -158,8 +233,8 @@ const Page = () => {
 
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
-                    <button  onClick={() => router.push("/profile")} className='block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-500'>
-                    Your Profile</button>
+                    <button onClick={() => router.push("/profile")} className='block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-500'>
+                      Your Profile</button>
                     <button
                       onClick={() => router.push("/change-password")}
                       className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-500"
@@ -195,137 +270,95 @@ const Page = () => {
                       <i className="fas fa-dollar-sign text-green-600 text-sm md:text-base"></i>
                     </div>
                   </div>
-                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i> 12.5% since last month</p>
+                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i>{percent}% since last month</p>
                 </div>
 
                 <div className="bg-white p-4 md:p-6 rounded-lg shadow">
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-gray-500 text-sm md:text-base">Orders</p>
-                      <p className="text-xl md:text-2xl font-bold">1,258</p>
+                      <p className="text-xl md:text-2xl font-bold">{quotes.length}</p>
                     </div>
                     <div className="bg-blue-100 p-2 md:p-3 rounded-full">
                       <i className="fas fa-shopping-cart text-blue-600 text-sm md:text-base"></i>
                     </div>
                   </div>
-                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i> 8.2% since last month</p>
+                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i>{percent}% since last month</p>
                 </div>
 
                 <div className="bg-white p-4 md:p-6 rounded-lg shadow">
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-gray-500 text-sm md:text-base">Products</p>
-                      <p className="text-xl md:text-2xl font-bold">56</p>
+                      <p className="text-xl md:text-2xl font-bold">{quotes.length}</p>
                     </div>
                     <div className="bg-yellow-100 p-2 md:p-3 rounded-full">
                       <i className="fas fa-solar-panel text-yellow-600 text-sm md:text-base"></i>
                     </div>
                   </div>
-                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i> 3.1% since last month</p>
+                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i>{percent}% since last month</p>
                 </div>
 
                 <div className="bg-white p-4 md:p-6 rounded-lg shadow">
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-gray-500 text-sm md:text-base">Customers</p>
-                      <p className="text-xl md:text-2xl font-bold">895</p>
+                      <p className="text-xl md:text-2xl font-bold">{quotes.length}</p>
                     </div>
                     <div className="bg-purple-100 p-2 md:p-3 rounded-full">
                       <i className="fas fa-users text-purple-600 text-sm md:text-base"></i>
                     </div>
                   </div>
-                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i> 5.7% since last month</p>
+                  <p className="text-green-600 mt-2 text-xs md:text-sm"><i className="fas fa-arrow-up"></i>{percent}% since last month</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-                <div className="bg-white p-4 md:p-6 rounded-lg shadow">
-                  <h3 className="text-lg font-semibold mb-4">Recent Orders</h3>
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full">
-                      <thead>
-                        <tr className="text-left text-gray-500">
-                          <th className="pb-2 text-sm md:text-base">Order ID</th>
-                          <th className="pb-2 text-sm md:text-base">Customer</th>
-                          <th className="pb-2 text-sm md:text-base">Amount</th>
-                          <th className="pb-2 text-sm md:text-base">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="border-b">
-                          <td className="py-3 text-sm md:text-base">#ORD-7562</td>
-                          <td className="py-3 text-sm md:text-base">John Smith</td>
-                          <td className="py-3 text-sm md:text-base">$3,500.00</td>
-                          <td className="py-3"><span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Delivered</span></td>
-                        </tr>
-                        <tr className="border-b">
-                          <td className="py-3 text-sm md:text-base">#ORD-7561</td>
-                          <td className="py-3 text-sm md:text-base">Emma Johnson</td>
-                          <td className="py-3 text-sm md:text-base">$7,200.00</td>
-                          <td className="py-3"><span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Processing</span></td>
-                        </tr>
-                        <tr className="border-b">
-                          <td className="py-3 text-sm md:text-base">#ORD-7560</td>
-                          <td className="py-3 text-sm md:text-base">Michael Brown</td>
-                          <td className="py-3 text-sm md:text-base">$2,800.00</td>
-                          <td className="py-3"><span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Shipped</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+              {/* Recent Orders */}
+              <div className="bg-white p-4 md:p-6 rounded-lg shadow">
+                <h3 className="text-lg font-semibold mb-4">Recent Orders</h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full text-xs sm:text-sm md:text-base">
+                    <thead>
+                      <tr className="text-left text-gray-500">
+                        <th className="pb-2 px-2 sm:px-4">Order ID</th>
+                        <th className="pb-2 px-2 sm:px-4">Customer</th>
+                        <th className="pb-2 px-2 sm:px-4">Email</th>
+                        <th className="pb-2 px-2 sm:px-4">Date</th>
+                        <th className="pb-2 px-2 sm:px-4">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {quotes
+                        .slice()
+                        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+                        .slice(0, 5)
+                        .map((order, idx) => (
+                          <tr key={order._id || idx} className="border-b">
+                            <td className="py-3 px-2 sm:px-4">#{order._id.slice(-6)}</td>
+                            <td className="py-3 px-2 sm:px-4">{order.name}</td>
+                            <td className="py-3 px-2 sm:px-4">{order.email || "-"}</td>
+                            <td className="py-3 px-2 sm:px-4">
+                              {new Date(order.createdAt).toLocaleDateString()}
+                            </td>
+                            <td className="py-3 px-2 sm:px-4">
+                              <select
+                                value={order.status}
+                                onChange={(e) => updateOrderStatus(order._id, e.target.value)}
+                                className="border rounded px-2 py-1 text-xs sm:text-sm"
+                              >
+                                <option value="Processing">Processing</option>
+                                <option value="Shipped">Shipped</option>
+                                <option value="Delivered">Delivered</option>
+                              </select>
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
                 </div>
 
-                <div className="bg-white p-4 md:p-6 rounded-lg shadow">
-                  <h3 className="text-lg font-semibold mb-4">Top Selling Products</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-green-100 rounded flex items-center justify-center mr-3">
-                          <i className="fas fa-solar-panel text-green-600 text-sm md:text-base"></i>
-                        </div>
-                        <div>
-                          <p className="font-medium text-sm md:text-base">Solar Panel 400W</p>
-                          <p className="text-gray-500 text-xs md:text-sm">Panels</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-medium text-sm md:text-base">$12,540</p>
-                        <p className="text-green-600 text-xs md:text-sm">+15.3%</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-100 rounded flex items-center justify-center mr-3">
-                          <i className="fas fa-battery-full text-blue-600 text-sm md:text-base"></i>
-                        </div>
-                        <div>
-                          <p className="font-medium text-sm md:text-base">Lithium Battery 5kWh</p>
-                          <p className="text-gray-500 text-xs md:text-sm">Batteries</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-medium text-sm md:text-base">$8,640</p>
-                        <p className="text-green-600 text-xs md:text-sm">+9.2%</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-yellow-100 rounded flex items-center justify-center mr-3">
-                          <i className="fas fa-bolt text-yellow-600 text-sm md:text-base"></i>
-                        </div>
-                        <div>
-                          <p className="font-medium text-sm md:text-base">Hybrid Inverter 5kW</p>
-                          <p className="text-gray-500 text-xs md:text-sm">Inverters</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-medium text-sm md:text-base">$7,200</p>
-                        <p className="text-green-600 text-xs md:text-sm">+7.8%</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
+
             </div>
           )}
 
@@ -335,10 +368,77 @@ const Page = () => {
             </div>
           )}
 
+
+
           {activeTab === 'orders' && (
             <div className="bg-white p-4 md:p-6 rounded-lg shadow">
-              <h3 className="text-lg font-semibold mb-4">Order Management</h3>
-              <p className="text-gray-500">Order management functionality will be implemented here.</p>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold">Order Management</h3>
+                <button
+                  onClick={fetchQuotes}
+                  disabled={loading}
+                  className={`bg-[#82c701] hover:bg-[#6daa01] text-white px-4 py-2 rounded-lg transition-all ${loading ? "opacity-70 cursor-not-allowed" : ""
+                    }`}
+                >
+                  {loading ? "Refreshing..." : "🔄 Refresh"}
+                </button>
+              </div>
+
+              {/* Loading */}
+              {loading && <p className="text-center py-10">Loading orders...</p>}
+
+              {/* Error */}
+              {ordersError && (
+                <p className="text-center text-red-500 py-10">{ordersError}</p>
+              )}
+
+              {/* Empty */}
+              {!loading && !ordersError && quotes.length === 0 && (
+                <p className="text-center py-10">No orders found.</p>
+              )}
+
+              {/* Orders Table */}
+              {!loading && !ordersError && quotes.length > 0 && (
+                <div className="overflow-x-auto shadow-md rounded-lg">
+                  <table className="min-w-full border border-gray-200">
+                    <thead className="bg-gray-100 text-left">
+                      <tr>
+                        <th className="py-3 px-4 border-b">Name</th>
+                        <th className="py-3 px-4 border-b">Email</th>
+                        <th className="py-3 px-4 border-b">Phone</th>
+                        <th className="py-3 px-4 border-b">Address</th>
+                        <th className="py-3 px-4 border-b">Interested Product</th>
+                        <th className="py-3 px-4 border-b">Message</th>
+                        <th className="py-3 px-4 border-b">Date</th>
+                        <th className="py-3 px-4 border-b text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {quotes.map((quote) => (
+                        <tr key={quote._id} className="hover:bg-gray-50 text-sm">
+                          <td className="py-2 px-4 border-b">{quote.name}</td>
+                          <td className="py-2 px-4 border-b">{quote.email || "-"}</td>
+                          <td className="py-2 px-4 border-b">{quote.phone}</td>
+                          <td className="py-2 px-4 border-b">{quote.address}</td>
+                          <td className="py-2 px-4 border-b">{quote.interestedProduct}</td>
+                          <td className="py-2 px-4 border-b">{quote.message || "-"}</td>
+                          <td className="py-2 px-4 border-b">
+                            {new Date(quote.createdAt).toLocaleDateString()}
+                          </td>
+                          <td className="py-2 px-4 border-b text-center">
+                            <button
+                              onClick={() => handleDelete(quote._id)}
+                              className="text-red-500 hover:text-red-700 transition-colors"
+                            >
+                              <Trash2 className="w-5 h-5" />
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           )}
 
