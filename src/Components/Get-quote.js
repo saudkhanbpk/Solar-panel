@@ -82,7 +82,7 @@ export default function GetQuoteModal() {
             <div className="flex items-center justify-center">
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                    className="bg-[#82c701] text-white px-6 py-3 rounded-lg hover:bg-[#6daa01] transition-colors"
                 >
                     Open Quote Form
                 </button>

@@ -1,6 +1,5 @@
 'use client';
 import Calltoexpert from '../Components/Calltoexpert';
-import ApplicationForm from '../Components/Form'
 import CustomSlider from '../Components/Slider';
 import { mainSliderSettings, gridSliderSettings } from '../Config/Sliderconfig';
 import React from 'react';
@@ -10,6 +9,7 @@ import { mainlogo } from '../Components/statis';
 import { images } from '../Components/statis';
 import StatsSection from '../Components/State-Section';
 import { useRouter } from "next/navigation";
+import GetQuoteModal from '../Components/Get-quote';
 
 const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -412,7 +412,8 @@ const HomePage = () => {
         </div>
       </div>
       
-      <ApplicationForm />
+      {/* <ApplicationForm /> */}
+      <GetQuoteModal />
 
       <div className="text-center px-6 py-12 md:py-16 lg:py-20 bg-white shadow-md rounded-xl max-w-7xl mx-auto my-10 md:my-14">
         <div className="mx-auto">

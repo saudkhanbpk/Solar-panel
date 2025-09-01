@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import SolarSystemForm from '../../Components/admin/pakagesform'
 import { Trash2 } from "lucide-react";
 import { calculateOrdersGrowth } from "../../Components/calculatordergrowth";
+import AdminFaqs from "../../Components/admin/insertfaq"
 
 
 const Page = () => {
@@ -185,10 +186,10 @@ const Page = () => {
             </li>
             <li className="mb-2">
               <button
-                onClick={() => handleTabChange('customers')}
-                className={`w-full text-left p-2 rounded ${activeTab === 'customers' ? 'bg-[#4D8F00]' : 'hover:bg-green-700'}`}
+                onClick={() => handleTabChange('FAQ')}
+                className={`w-full text-left p-2 rounded ${activeTab === 'FAQ' ? 'bg-[#4D8F00]' : 'hover:bg-green-700'}`}
               >
-                <i className="fas fa-users mr-2"></i> Customers
+                <i className="fas fa-users mr-2"></i> FAQS
               </button>
             </li>
           </ul>
@@ -442,10 +443,9 @@ const Page = () => {
             </div>
           )}
 
-          {activeTab === 'customers' && (
+          {activeTab === 'FAQ' && (
             <div className="bg-white p-4 md:p-6 rounded-lg shadow">
-              <h3 className="text-lg font-semibold mb-4">Customer Management</h3>
-              <p className="text-gray-500">Customer management functionality will be implemented here.</p>
+              <AdminFaqs />
             </div>
           )}
         </main>

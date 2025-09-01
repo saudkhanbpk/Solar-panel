@@ -1,60 +1,75 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 
-const FAQ = ({ category }) => {
+const Chevron = ({ open }) => (
+  <svg
+    className={`h-5 w-5 transition-transform ${open ? "rotate-180" : ""}`}
+    viewBox="0 0 20 20" fill="currentColor"
+  >
+    <path
+      fillRule="evenodd"
+      d="M5.23 7.21a.75.75 0 011.06.02L10 11.085l3.71-3.856a.75.75 0 111.08 1.04l-4.24 4.41a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+export default function FAQ({ category }) {
   const [faqs, setFaqs] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
-    const fetchFAQs = async () => {
+    async function fetchFAQs({category}) {
       try {
-        const res = await axios.get(`http://localhost:5000/api/faqs/${category}`);
-        setFaqs(res.data);
-      } catch (error) {
-        console.error("Error fetching FAQs:", error);
+        const res = await fetch(`http://localhost:3000/api/faqs/${category}`);
+        const data = await res.json();
+        setFaqs(data);
+      } catch (err) {
+        console.error("Error loading FAQs:", err);
       }
-    };
-
+    }
     if (category) fetchFAQs();
   }, [category]);
 
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-        Frequently Asked Questions
-      </h2>
+    <section className="mx-auto max-w-4xl px-4 py-10">
+      <h2 className="mb-6 text-3xl font-bold text-gray-900">FAQs</h2>
 
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={faq._id}
-            className="border border-gray-200 rounded-2xl shadow-sm"
-          >
-            <button
-              className="flex justify-between items-center w-full p-4 text-left font-semibold text-gray-800"
-              onClick={() => toggleFAQ(index)}
+      <div className="rounded-2xl border border-gray-200 bg-white">
+        {faqs.map((faq, index) => {
+          const open = activeIndex === index;
+          return (
+            <div
+              key={faq._id}
+              className="border-b border-gray-200 last:border-b-0"
             >
-              {faq.question}
-              <span className="ml-4 text-xl">
-                {activeIndex === index ? "−" : "+"}
-              </span>
-            </button>
+              <button
+                onClick={() =>
+                  setActiveIndex(open ? null : index)
+                }
+                className="flex w-full items-center justify-between px-6 py-4 text-left"
+              >
+                <span
+                  className={`font-medium ${
+                    open ? "text-lime-600" : "text-gray-900"
+                  }`}
+                >
+                  {faq.question}
+                </span>
+                <Chevron open={open} />
+              </button>
 
-            {activeIndex === index && (
-              <div className="p-4 border-t text-gray-600">
-                {faq.answer}
+              <div
+                className={`overflow-hidden px-6 transition-all ${
+                  open ? "max-h-96 pb-4" : "max-h-0"
+                }`}
+              >
+                <p className="text-gray-600">{faq.answer}</p>
               </div>
-            )}
-          </div>
-        ))}
+            </div>
+          );
+        })}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default FAQ;
+}
