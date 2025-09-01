@@ -144,7 +144,7 @@ const page = () => {
                 <div className="py-12">
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-start w-full">
                         <div className="w-full md:w-1/2">
-                            <FAQ category="fillingstation" />
+                            <FAQ category="Filling station" />
                         </div>
                         <div className="w-full md:w-1/2">
                             <Appointment />

@@ -172,7 +172,7 @@ const page = () => {
 
         {/* FAQ */}
         <div className="items-center">
-          <FAQ />
+          <FAQ  category="net-metering"/>
         </div>
       </div>
     </div>

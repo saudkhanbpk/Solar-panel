@@ -57,7 +57,6 @@ export default function AdminFaqs() {
         try {
             const res = await fetch("http://localhost:3000/api/faq");
             const data = await res.json();
-            console.log("data", data);
             if (data.success) {
                 setFaqs(data.faq);
             }

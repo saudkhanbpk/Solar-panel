@@ -8,9 +8,6 @@ const page = () => {
         <div className="bg-gray-50">
             {/* Cover Section */}
             <div className="flex justify-center text-center items-center bg-[url(/Cover-Industrial.png)] bg-cover bg-center h-64">
-                <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-                    Industrial Solar Solution
-                </h1>
             </div>
 
             {/* Intro Section */}
@@ -150,7 +147,7 @@ const page = () => {
             {/* FAQ + Appointment Section */}
             <div className="flex flex-col md:flex-row gap-10 justify-center items-start max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="w-full md:w-1/2">
-                    <FAQ category="commercial" />
+                    <FAQ category="industrial" />
                 </div>
                 <div className="w-full md:w-1/2">
                     <Appointment />

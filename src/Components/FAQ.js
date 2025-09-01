@@ -15,15 +15,22 @@ const Chevron = ({ open }) => (
 );
 
 export default function FAQ({ category }) {
+
   const [faqs, setFaqs] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
-    async function fetchFAQs({category}) {
+    async function fetchFAQs() {
       try {
-        const res = await fetch(`http://localhost:3000/api/faqs/${category}`);
+        const res = await fetch('http://localhost:3000/api/faq');
         const data = await res.json();
-        setFaqs(data);
+
+        if (data.success) {
+          let faq = Array.isArray(data.faq) ? data.faq : [];
+          // const Faqs = faq.filter((item) => item.isPublished);
+          setFaqs(faq);
+        }
+
       } catch (err) {
         console.error("Error loading FAQs:", err);
       }
@@ -31,12 +38,14 @@ export default function FAQ({ category }) {
     if (category) fetchFAQs();
   }, [category]);
 
+  const filteredFaqs = faqs.filter((faq) => faq.category === category);
+
   return (
     <section className="mx-auto max-w-4xl px-4 py-10">
-      <h2 className="mb-6 text-3xl font-bold text-gray-900">FAQs</h2>
+      <h2 className="mb-6 text-3xl font-bold text-gray-900 text-center">FAQs</h2>
 
       <div className="rounded-2xl border border-gray-200 bg-white">
-        {faqs.map((faq, index) => {
+        {filteredFaqs.map((faq, index) => {
           const open = activeIndex === index;
           return (
             <div
@@ -50,9 +59,8 @@ export default function FAQ({ category }) {
                 className="flex w-full items-center justify-between px-6 py-4 text-left"
               >
                 <span
-                  className={`font-medium ${
-                    open ? "text-lime-600" : "text-gray-900"
-                  }`}
+                  className={`font-medium ${open ? "text-lime-600" : "text-gray-900"
+                    }`}
                 >
                   {faq.question}
                 </span>
@@ -60,9 +68,8 @@ export default function FAQ({ category }) {
               </button>
 
               <div
-                className={`overflow-hidden px-6 transition-all ${
-                  open ? "max-h-96 pb-4" : "max-h-0"
-                }`}
+                className={`overflow-hidden px-6 transition-all ${open ? "max-h-96 pb-4" : "max-h-0"
+                  }`}
               >
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

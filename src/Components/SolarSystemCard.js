@@ -13,7 +13,7 @@ const SolarPackageCards = ({category}) => {
   // Fetch API
   const fetchPackages = async () => {
     try {
-           const res = await axios.get("http://localhost:3000/api/pakages");
+           const res = await axios.get("/api/pakages");
            setPackages(res.data);
     } catch (error) {
              console.log({ error: error.message });
