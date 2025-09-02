@@ -18,7 +18,7 @@ export default function ChangePassword() {
       const email = localStorage.getItem("email");
 
       const res = await axios.post(
-        `http://localhost:3000/api/change-password?email=${email}`,
+        `/api/change-password?email=${email}`,
         {
           oldPassword,
           newPassword,
