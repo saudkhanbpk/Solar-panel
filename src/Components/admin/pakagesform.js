@@ -35,7 +35,7 @@ const SolarSystemForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/pakages", {
+      const res = await fetch("/api/pakages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -77,7 +77,7 @@ const SolarSystemForm = () => {
 
   const fetchPackages = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/pakages")
+      const res = await fetch("/api/pakages")
       const data = await res.json();
       setPackages(data);
     } catch (error) {
@@ -87,7 +87,7 @@ const SolarSystemForm = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/pakages/${id}`,
+      const res = await fetch(`/api/pakages/${id}`,
         { method: 'DELETE' });
 
       if (!res.ok) {
