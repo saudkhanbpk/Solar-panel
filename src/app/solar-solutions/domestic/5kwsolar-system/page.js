@@ -8,9 +8,7 @@ const page = () => {
 
       {/* Hero Section */}
       <div className="bg-[url(/solar.jpg)] bg-cover bg-center p-6 shadow-md">
-        <h1 className="text-center font-extrabold text-4xl md:text-5xl mb-6 p-4 text-[#82C701] drop-shadow-lg">
-          5kW Solar System Price in Pakistan
-        </h1>
+        
         <div className="flex items-center justify-center">
           <DomasticCards />
         </div>
@@ -24,16 +22,6 @@ const page = () => {
             
             {/* Left Content */}
             <div className="flex-1 space-y-10">
-              
-              <div>
-                <h1 className="text-3xl font-bold mb-4 text-[#082E6F] border-l-4 border-[#82C701] pl-3">
-                  5kW Solar System Price in Pakistan
-                </h1>
-                <p className="text-gray-700 leading-relaxed">
-                  There are thousands of homes and small businesses in Pakistan...
-                </p>
-              </div>
-
               <div>
                 <h1 className="text-3xl font-bold mb-4 text-[#082E6F] border-l-4 border-[#82C701] pl-3">
                   What is a 5kW Solar System?
@@ -41,7 +29,7 @@ const page = () => {
                 <p className="text-gray-700 leading-relaxed">
                   A 5kW solar panel system refers to a system that produces around 20 kWh of electricity per day...
                 </p>
-                <img src="image/logo" alt="image" className="my-4 rounded-lg shadow-md" />
+                <img src="" alt="image" className="my-4 rounded-lg shadow-md  " />
                 <p className="text-gray-700 leading-relaxed">
                   A 5kW system is capable of powering most household appliances...
                 </p>
@@ -63,7 +51,7 @@ const page = () => {
                 <p className="text-gray-700 leading-relaxed">
                   A 5kW hybrid solar system is one of the most popular systems in Pakistan...
                   <br />
-                  <span className="font-semibold text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</span> provides affordable and high-quality 5kW solar systems in Pakistan.
+                  <span className="font-semibold text-[#82C701]">GO GREEN SOLAR</span> provides affordable and high-quality 5kW solar systems in Pakistan.
                 </p>
               </div>
 
@@ -99,7 +87,7 @@ const page = () => {
                   What Does A 5kW Solar System Consist Of?
                 </h1>
                 <p className="text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</span> always values product quality, efficiency, and affordability...
+                  <span className="font-semibold text-[#82C701]">GO GREEN SOLAR</span> always values product quality, efficiency, and affordability...
                 </p>
               </div>
 
@@ -150,7 +138,7 @@ const page = () => {
               <div className="bg-gradient-to-r from-[#82C701] to-[#082E6F] text-white rounded-xl p-6 shadow-md">
                 <h1 className="text-2xl font-bold mb-3">Free Consultation</h1>
                 <p>
-                  <span className="font-semibold">GO GREEN POWER WITH SUN SOLAR</span> offers the most affordable packages.
+                  <span className="font-semibold">GO GREEN SOLAR</span> offers the most affordable packages.
                   Contact us for consultation and quotations.
                 </p>
               </div>

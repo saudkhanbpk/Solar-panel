@@ -23,21 +23,12 @@ const page = () => {
             <div className="flex-1 space-y-10">
               <div>
                 <h1 className="text-3xl font-bold mb-4 text-[#082E6F] border-l-4 border-[#82C701] pl-3">
-                  3kW Solar System Price in Pakistan
-                </h1>
-                <p className="text-gray-700 leading-relaxed">
-                  There are hundreds of houses in Pakistan that consume between 300 to 400 units of electricity monthly...
-                </p>
-              </div>
-
-              <div>
-                <h1 className="text-3xl font-bold mb-4 text-[#082E6F] border-l-4 border-[#82C701] pl-3">
                   What is a 3kW Solar System?
                 </h1>
                 <p className="text-gray-700 leading-relaxed">
                   A 3kW solar Panel system refers to a system that produces 12 kWh of electricity per day...
                 </p>
-                <img src="image/logo" alt="image" className="my-4 rounded-lg shadow-md" />
+                <img src="/3kwsolar.png" alt="image" className="my-4 rounded-lg shadow-md" />
                 <p className="text-gray-700 leading-relaxed">
                   A 3kW system is capable of powering most small household appliances...
                 </p>
@@ -45,29 +36,12 @@ const page = () => {
 
               <div>
                 <h1 className="text-3xl font-bold mb-4 text-[#082E6F] border-l-4 border-[#82C701] pl-3">
-                  3kW Solar System Price in Pakistan?
-                </h1>
-                <p className="text-gray-700 leading-relaxed">
-                  A 3kW solar PV system in Pakistan costs around 390,000 PKR...
-                </p>
-              </div>
-
-              <div>
-                <h1 className="text-3xl font-bold mb-4 text-[#082E6F] border-l-4 border-[#82C701] pl-3">
-                  Hybrid 3kW Solar System Price in Pakistan
+                  Hybrid 3kW Solar System in Pakistan
                 </h1>
                 <p className="text-gray-700 leading-relaxed">
                   A 3kW hybrid solar system is the most commonly used system in Pakistan...
                   <br />
-                  <span className="font-semibold text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</span> provides affordable and high-quality 3kW solar systems.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-md p-6">
-                <h1 className="text-2xl font-semibold text-[#082E6F] mb-3">Hybrid 3kW Solar System Price in Pakistan with Batteries</h1>
-                <p className="text-gray-700">
-                  • With Batteries: <span className="font-bold text-[#82C701]">Rs. 510,000 PKR</span><br />
-                  • Without Batteries: <span className="font-bold text-[#082E6F]">Rs. 390,000 PKR</span>
+                  <span className="font-semibold text-[#82C701]">GO GREEN SOLAR</span> provides affordable and high-quality 3kW solar systems.
                 </p>
               </div>
 
@@ -91,7 +65,7 @@ const page = () => {
               <div>
                 <h1 className="text-2xl font-semibold text-[#082E6F] mb-3">What Does A 3kW Solar System Consist Of?</h1>
                 <p className="text-gray-700">
-                  <span className="font-semibold text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</span> always values product quality...
+                  <span className="font-semibold text-[#82C701]">GO GREEN SOLAR</span> always values product quality...
                 </p>
               </div>
 

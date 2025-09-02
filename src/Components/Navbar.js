@@ -57,8 +57,8 @@ export default function Navbar() {
     {name:'Services',
       path:'/services',
       submenu: [
-        { name: 'Solar Consultancy', path: '/services#solar-consultancy' },
-        { name: 'Solar System Installation', path: '/services#solar-installation' },
+         { name: 'EPC', path: '/services#epc' },
+        { name: 'Solar Consultancy', path: '/services#solar-consultancy' },  
         { name: 'Solar Maintenance', path: '/services#solar-maintenance' },
         { name: 'Solar System Cleaning', path: '/services#solar-cleaning' },
         { name: 'Net Metering', path: '/services/net-metering' },

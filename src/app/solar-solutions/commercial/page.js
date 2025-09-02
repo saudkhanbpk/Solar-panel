@@ -12,11 +12,11 @@ const page = () => {
             {/* Intro */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <h1 className="text-center text-3xl font-bold text-[#082E6F] mb-8 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-6">
-                    GO GREEN POWER WITH SUN SOLAR
+                    GO GREEN 
                 </h1>
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                     <p>
-                        <b className='text-[#82C701]'>GO GREEN POWER WITH SUN SOLAR</b> understands that every business has its own unique energy requirements. We offer customized and comprehensive commercial solar solutions tailored to your energy needs—helping businesses reduce energy costs by up to 75%, minimize carbon footprints, and enhance their market reputation.
+                        <b className='text-[#82C701]'>GO GREEN </b> understands that every business has its own unique energy requirements. We offer customized and comprehensive commercial solar solutions tailored to your energy needs—helping businesses reduce energy costs by up to 75%, minimize carbon footprints, and enhance their market reputation.
                     </p>
                     <p>
                         Whether you’re a small or medium-sized business or a large enterprise, our highly efficient, cutting-edge commercial solar systems ensure energy security and financial success.

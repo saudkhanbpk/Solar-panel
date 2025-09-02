@@ -51,7 +51,7 @@ const page = () => {
                         </h2>
                         <div className="space-y-4 text-gray-700">
                             <p>
-                                Dealing with water scarcity and the sky-high prices of diesel and petrol for pumping water from the earth makes it a real challenge for farmers to keep their lands well-irrigated. But here at <b className="text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</b>, we have a team of experts who specialize in setting up customized solar tube well solutions. Our solar tube well systems come with 2 years of after-sales services and a whopping 25-year panel warranty. We aim to make sure our farming community keeps their lands lush and fruitful without the headache of crazy expensive electricity bills.
+                                Dealing with water scarcity and the sky-high prices of diesel and petrol for pumping water from the earth makes it a real challenge for farmers to keep their lands well-irrigated. But here at <b className="text-[#82C701]">GO GREEN POWER</b>, we have a team of experts who specialize in setting up customized solar tube well solutions. Our solar tube well systems come with 2 years of after-sales services and a whopping 25-year panel warranty. We aim to make sure our farming community keeps their lands lush and fruitful without the headache of crazy expensive electricity bills.
                             </p>
                             <p>
                                 With solar solutions, farmers can grow crops all year round,

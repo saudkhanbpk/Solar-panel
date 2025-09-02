@@ -20,11 +20,11 @@ const page = () => {
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-4">
-                    GO GREEN POWER WITH SUN SOLAR has come up with a solution that's reliable, cost-effective and a sustainable source of energy production for industries which help them to save up to 75% on their electricity cost. We offer industrial solar solutions to a variety of sectors, including textiles, sports, cement, engineering, automobile, food processing and so on. Our turnkey solution covers everything from consultation and project management to designing, performance evaluation, efficiency optimization and system installation.
+                    GO GREEN has come up with a solution that's reliable, cost-effective and a sustainable source of energy production for industries which help them to save up to 75% on their electricity cost. We offer industrial solar solutions to a variety of sectors, including textiles, sports, cement, engineering, automobile, food processing and so on. Our turnkey solution covers everything from consultation and project management to designing, performance evaluation, efficiency optimization and system installation.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
-                    Expertise in industrial projects is a hallmark at GO GREEN POWER WITH SUN SOLAR. We've successfully guided both national and multinational industries through the transition to solar renewable energy, managing projects ranging from 100 kW to 2 MW.
+                    Expertise in industrial projects is a hallmark at GO GREEN . We've successfully guided both national and multinational industries through the transition to solar renewable energy, managing projects ranging from 100 kW to 2 MW.
                 </p>
             </div>
 

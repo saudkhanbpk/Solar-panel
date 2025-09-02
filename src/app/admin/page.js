@@ -16,6 +16,7 @@ const Page = () => {
   const [quotes, setQuotes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [ordersError, setOrdersError] = useState("");
+  const [save,setsave]=useState("");
   const router = useRouter();
 
   const { percent, current, last } = calculateOrdersGrowth(quotes);
@@ -25,7 +26,9 @@ const Page = () => {
     fetchQuotes();
 
     const token = localStorage.getItem("token");
-    if (!token) {
+    const email = localStorage.getItem("email");
+    setsave(email);  
+      if (!token) {
       router.push("/login");
     }
 
@@ -117,8 +120,8 @@ const Page = () => {
       if (data.success) {
         alert("Status updated successfully ✅");
         setQuotes((prev) =>
-        prev.map((q) => (q._id === id ? { ...q, status: newStatus } : q))
-      );
+          prev.map((q) => (q._id === id ? { ...q, status: newStatus } : q))
+        );
       } else {
         alert("Failed to update status ❌");
       }
@@ -211,47 +214,94 @@ const Page = () => {
         <header className="bg-white shadow-sm p-4 flex justify-between items-center">
           <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
           <div className="flex items-center space-x-4">
-            <button
+            {/* <button
               onClick={() => handleTabChange('packages')}
               className="bg-green-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-green-700 text-sm md:text-base"
             >
               <i className="fas fa-plus mr-2"></i> Add New
-            </button>
+            </button> */}
 
             <div className="relative">
-              {/* Profile Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center focus:outline-none"
+              {/* Profile Button */}
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center space-x-2 bg-blue-700 hover:bg-blue-800 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+              >
+                {/* User Avatar */}
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                  AA
+                </div>
+                <svg
+                  className={`w-4 h-4 text-white transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <img
-                    src="https://ui-avatars.com/api/?name=Admin&background=6AAF02&color=fff"
-                    alt="Profile"
-                    className="w-10 h-10 rounded-full border-2 border-green-600"
-                  />
-                </button>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
-                {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
-                    <button onClick={() => router.push("/profile")} className='block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-500'>
-                      Your Profile</button>
-                    <button
-                      onClick={() => router.push("/change-password")}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-500"
+              {/* Dropdown Menu */}
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {/* User Info Section */}
+                  <div className="px-4 py-3 border-b border-gray-200">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900"></p>
+                        <p className="text-sm text-gray-600">{save}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Menu Items */}
+                  <div className="py-2">
+                    {/* <button
+                      onClick={() => {
+                        router.push("/profile");
+                        setIsDropdownOpen(false);
+                      }}
+                      className="flex items-center w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                     >
+                      <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      Your Profile
+                    </button> */}
+
+                    <button
+                      onClick={() => {
+                        router.push("/change-password");
+                        setIsDropdownOpen(false);
+                      }}
+                      className="flex items-center w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m0 0a2 2 0 01-2 2m2-2h3m-3 0h-3m-3-2a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2V9a2 2 0 00-2-2H9z" />
+                      </svg>
                       Change Password
                     </button>
+
                     <button
-                      onClick={handleLogout}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-green-500"
+                      onClick={() => {
+                        handleLogout();
+                        setIsDropdownOpen(false);
+                      }}
+                      className="flex items-center w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                     >
-                      Logout
+                      <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                      </svg>
+                      Sign Out
                     </button>
                   </div>
-                )}
-              </div>
-
+                </div>
+              )}
             </div>
           </div>
         </header>
