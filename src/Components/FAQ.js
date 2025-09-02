@@ -22,7 +22,7 @@ export default function FAQ({ category }) {
   useEffect(() => {
     async function fetchFAQs() {
       try {
-        const res = await fetch('http://localhost:3000/api/faq');
+        const res = await fetch('/api/faq');
         const data = await res.json();
 
         if (data.success) {
