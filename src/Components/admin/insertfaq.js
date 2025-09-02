@@ -33,7 +33,7 @@ export default function AdminFaqs() {
         setLoading(true);
         setMsg("");
         try {
-            const res = await fetch("http://localhost:3000/api/faq", {
+            const res = await fetch("/api/faq", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),
