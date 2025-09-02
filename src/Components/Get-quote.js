@@ -45,7 +45,7 @@ export default function GetQuoteModal() {
     const handleSubmit = async () => {
          if (!validateForm()) return; 
         try {
-            const res = await fetch("http://localhost:3000/api/quote", {
+            const res = await fetch("/api/quote", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

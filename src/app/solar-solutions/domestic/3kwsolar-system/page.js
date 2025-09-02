@@ -7,9 +7,7 @@ const page = () => {
     <div className="bg-gray-50">
       {/* Hero Section */}
       <div className="bg-[url(/domestic-solar-solution-cover.png)] bg-cover bg-center text-white py-12 shadow-lg">
-        <h1 className="text-center font-extrabold text-4xl md:text-5xl mb-6 p-4 drop-shadow-lg text-[#82C701]">
-          3kW Solar System Price in Pakistan
-        </h1>
+        
         <div className="flex items-center justify-center">
           <DomasticCards />
         </div>

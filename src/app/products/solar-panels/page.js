@@ -1,12 +1,12 @@
+'use client';
 import React from 'react'
 import Calltoexpert from '../../../Components/Calltoexpert'
-
+import GetQuoteModal from '../../../Components/Get-quote';
 const page = () => {
   return (
     <div>
       {/* Hero Section */}
       <div className="flex justify-center text-center items-center bg-[url(/solarpanel.png)] bg-cover bg-center h-64">
-        {/* <h1 className='text-6xl font-extrabold text-[#082E6F]'>SOLAR PANELS</h1> */}
       </div>
 
       {/* Intro Section */}
@@ -15,7 +15,7 @@ const page = () => {
           Solar Panels
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed text-justify">
-          We use top-quality solar panels from international brands for all our solar installations in Pakistan, be it for homes, businesses, farms or industries. The efficiency of these solar panels directly influences your electricity savings – the higher the efficiency, the more you save. At <span className="font-semibold text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</span>, we understand how crucial it is to stay updated with the advancements in solar technology. That’s why our engineers and experts closely monitor emerging technologies and their efficiency to ensure our customers always receive the best available products.
+          We use top-quality solar panels from international brands for all our solar installations in Pakistan, be it for homes, businesses, farms or industries. The efficiency of these solar panels directly influences your electricity savings – the higher the efficiency, the more you save. At <span className="font-semibold text-[#82C701]">GO GREEN SOLAR</span>, we understand how crucial it is to stay updated with the advancements in solar technology. That’s why our engineers and experts closely monitor emerging technologies and their efficiency to ensure our customers always receive the best available products.
         </p>
       </div>
 
@@ -67,7 +67,7 @@ const page = () => {
       {/* Brands Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <h1 className='text-center text-3xl font-extrabold text-[#082E6F] pb-2.5 mb-10 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-lg'>
-          GO GREEN POWER WITH SUN SOLAR’s Top Brands: Trusted by Millions
+          GO GREEN SOLAR’s Top Brands: Trusted by Millions
         </h1>
 
         {/* Canadian Solar */}
@@ -142,10 +142,10 @@ const page = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="flex justify-center">
-        <button className="bg-[#82C701] hover:bg-[#6EA200] text-white font-semibold text-lg py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-          Get A Quote
-        </button>
+      <div className="flex justify-center mb-8">
+        <div className='mt-6  text-center '>
+          <GetQuoteModal />
+        </div>
       </div>
     </div>
   )

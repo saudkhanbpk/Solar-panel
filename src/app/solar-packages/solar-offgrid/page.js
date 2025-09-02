@@ -8,7 +8,6 @@ const page = () => {
     <div className="bg-gradient-to-b from-[#f9fdf6] to-white">
       {/* Banner Section */}
       <div className="flex justify-center text-center items-center bg-[url(/Cover-OffGrid.png)] bg-cover bg-center h-64 shadow-lg">
-        {/* <h1 className='text-6xl font-extrabold text-[#082E6F] drop-shadow-lg'>Off-Grid Solar Systems</h1> */}
       </div>
 
       {/* Intro Section */}
@@ -17,7 +16,7 @@ const page = () => {
           Complete Independence with Reliable and Cost-Effective Off-Grid Solar Systems
         </h1>
         <p className="text-gray-700 leading-relaxed text-lg text-center">
-          At <span className="text-[#82C701] font-semibold">GO GREEN POWER WITH SUN SOLAR</span>, we provide 
+          At <span className="text-[#82C701] font-semibold">GO GREEN SOLAR</span>, we provide 
           the most dependable <span className="text-[#082E6F] font-semibold">Off-Grid Solar Solutions</span> for 
           households and businesses in areas where grid electricity is either unreliable or unavailable. 
           Our off-grid systems are designed with high-performance inverters and long-life batteries, 
@@ -29,7 +28,7 @@ const page = () => {
       </div>
 
       {/* Pricing Section */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#f4fbf0] rounded-2xl shadow-md'>
+      {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#f4fbf0] rounded-2xl shadow-md'>
         <h1 className='text-center text-3xl font-bold text-[#082E6F] mb-8 border-l-[5px] border-r-[5px] border-[#82C701] px-2 inline-block'>
           Off-Grid Solar System Price in Pakistan
         </h1>
@@ -46,7 +45,7 @@ const page = () => {
           <span className="text-[#082E6F] font-semibold"> 10-year replacement warranty</span>, 
           delivering maximum efficiency and durability.
         </p>
-      </div>
+      </div> */}
       
       {/* Product Cards Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>

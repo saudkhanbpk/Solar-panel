@@ -1,12 +1,13 @@
+'use client';
 import React from 'react'
 import Calltoexpert from '../../../Components/Calltoexpert'
+import GetQuoteModal from '../../../Components/Get-quote';
 
 const page = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* Cover Section */}
       <div className="flex justify-center text-center items-center bg-[url(/Cover-SolarBatteries.png)] bg-cover bg-center h-64">
-        {/* Empty background section */}
       </div>
 
       {/* Intro Section */}
@@ -18,7 +19,7 @@ const page = () => {
           During the day, solar panels do an excellent job of supplying energy. But for a system that works really well on its own, especially at night or during power outages, you need a backup. That’s where solar batteries come in – they’re like the superheroes of storage. Solar batteries store the energy produced by the panels for use at night or during power outages. And if you’ve incorporated net metering, excess electricity can be sold back to the grid, maximizing the benefits from the solar system.
         </p>
         <p className="text-lg leading-relaxed">
-          At <span className="font-bold text-[#82C701]">GO GREEN POWER WITH SUN SOLAR</span>, we go above and beyond. We use top-notch, super-efficient and reliable batteries in every installation. Because when it comes to saving your solar power, we only believe in the best.
+          At <span className="font-bold text-[#82C701]">GO GREEN SOLAR</span>, we go above and beyond. We use top-notch, super-efficient and reliable batteries in every installation. Because when it comes to saving your solar power, we only believe in the best.
         </p>
       </div>
 
@@ -27,7 +28,7 @@ const page = () => {
       {/* Tubular Batteries */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
         <h1 className='text-center text-3xl font-bold text-[#082E6F] pb-2.5 mb-8 border-l-[5px] border-r-[5px] border-[#82C701]'>
-          GO GREEN POWER WITH SUN SOLAR'S TRUSTED SOLAR BATTERIES BRAND
+          GO GREEN SOLAR'S TRUSTED SOLAR BATTERIES BRAND
         </h1>
         <div className='flex flex-col md:flex-row gap-8 items-center'>
           {/* Left side - Text content */}
@@ -81,10 +82,10 @@ const page = () => {
       </div>
 
       {/* Button */}
-      <div className="flex justify-center">
-        <button className="bg-[#82C701] hover:bg-[#6db600] text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300">
-          Get A Quote
-        </button>
+      <div className="flex justify-center mb-8">
+        <div className='mt-6 text-center '>
+          <GetQuoteModal />
+        </div>
       </div>
     </div>
   )

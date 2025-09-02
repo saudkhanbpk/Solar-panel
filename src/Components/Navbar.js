@@ -51,7 +51,7 @@ export default function Navbar() {
         { name: 'Industrial ', path: '/solar-solutions/industrial' },
         { name: 'Commercial ', path: '/solar-solutions/commercial' },
         { name: 'Agricalture', path: '/solar-solutions/agricalture' },
-        { name: 'Filling Stations', path: '/solar-solutions/filling-station' },
+        
       ],
     },
     {name:'Services',

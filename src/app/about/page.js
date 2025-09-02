@@ -16,9 +16,7 @@ const About = () => {
           </h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-[#82C701]">
             <p className="text-gray-700 leading-relaxed text-lg">
-              <b className='text-[#82c701]'>GO GREEN POWER WITH SUN</b> was established in 2022 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision for over 10 years.
-              <br /><br />
-              With thousands of installations across various sectors, including both local and multinational organizations such as UNOPS, USAID, SIALKOT INTERNATIONAL AIRPORT, RAJCO, ZTBL, UMT, FORWARD, JDW Group and FFC, the trust of such reputable multinational organizations is evidence that Alpha Solar is trustworthy and committed to promoting solar solutions not only locally but also at the multinational level.
+              <b className='text-[#82c701]'>GO GREEN</b> was established in 2022 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision for over 10 years.
               <br /><br />
               Pakistan's heavy reliance on imported fossil fuels for electricity production not only makes electricity expensive but also contributes to the pollution of an already devastated climate. Alpha Solar has always been curious about finding ways to save both money and the environment. Our solar solutions are the answer, as they not only enhance the air quality of cities like Lahore and Karachi but also enable you to generate your own electricity and save thousands of rupees every month.
               <br /><br />
@@ -62,25 +60,28 @@ const About = () => {
             { title: "Solar Tube Wells", desc: "Agricultural solar solutions for farmers to power their tube wells with clean energy." },
             { title: "Net Metering Solutions", desc: "Connect your solar system to the grid and sell excess electricity back to the utility company." },
             { title: "Bank Financing", desc: "Easy financing options through partner banks to make solar affordable for everyone." },
-          ].map((service, i) => (
-            <div key={i} className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300 border-b-4 border-[#82C701]">
-              <div className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#082E6F] to-[#82C701] rounded-full flex items-center justify-center text-white shadow-lg">
-                    <span className="text-2xl font-bold">{i + 1}</span>
+            { title: "Solar Solution Audit", desc: "Professional auditing services to evaluate the performance, efficiency, and reliability of your existing solar system." },
+            { title: "Overseas Solar Solution Consultation", desc: "Expert consultation services for international clients to design and implement solar projects tailored to overseas markets." }
+          ]
+            .map((service, i) => (
+              <div key={i} className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300 border-b-4 border-[#82C701]">
+                <div className="p-6 text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#082E6F] to-[#82C701] rounded-full flex items-center justify-center text-white shadow-lg">
+                      <span className="text-2xl font-bold">{i + 1}</span>
+                    </div>
                   </div>
+                  <h3 className="text-xl font-semibold text-[#082E6F] mb-2">{service.title}</h3>
+                  <p className="text-gray-600">{service.desc}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-[#082E6F] mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.desc}</p>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
       {/* Why Choose Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-center text-3xl font-bold text-[#082E6F] mb-10">Why Choose Alpha Solar</h2>
+        <h2 className="text-center text-3xl font-bold text-[#082E6F] mb-10">Why Choose <b className='text-[#82c701]'>GO GREEN</b> </h2>
         <figure className="w-[80vw] bg-white shadow-2xl mx-auto rounded-xl overflow-hidden border-4 border-[#82C701]">
           <Image
             src="/choosealpa.jpg"

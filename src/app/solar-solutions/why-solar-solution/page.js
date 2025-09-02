@@ -21,7 +21,7 @@ const page = () => {
             We have witnessed hundreds of companies struggling to keep their operations running due to a power shortage and unavailability of electricity, which ultimately damages the entire economy. 
             Observing this, every individual in Pakistan wants to find a better way to keep themselves safe from continuously increasing electricity bills and the harmful environmental effects from conservative sources of electricity production. 
             The solution is in the sun’s rays, one can call it solar energy. It’s easy to get, not too expensive and has the capacity to produce enough electricity for every sector from domestic to businesses, industries and agriculture departments. 
-            And <span className="text-[#82C701] font-semibold">GO GREEN POWER WITH SUN SOLAR</span> is here to help you get the best solar energy system at an affordable cost.
+            And <span className="text-[#82C701] font-semibold">GO GREEN SOLAR</span> is here to help you get the best solar energy system at an affordable cost.
           </p>
         </div>
 
@@ -132,9 +132,9 @@ const page = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:scale-105 transition">
-            <h3 className="text-xl font-bold text-[#082E6F] mb-2">Solar Energy in Pakistan and the Role of GO GREEN POWER WITH SUN SOLAR</h3>
+            <h3 className="text-xl font-bold text-[#082E6F] mb-2">Solar Energy in Pakistan and the Role of GO GREEN SOLAR</h3>
             <p className="text-gray-700">
-              With its array of benefits, opportunities and challenges, GO GREEN POWER WITH SUN SOLAR has experienced both good and bad times...
+              With its array of benefits, opportunities and challenges, GO GREEN SOLAR has experienced both good and bad times...
             </p>
           </div>
         </div>
