@@ -55,7 +55,7 @@ export default function AdminFaqs() {
 
     const fetchFaqs = async () => {
         try {
-            const res = await fetch("http://localhost:3000/api/faq");
+            const res = await fetch("/api/faq");
             const data = await res.json();
             if (data.success) {
                 setFaqs(data.faq);
@@ -68,7 +68,7 @@ export default function AdminFaqs() {
     const deleteFaq = async (id) => {
         if (!confirm("Are you sure you want to delete this FAQ?")) return;
         try {
-            const res = await fetch(`http://localhost:3000/api/faq/${id}`, {
+            const res = await fetch(`/api/faq/${id}`, {
                 method: "DELETE",
             });
             const data = await res.json();
@@ -85,7 +85,7 @@ export default function AdminFaqs() {
 
     const togglePublish = async (id, currentStatus) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/faq/${id}/publish`, {
+            const res = await fetch(`/api/faq/${id}/publish`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ isPublished: !currentStatus }),
