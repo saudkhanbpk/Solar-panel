@@ -67,7 +67,7 @@ const Page = () => {
     setLoading(true);
     setOrdersError("");
     try {
-      const res = await fetch("http://localhost:3000/api/quote");
+      const res = await fetch("/api/quote");
       const data = await res.json();
       if (data.success) {
         setQuotes(data.data);
@@ -86,7 +86,7 @@ const Page = () => {
     // if (!confirm("Are you sure you want to delete this order?")) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/quote/${id}`, {
+      const res = await fetch(`/api/quote/${id}`, {
         method: "DELETE",
       });
 
@@ -106,7 +106,7 @@ const Page = () => {
 
   const updateOrderStatus = async (id, newStatus) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/quote/${id}`, {
+      const res = await fetch(`/api/quote/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
