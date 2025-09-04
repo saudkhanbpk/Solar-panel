@@ -13,7 +13,7 @@ import GetQuoteModal from '../Components/Get-quote';
 
 const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-   const router = useRouter();
+  const router = useRouter();
 
   const faqs = [
     {
@@ -40,16 +40,31 @@ const HomePage = () => {
       <div className="card lg:card-side bg-[#EBF9EA] shadow-sm min-h-[200px] rounded-xl overflow-hidden">
         {/* Content Section */}
         <div className="card-body flex flex-col items-center justify-center text-center p-6 lg:p-8 w-full lg:w-1/2">
-          <div className="max-w-md mx-auto space-y-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-gray-200/50">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold px-2 bg-gradient-to-r from-[#82c701] to-emerald-800 bg-clip-text text-transparent">
+          <div className="max-w-md mx-auto space-y-4 p-6 
+                  bg-white/10 dark:bg-gray-900/60 
+                  backdrop-blur-sm 
+                  rounded-xl 
+                  border border-gray-200/50 dark:border-gray-700/50">
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl font-extrabold px-2 
+             bg-gradient-to-r from-[#82c701] to-emerald-800 
+             dark:from-green-400 dark:to-green-200
+             bg-clip-text text-transparent"
+            >
               Powering Tomorrow's World
             </h1>
 
-            <p className="text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed px-2">
-             <b className='text-[#82c701]'>GO GREEN POWER WITH SUN</b>, one of Pakistan's pioneers in solar energy, offers <span className="font-medium text-emerald-700">cost-effective</span> and <span className="font-medium text-emerald-700">top-notch solar solutions</span> to residential, commercial and agricultural entities.
+
+            <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed px-2">
+              <b className="text-[#82c701]">GO GREEN</b>, one of Pakistan's pioneers in solar energy, offers
+              <span className="font-medium text-emerald-700 dark:text-emerald-400"> cost-effective </span>
+              and
+              <span className="font-medium text-emerald-700 dark:text-emerald-400"> top-notch solar solutions </span>
+              to residential, commercial and agricultural entities.
             </p>
           </div>
         </div>
+
 
         {/* Image Section */}
         <figure className="lg:w-1/2 h-[220px] sm:h-[280px] md:h-[340px] lg:h-[380px] xl:h-[440px] flex items-center justify-center bg-gray-100 rounded-r-xl border-l-2 border-[#82c701] relative">
@@ -214,7 +229,7 @@ const HomePage = () => {
                     Combines solar with battery storage and grid connection for maximum efficiency and backup power.
                   </p>
                   <div className="mt-6 text-center">
-                    <button onClick={()=>router.push("/solar-packages/solar-hybrid")}
+                    <button onClick={() => router.push("/solar-packages/solar-hybrid")}
                       className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
@@ -235,8 +250,8 @@ const HomePage = () => {
                     Reduce Your Electricity Bills with GO GREEN On-Grid System Packages
                   </p>
                   <div className="mt-6 text-center">
-                    <button onClick={()=>router.push("/solar-packages/solar-ongrid")} 
-                    className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
+                    <button onClick={() => router.push("/solar-packages/solar-ongrid")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
                   </div>
@@ -256,7 +271,7 @@ const HomePage = () => {
                     Net Metering in Pakistan
                   </p>
                   <div className="mt-6 text-center">
-                    <button onClick={()=>router.push("/services/net-metering")}
+                    <button onClick={() => router.push("/services/net-metering")}
                       className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
@@ -270,7 +285,7 @@ const HomePage = () => {
 
       <Calltoexpert />
       <StatsSection />
-      
+
       <div className="my-10">
         <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
           Our Project Work Flow Process
@@ -411,7 +426,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* <ApplicationForm /> */}
       <GetQuoteModal />
 

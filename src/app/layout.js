@@ -1,8 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
-import  AdminRouteChecker from '../app/AdminRouteChecker'
+import AdminRouteChecker from '../app/AdminRouteChecker'
+import { ThemeProvider } from '../context/ThemeContext'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,15 +23,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+
         <link sizes="192x192" rel="icon" type="image/png" href="/companylogo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
-       >
-        <AdminRouteChecker>
-          {children}
-        </AdminRouteChecker>
+      >
+        <ThemeProvider>
+          <AdminRouteChecker>
+            {children}
+          </AdminRouteChecker>
+        </ThemeProvider>
 
       </body>
     </html>
