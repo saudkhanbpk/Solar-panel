@@ -331,7 +331,7 @@ const SolarSystemForm = () => {
         </button>
       </form>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
         {packages?.map((pkg) => (
           <div
             key={pkg._id}

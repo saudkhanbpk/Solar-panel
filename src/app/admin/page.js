@@ -152,52 +152,126 @@ const Page = () => {
       </header>
 
       {/* Sidebar */}
-      <div
-        className={`${isSidebarOpen ? 'block' : 'hidden'} md:block fixed md:relative inset-0 z-50 md:z-auto w-64 bg-[#6AAF02] text-white md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto`}
-        style={{ height: isMobile ? '100vh' : 'auto' }}
-      >
-
-        <div className="p-4 border-b border-green-700 hidden md:block">
-          <h1 className="text-xl font-bold text-green-700 ">GO GREEN </h1>
-          <p className=" text-sm">Dashboard</p>
-        </div>
-        <nav className="p-4">
-          <ul>
-            <li className="mb-2">
-              <button
-                onClick={() => handleTabChange('dashboard')}
-                className={`w-full text-left p-2 rounded ${activeTab === 'dashboard' ? 'bg-[#4D8F00]' : 'hover:bg-green-700'}`}
-              >
-                <i className="fas fa-tachometer-alt mr-2"></i> Dashboard
-              </button>
-            </li>
-            <li className="mb-2">
-              <button
-                onClick={() => handleTabChange('packages')}
-                className={`w-full text-left p-2 rounded ${activeTab === 'packages' ? 'bg-[#4D8F00]' : 'hover:bg-green-700'}`}
-              >
-                <i className="fas fa-box mr-2"></i> Packages
-              </button>
-            </li>
-            <li className="mb-2">
-              <button
-                onClick={() => handleTabChange('orders')}
-                className={`w-full text-left p-2 rounded ${activeTab === 'orders' ? 'bg-[#4D8F00]' : 'hover:bg-green-700'}`}
-              >
-                <i className="fas fa-shopping-cart mr-2"></i> Orders
-              </button>
-            </li>
-            <li className="mb-2">
-              <button
-                onClick={() => handleTabChange('FAQ')}
-                className={`w-full text-left p-2 rounded ${activeTab === 'FAQ' ? 'bg-[#4D8F00]' : 'hover:bg-green-700'}`}
-              >
-                <i className="fas fa-users mr-2"></i> FAQS
-              </button>
-            </li>
-          </ul>
-        </nav>
+      <div         
+  className={`${isSidebarOpen ? 'block' : 'hidden'} md:block fixed md:relative inset-0 z-50 md:z-auto w-64 bg-gradient-to-br from-[#82c701] via-[#6AAF02] to-[#4d8f00] text-white md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto shadow-2xl`}         
+  style={{ height: isMobile ? '100vh' : 'auto' }}       
+>          
+  <div className="p-6 border-b border-white/20 hidden md:block backdrop-blur-sm bg-white/5">
+    <div className="flex items-center space-x-3">
+      <div className="w-12 h-12 bg-white/90 rounded-xl flex items-center justify-center shadow-lg">
+        <svg className="w-7 h-7 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+        </svg>
       </div>
+      <div>
+        <h1 className="text-xl font-bold text-white drop-shadow-sm">GO GREEN</h1>
+        <p className="text-green-100 text-sm">Dashboard</p>
+      </div>
+    </div>
+  </div>
+  
+  <nav className="p-6">
+    <ul className="space-y-3">
+      <li>
+        <button
+          onClick={() => handleTabChange('dashboard')}
+          className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${
+            activeTab === 'dashboard' 
+              ? 'bg-white text-[#82c701] shadow-lg transform scale-105' 
+              : 'hover:bg-white/10 hover:translate-x-2 hover:shadow-md'
+          }`}
+        >
+          <div className={`p-2 rounded-lg transition-colors ${
+            activeTab === 'dashboard' ? 'bg-[#82c701]/10' : 'group-hover:bg-white/10'
+          }`}>
+            <i className="fas fa-tachometer-alt text-lg"></i>
+          </div>
+          <span>Dashboard</span>
+          {activeTab === 'dashboard' && (
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#82c701] rounded-r-full"></div>
+          )}
+        </button>
+      </li>
+      
+      <li>
+        <button
+          onClick={() => handleTabChange('packages')}
+          className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${
+            activeTab === 'packages' 
+              ? 'bg-white text-[#82c701] shadow-lg transform scale-105' 
+              : 'hover:bg-white/10 hover:translate-x-2 hover:shadow-md'
+          }`}
+        >
+          <div className={`p-2 rounded-lg transition-colors ${
+            activeTab === 'packages' ? 'bg-[#82c701]/10' : 'group-hover:bg-white/10'
+          }`}>
+            <i className="fas fa-box text-lg"></i>
+          </div>
+          <span>Packages</span>
+          <span className={`ml-auto px-2 py-1 text-xs rounded-full font-semibold ${
+            activeTab === 'packages'
+              ? 'bg-[#82c701] text-white'
+              : 'bg-white/20 text-white'
+          }`}>
+            New
+          </span>
+          {activeTab === 'packages' && (
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#82c701] rounded-r-full"></div>
+          )}
+        </button>
+      </li>
+      
+      <li>
+        <button
+          onClick={() => handleTabChange('orders')}
+          className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${
+            activeTab === 'orders' 
+              ? 'bg-white text-[#82c701] shadow-lg transform scale-105' 
+              : 'hover:bg-white/10 hover:translate-x-2 hover:shadow-md'
+          }`}
+        >
+          <div className={`p-2 rounded-lg transition-colors ${
+            activeTab === 'orders' ? 'bg-[#82c701]/10' : 'group-hover:bg-white/10'
+          }`}>
+            <i className="fas fa-shopping-cart text-lg"></i>
+          </div>
+          <span>Orders</span>
+          {activeTab === 'orders' && (
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#82c701] rounded-r-full"></div>
+          )}
+        </button>
+      </li>
+      
+      <li>
+        <button
+          onClick={() => handleTabChange('FAQ')}
+          className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${
+            activeTab === 'FAQ' 
+              ? 'bg-white text-[#82c701] shadow-lg transform scale-105' 
+              : 'hover:bg-white/10 hover:translate-x-2 hover:shadow-md'
+          }`}
+        >
+          <div className={`p-2 rounded-lg transition-colors ${
+            activeTab === 'FAQ' ? 'bg-[#82c701]/10' : 'group-hover:bg-white/10'
+          }`}>
+            <i className="fas fa-users text-lg"></i>
+          </div>
+          <span>FAQS</span>
+          {activeTab === 'FAQ' && (
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#82c701] rounded-r-full"></div>
+          )}
+        </button>
+      </li>
+    </ul>
+  </nav>
+  
+  {/* Decorative Elements */}
+  <div className="absolute top-20 right-6 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
+  <div className="absolute bottom-20 left-6 w-12 h-12 bg-white/5 rounded-full blur-lg"></div>
+  
+  {/* Bottom Gradient Overlay */}
+  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#4d8f00]/20 to-transparent pointer-events-none"></div>
+</div>
 
       {/* Overlay for mobile when sidebar is open */}
       {isSidebarOpen && isMobile && (
@@ -225,7 +299,7 @@ const Page = () => {
               {/* Profile Button */}
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center space-x-2 bg-blue-700 hover:bg-blue-800 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="flex items-center space-x-2 px-3 py-2 "
               >
                 {/* User Avatar */}
                 <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
@@ -261,19 +335,6 @@ const Page = () => {
 
                   {/* Menu Items */}
                   <div className="py-2">
-                    {/* <button
-                      onClick={() => {
-                        router.push("/profile");
-                        setIsDropdownOpen(false);
-                      }}
-                      className="flex items-center w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                    >
-                      <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                      </svg>
-                      Your Profile
-                    </button> */}
-
                     <button
                       onClick={() => {
                         router.push("/change-password");
@@ -414,7 +475,7 @@ const Page = () => {
           )}
 
           {activeTab === 'packages' && (
-            <div>
+            <div >
               <SolarSystemForm />
             </div>
           )}
