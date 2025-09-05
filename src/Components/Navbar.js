@@ -66,7 +66,6 @@ export default function Navbar() {
       ],
     },
     { name: 'Projects', path: '/projects' },
-    { name: 'Deshboard', path: '/admin' },
   ];
 
   return (
