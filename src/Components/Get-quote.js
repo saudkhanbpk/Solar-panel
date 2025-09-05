@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import swal from 'sweetalert';
 
 export default function GetQuoteModal() {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function GetQuoteModal() {
         }));
     };
 
-      const validateForm = () => {
+    const validateForm = () => {
         let newErrors = {};
 
         if (!formData.phone.trim()) {
@@ -43,7 +44,7 @@ export default function GetQuoteModal() {
     };
 
     const handleSubmit = async () => {
-         if (!validateForm()) return; 
+        if (!validateForm()) return;
         try {
             const res = await fetch("/api/quote", {
                 method: "POST",
@@ -56,7 +57,13 @@ export default function GetQuoteModal() {
             const data = await res.json();
 
             if (res.ok) {
-                alert("✅ " + data.message);
+                swal({
+                    title: "Good job!",
+                    text: "FORM Submitted successfully!",
+                    icon: "success",
+                    button: true,
+                    // timer: 2000
+                })
                 setIsOpen(false);
                 setFormData({
                     name: "",
@@ -68,7 +75,12 @@ export default function GetQuoteModal() {
                 });
                 setErrors({});
             } else {
-                alert("❌ " + data.error);
+                swal({
+                    title: "Error!",
+                    text: data.error || "Something went wrong.",
+                    icon: "error",
+                    button: "OK",
+                });
             }
         } catch (error) {
             console.error("Error submitting quote:", error);
@@ -167,7 +179,7 @@ export default function GetQuoteModal() {
                                 onChange={handleInputChange}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
-                             {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                         </div>
                     </div>
 

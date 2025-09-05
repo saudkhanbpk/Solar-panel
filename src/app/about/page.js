@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-green-50">
       {/* Hero Section */}
-      <div className="relative w-full h-[300px] md:h-[500px] lg:h-[700px]">
+      <div className="relative w-full h-[300px] ">
         <Image
           src="/About.png"
           alt="About"

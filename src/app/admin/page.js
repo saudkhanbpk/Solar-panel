@@ -6,6 +6,7 @@ import SolarSystemForm from '../../Components/admin/pakagesform'
 import { Trash2 } from "lucide-react";
 import { calculateOrdersGrowth } from "../../Components/calculatordergrowth";
 import AdminFaqs from "../../Components/admin/insertfaq"
+import UploadPic from '../../Components/admin/uploadpic'
 
 
 const Page = () => {
@@ -253,6 +254,24 @@ const Page = () => {
                 )}
               </button>
             </li>
+            <li>
+              <button
+                onClick={() => handleTabChange('Project')}
+                className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${activeTab === 'Project'
+                  ? 'bg-white text-[#82c701] shadow-lg transform scale-105'
+                  : 'hover:bg-white/10 hover:translate-x-2 hover:shadow-md'
+                  }`}
+              >
+                <div className={`p-2 rounded-lg transition-colors ${activeTab === 'Project' ? 'bg-[#82c701]/10' : 'group-hover:bg-white/10'
+                  }`}>
+                  <i className="fas fa-users text-lg"></i>
+                </div>
+                <span>Project</span>
+                {activeTab === 'Project' && (
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#82c701] rounded-r-full"></div>
+                )}
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -279,12 +298,6 @@ const Page = () => {
         <header className="bg-white shadow-sm p-4 flex justify-between items-center">
           <h2 className="text-xl font-semibold capitalize">{activeTab}</h2>
           <div className="flex items-center space-x-4">
-            {/* <button
-              onClick={() => handleTabChange('packages')}
-              className="bg-green-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-green-700 text-sm md:text-base"
-            >
-              <i className="fas fa-plus mr-2"></i> Add New
-            </button> */}
 
             <div className="relative">
               {/* Profile Button */}
@@ -549,6 +562,10 @@ const Page = () => {
             <div className="bg-white p-4 md:p-6 rounded-lg shadow">
               <AdminFaqs />
             </div>
+          )}
+
+          {activeTab === 'Project' && (
+            <UploadPic />
           )}
         </main>
       </div>

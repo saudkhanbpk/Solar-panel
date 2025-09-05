@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import swal from 'sweetalert';
 
 const CATEGORIES = ["industrial", "commercial", "agriculture", "net-metering", "Filling station"];
 
@@ -40,7 +41,13 @@ export default function AdminFaqs() {
             });
             const data = await res.json();
             if (data.success) {
-                setMsg("✅ FAQ added successfully");
+                swal({
+                    title: "Good job!",
+                    text: "FAQ added successfully!",
+                    icon: "success",
+                    button: true,
+                    // timer: 2000
+                })
                 setForm({ question: "", answer: "", category: "", order: 0, isPublished: true });
                 fetchFaqs();
             } else {
@@ -66,14 +73,28 @@ export default function AdminFaqs() {
     };
 
     const deleteFaq = async (id) => {
-        if (!confirm("Are you sure you want to delete this FAQ?")) return;
+        const willDelete = await swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this FAQ!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        });
+
+        if (!willDelete) return;
         try {
             const res = await fetch(`/api/faq/${id}`, {
                 method: "DELETE",
             });
             const data = await res.json();
             if (data.success) {
-                setMsg("✅ FAQ deleted");
+                swal({
+                    title: "Good job!",
+                    text: "FAQ Deleted successfully!",
+                    icon: "success",
+                    button: true,
+                    // timer: 2000
+                })
                 fetchFaqs();
             } else {
                 setMsg("❌ Failed to delete");

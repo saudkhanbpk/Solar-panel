@@ -149,24 +149,28 @@ const HomePage = () => {
 
       <div className="FAQ">
         <div className="flex flex-col items-center justify-center text-center p-6">
-          <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 px-2 mb-4">
-            <b className='text-[#82c701]'>GO GREEN POWER WITH SUN</b> – Your Reliable Partner for Solar Solutions
+          <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white px-2 mb-4">
+            <b className="text-[#82c701]">GO GREEN</b> – Your Reliable Partner for Solar Solutions
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-600">
+          <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
             Leading the Way – A Pioneer in Pakistan's Solar Industry
           </p>
         </div>
+
         <div className="FAQ-content">
           <div className="max-w-6xl mx-auto px-4 py-16">
             <div className="flex flex-col md:flex-row gap-10">
               {/* Questions Box */}
-              <div className="w-full md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-sm">
+              <div className="w-full md:w-1/2 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
                 <div className="space-y-4">
                   {faqs.map((faq, index) => (
                     <div
                       key={index}
                       onClick={() => setActiveIndex(index)}
-                      className={`p-4 cursor-pointer rounded-md transition-all ${activeIndex === index ? 'bg-[#82c701] text-white' : 'bg-white hover:bg-gray-100'}`}
+                      className={`p-4 cursor-pointer rounded-md transition-all ${activeIndex === index
+                        ? 'bg-[#82c701] text-white'
+                        : 'bg-white dark:bg-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600'
+                        }`}
                     >
                       {faq.question}
                     </div>
@@ -175,25 +179,31 @@ const HomePage = () => {
               </div>
 
               {/* Divider - Hidden on mobile */}
-              <div className="hidden md:block border-l border-gray-200"></div>
+              <div className="hidden md:block border-l border-gray-200 dark:border-gray-600"></div>
 
               {/* Answers Box */}
-              <div className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-                <div className="p-6 bg-gray-50 rounded-md min-h-[240px] flex items-center">
-                  <p className="text-gray-700 text-lg">{faqs[activeIndex].answer}</p>
+              <div className="w-full md:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600">
+                <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-md min-h-[240px] flex items-center">
+                  <p className="text-gray-700 dark:text-gray-200 text-lg">
+                    {faqs[activeIndex].answer}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
       <div className="brand">
-        <h1 className='text-center text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 px-2 mb-8'>Top Brands We Trust for Your Solar System Needs</h1>
+        <h1 className="text-center text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 px-2 mb-8">
+          Top Brands We Trust for Your Solar System Needs
+        </h1>
         <div className="trustedbrand">
-          <div className="w-full p-6 bg-white rounded-xl shadow-sm mt-10">
-            <h2 className="text-3xl font-bold mb-6 text-center">Our Services Grid</h2>
-
+          <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm mt-10">
+            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
+              Our Services Grid
+            </h2>
             <CustomSlider settings={gridSliderSettings}>
               {images.map((item) => (
                 <div key={`grid-${item}`} className="px-2 mt-2 mb-2">
@@ -212,7 +222,7 @@ const HomePage = () => {
       </div>
 
       <div className="solution">
-        <h1 className='text-center text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 px-2 mb-10'>SOLAR SOLUTION</h1>
+        <h1 className='text-center text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white px-2 mb-10'>SOLAR SOLUTION</h1>
         <div className='card'>
           <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -287,10 +297,10 @@ const HomePage = () => {
       <StatsSection />
 
       <div className="my-10">
-        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
           Our Project Work Flow Process
         </h2>
-        <p className="text-gray-600 text-lg md:text-xl mb-8 text-center">
+        <p className="text-gray-600 dark:text-white text-lg md:text-xl mb-8 text-center">
           How We Work
         </p>
 
@@ -307,7 +317,7 @@ const HomePage = () => {
       </div>
 
       <div className="my-12">
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-8'>Clients' Reviews</h1>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center dark:text-white text-gray-800 mb-8'>Clients' Reviews</h1>
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
@@ -358,19 +368,19 @@ const HomePage = () => {
               </div>
               <div className="px-8 pb-6">
                 <ul className="space-y-4 text-center">
-                  <li className="flex items-center justify-center gap-3 text-lg">
+                  <li className="flex items-center justify-center gap-3 text-lg dark:text-gray-200">
                     <svg className="w-6 h-6 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                     Hassle-Free Process
                   </li>
-                  <li className="flex items-center justify-center gap-3 text-lg">
+                  <li className="flex items-center justify-center gap-3 text-lg dark:text-gray-200">
                     <svg className="w-6 h-6 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                     Fast Application Approvals
                   </li>
-                  <li className="flex items-center justify-center gap-3 text-lg">
+                  <li className="flex items-center justify-center gap-3 text-lg dark:text-gray-200">
                     <svg className="w-6 h-6 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
@@ -397,19 +407,19 @@ const HomePage = () => {
               </div>
               <div className="px-8 pb-6">
                 <ul className="space-y-4 text-center">
-                  <li className="flex items-center justify-center gap-3 text-lg">
+                  <li className="flex items-center justify-center gap-3 text-lg dark:text-gray-200">
                     <svg className="w-6 h-6 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                     0% Mark-Up Rate
                   </li>
-                  <li className="flex items-center justify-center gap-3 text-lg">
+                  <li className="flex items-center justify-center gap-3 text-lg dark:text-gray-200">
                     <svg className="w-6 h-6 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                     EMI Plan 6 months to 1 year
                   </li>
-                  <li className="flex items-center justify-center gap-3 text-lg">
+                  <li className="flex items-center justify-center gap-3 text-lg dark:text-gray-200">
                     <svg className="w-6 h-6 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
@@ -456,7 +466,7 @@ const HomePage = () => {
           ))}
         </CustomSlider>
       </div>
-    </div>
+    </div >
   );
 };
 

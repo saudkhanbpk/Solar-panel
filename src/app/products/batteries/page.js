@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className="bg-white text-gray-800">
       {/* Cover Section */}
-      <div className="flex justify-center text-center items-center bg-[url(/Cover-SolarBatteries.png)] bg-cover bg-center h-64">
+      <div className="flex justify-center text-center items-center bg-[url(/Cover-SolarBatteries.png)] bg-cover bg-center w-full h-[300px] ">
       </div>
 
       {/* Intro Section */}
