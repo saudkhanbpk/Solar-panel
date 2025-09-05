@@ -8,9 +8,9 @@ const page = () => {
 
       {/* Hero Section */}
       <div className="bg-[url(/solar.jpg)] bg-cover bg-center p-6 shadow-md">
-        <h1 className="text-center font-extrabold text-4xl md:text-5xl mb-6 p-4 text-[#82C701] drop-shadow-lg">
+        {/* <h1 className="text-center font-extrabold text-4xl md:text-5xl mb-6 p-4 text-[#82C701] drop-shadow-lg">
           10kW Solar System Price in Pakistan
-        </h1>
+        </h1> */}
         <div className="flex items-center justify-center">
           <DomasticCards />
         </div>
@@ -41,7 +41,7 @@ const page = () => {
                 <p className="text-gray-700 leading-relaxed">
                   A 10kW solar system produces about 40–45 kWh (units) of electricity per day...
                 </p>
-                <img src="image/logo" alt="image" className="my-4 rounded-lg shadow-md" />
+                {/* <img src="image/logo" alt="image" className="my-4 rounded-lg shadow-md" /> */}
                 <p className="text-gray-700 leading-relaxed">
                   This capacity is ideal for families or businesses with high energy usage...
                 </p>

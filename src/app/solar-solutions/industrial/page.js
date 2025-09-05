@@ -2,14 +2,31 @@ import React from 'react'
 import Calltoexpert from '../../../Components/Calltoexpert'
 import Appointment from '../../../Components/domasticcards/Appointment'
 import FAQ from '../../../Components/FAQ'
+import Image from 'next/image'
 
 const page = () => {
     return (
         <div className="bg-gray-50">
-            {/* Cover Section */}
-            <div className="flex justify-center text-center items-center bg-[url(/Cover-Industrial.png)] bg-cover bg-center h-64">
-            </div>
-
+          
+              <div className="flex justify-center items-center w-full h-64 text-center relative">
+                    {/* Mobile Image */}
+                    <Image
+                      src="/Cover-Industrial-mob.png"
+                      alt="industrial Mobile"
+                      fill
+                      priority
+                      className="object-cover object-left-top md:hidden"
+                    />
+              
+                    {/* Desktop / Tablet Image */}
+                    <Image
+                      src="/Cover-Industrial.png"
+                      alt="Industrial Desktop"
+                      fill
+                      priority
+                      className="object-cover object-center hidden md:block"
+                    />
+                  </div>
             {/* Intro Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <h1 className="text-center text-3xl md:text-4xl font-bold text-[#082E6F] mb-8 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-6">

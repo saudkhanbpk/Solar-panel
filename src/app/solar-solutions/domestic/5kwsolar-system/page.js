@@ -29,7 +29,7 @@ const page = () => {
                 <p className="text-gray-700 leading-relaxed">
                   A 5kW solar panel system refers to a system that produces around 20 kWh of electricity per day...
                 </p>
-                <img src="" alt="image" className="my-4 rounded-lg shadow-md  " />
+                {/* <img src="" alt="image" className="my-4 rounded-lg shadow-md  " /> */}
                 <p className="text-gray-700 leading-relaxed">
                   A 5kW system is capable of powering most household appliances...
                 </p>

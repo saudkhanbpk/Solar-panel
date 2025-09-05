@@ -2,12 +2,31 @@
 import React from 'react'
 import Calltoexpert from '../../../Components/Calltoexpert'
 import GetQuoteModal from '../../../Components/Get-quote';
+import Image from 'next/image';
+
 const page = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="flex justify-center text-center items-center bg-[url(/solarpanel.png)] bg-cover bg-center h-64">
-      </div>
+       <div className="flex justify-center items-center w-full h-64 text-center relative">
+                    {/* Mobile Image */}
+                    <Image
+                      src="/Cover-Solar-Panels-mob.png"
+                      alt="solar panel Mobile"
+                      fill
+                      priority
+                      className="object-cover object-left-top md:hidden"
+                    />
+              
+                    {/* Desktop / Tablet Image */}
+                    <Image
+                      src="/solarpanel.png"
+                      alt="On gride Desktop"
+                      fill
+                      priority
+                      className="object-cover object-center hidden md:block"
+                    />
+                  </div>
 
       {/* Intro Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>

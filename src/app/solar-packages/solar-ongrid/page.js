@@ -1,12 +1,31 @@
 import React from 'react'
 import SolarPackageCards from '../../../Components/SolarSystemCard'
+import Image from 'next/image'
+
 
 const Solar = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-green-50">
-      {/* Hero Section */}
-      <div className="flex justify-center text-center items-center bg-[url(/on-gride.png)] bg-cover bg-center h-64 relative"> </div>
-
+      {/* Hero Section */}  
+         <div className="flex justify-center items-center w-full h-64 text-center relative">
+              {/* Mobile Image */}
+              <Image
+                src="/Cover-On-grid-Mobile.png"
+                alt="ON gride Mobile"
+                fill
+                priority
+                className="object-cover object-left-top md:hidden"
+              />
+        
+              {/* Desktop / Tablet Image */}
+              <Image
+                src="/on-gride.png"
+                alt="On gride Desktop"
+                fill
+                priority
+                className="object-cover object-center hidden md:block"
+              />
+            </div>
       {/* Intro Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-center text-3xl font-bold text-[#082E6F] mb-8 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-4">

@@ -1,28 +1,48 @@
 import React from 'react'
 import Calltoexpert from '../../../Components/Calltoexpert'
 import FAQ from '../../../Components/FAQ'
+import Image from 'next/image';
 
 const page = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <div className="flex justify-center bg-[url(/Cover-Net-meter.png)] bg-cover bg-center h-[60vh]" />
+      <div className="flex justify-center items-center w-full h-64 text-center relative">
+        {/* Mobile Image */}
+        <Image
+          src="/Cover-Net-Metering-mob.png"
+          alt="Net Metering Mobile"
+          fill
+          priority
+          className="object-cover object-left-top md:hidden"
+        />
+
+        {/* Desktop / Tablet Image */}
+        <Image
+          src="/Cover-Net-meter.png"
+          alt="Net Metering Desktop"
+          fill
+          priority
+          className="object-cover object-center hidden md:block"
+        />
+      </div>
+
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
+
         {/* Title */}
         <h1 className="text-center text-3xl md:text-4xl font-bold text-[#082E6F] mb-12 border-l-4 border-r-4 border-[#82C701] py-4 mx-auto max-w-lg">
-          NET METERING IN PAKISTAN 
+          NET METERING IN PAKISTAN
         </h1>
-        
+
         {/* Introduction */}
         <div className="space-y-6 text-gray-700 text-lg leading-relaxed mb-16">
           <p>
             Everyone wants to get maximum benefits out of their solar panels and pay very little or no electricity bill, right? But the question is how is this possible?
           </p>
           <p>
-            Well, one of the easiest way to achieve this is by adding net metering to your existing solar system. 
+            Well, one of the easiest way to achieve this is by adding net metering to your existing solar system.
           </p>
           <p>
             So, you wonder how does the system work and provide benefit to its customers?
@@ -39,7 +59,7 @@ const page = () => {
         </div>
 
         <Calltoexpert />
-        
+
         {/* How Net Metering Works */}
         <div className="my-16">
           <h1 className="text-center text-3xl md:text-4xl font-bold text-[#082E6F] mb-12 border-l-4 border-r-4 border-[#82C701] py-4 mx-auto max-w-lg">
@@ -67,7 +87,7 @@ const page = () => {
                 it's just one that checks both the import and export of electricity.
               </p>
             </div>
-            
+
             {/* Right Side - Image */}
             <div className="md:w-1/2 flex justify-center">
               <img
@@ -78,13 +98,13 @@ const page = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Compensation Methods */}
         <div className="my-16">
           <h1 className="text-center text-3xl md:text-4xl font-bold text-[#082E6F] mb-12 border-l-4 border-r-4 border-[#82C701] py-4 mx-auto max-w-lg">
             COMPENSATION METHODS
           </h1>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
               <h3 className="text-2xl font-bold text-[#082E6F] mb-6 pb-2 border-b-2 border-[#82C701]">NET BILLING</h3>
@@ -92,7 +112,7 @@ const page = () => {
                 In most cases, the power company will use this method to compensate the user. This process works just like your monthly electricity bill; at the end of each billing cycle, your electricity meter readings are compared. And you are only charged for the net difference between the electricity you consumed from the grid and the surplus you fed back.
               </p>
             </div>
-            
+
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
               <h3 className="text-2xl font-bold text-[#082E6F] mb-6 pb-2 border-b-2 border-[#82C701]">FEED-IN TARIFF</h3>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -101,34 +121,34 @@ const page = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Go Green Net Metering Process */}
         <div className="my-16">
           <h1 className="text-center text-3xl md:text-4xl font-bold text-[#082E6F] mb-12 border-l-4 border-r-4 border-[#82C701] py-4 mx-auto max-w-lg">
             GO GREEN NET METERING PROCESS
           </h1>
-          
+
           <div className="bg-white p-8 rounded-xl shadow-md mb-10">
             <p className="text-gray-700 text-lg leading-relaxed mb-8">
               Net metering is an incredible device that lets you share surplus energy with the power grid. Here's how it works: when you produce more electricity than you require during the day, the excess power is sent back to the grid. Then, during nighttime when your solar panels aren't generating electricity, you can draw energy from the grid using the credits earned from your exported energy, effectively reducing your costs. With a properly installed system, you can generate sufficient solar energy to meet all of your electricity needs throughout the year, eliminating the need to pay electricity bills. It's a fantastic way to both save money and contribute to a greener future.
             </p>
-            
+
             <div>
-              <img 
-                src="/Net-Metering-Process.png" 
-                alt="net meter process" 
-                className="mx-auto rounded-lg shadow-lg max-w-full" 
+              <img
+                src="/Net-Metering-Process.png"
+                alt="net meter process"
+                className="mx-auto rounded-lg shadow-lg max-w-full"
               />
             </div>
           </div>
         </div>
-        
+
         {/* Benefits Section */}
         <div className="my-16">
           <h1 className="text-center text-3xl md:text-4xl font-bold text-[#082E6F] mb-6">
             BENEFITS OF INSTALLING NET METERING IN PAKISTAN
           </h1>
-          
+
           <p className="text-center text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             The benefits you will have after having installed a net meter in your home are numerous.
           </p>
@@ -172,7 +192,7 @@ const page = () => {
 
         {/* FAQ */}
         <div className="items-center">
-          <FAQ  category="net-metering"/>
+          <FAQ category="net-metering" />
         </div>
       </div>
     </div>
