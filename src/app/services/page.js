@@ -45,14 +45,18 @@ const Page = () => {
               EPC (Engineering, Procurement, Construction)
             </h3>
             <p className="text-gray-600 text-sm mb-3">
-              We provide complete EPC solutions where our engineers design solar systems
-              with precision, ensuring efficiency, reliability, and long-term performance.
+              We offer complete EPC solutions, delivering end-to-end services for solar
+              projects across <b>industrial, commercial, agricultural, and domestic</b> sectors.
+              Our engineers design each system with precision to ensure maximum efficiency,
+              reliability, and long-term performance.
             </p>
             <p className="text-gray-600 text-sm">
-              From sourcing top-quality equipment to safe construction and after-support,
-              we deliver turnkey solar projects on time with guaranteed results.
+              From sourcing premium equipment to safe construction, testing, and ongoing
+              support, we deliver turnkey solar projects on time—backed by guaranteed
+              quality and results.
             </p>
           </div>
+
 
 
 
@@ -91,17 +95,20 @@ const Page = () => {
           {/* Card 4 */}
           <div className="bg-white p-6 text-center rounded-2xl shadow-md hover:shadow-xl border-t-4 border-[#82C701] transition duration-300 hover:-translate-y-1">
             <h3 className="text-xl font-semibold text-[#082E6F] mb-3">
-              Solar System Cleaning
+              Solar Wheeling Services
             </h3>
             <p className="text-gray-600 text-sm mb-3">
-              Professional cleaning services to maximize sunlight absorption for
-              higher energy output.
+              Unlock the power of solar energy beyond a single site with our professional
+              <b> wheeling solutions</b>. Generate electricity at one location and seamlessly
+              consume it at another through the national grid.
             </p>
             <p className="text-gray-600 text-sm">
-              Our eco-friendly cleaning process keeps panels dirt-free and ensures
-              optimal performance year-round.
+              We handle the technical, legal, and utility coordination to ensure smooth
+              energy transfer, helping industries and businesses reduce costs, achieve
+              sustainability goals, and maximize the value of their solar investments.
             </p>
           </div>
+
         </div>
 
         <StatsSection />
@@ -269,65 +276,61 @@ const Page = () => {
 
         {/* Cleaning */}
         <h1
-          id="solar-cleaning"
+          id="solar-wheeling"
           className="scroll-mt-24 text-center text-3xl font-bold text-[#082E6F] my-8 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-sm"
         >
-          Solar System Cleaning
+          Solar Wheeling Services
         </h1>
 
         <div>
           <div className="space-y-6 text-gray-700">
+
             <div>
-              <h2 className="text-xl font-semibold text-[#82C701]">Dust Removal</h2>
+              <h2 className="text-xl font-semibold text-[#82C701]">Energy Transfer Across Locations</h2>
               <p>
-                Dust, dirt, and debris often settle on the surface of solar panels,
-                blocking sunlight and reducing energy production. Even a thin layer
-                of dust can lower efficiency by 10–20%. Our professional dust removal
-                service ensures your panels are safely and thoroughly cleaned without
-                causing scratches or damage to the glass surface. With regular cleaning,
-                you can enjoy maximum sunlight absorption, improved system performance,
-                and consistent power output throughout the year.
+                Solar wheeling enables you to generate electricity at one site and
+                consume it at another, using the national grid as the transmission
+                channel. This is especially valuable for industries, businesses,
+                and organizations with facilities spread across multiple cities.
+                With wheeling, your investment in solar power is not restricted
+                to a single location but shared across your entire operation.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-[#82C701]">Eco-Friendly Cleaning</h2>
+              <h2 className="text-xl font-semibold text-[#82C701]">Seamless Utility Coordination</h2>
               <p>
-                We prioritize sustainability by using water-efficient techniques
-                and eco-friendly cleaning solutions. Unlike harsh chemicals that
-                may damage your panels or harm the environment, our methods are
-                gentle yet effective. This ensures your solar system remains
-                protected while also reducing water waste. By choosing our
-                eco-friendly cleaning services, you not only maintain your
-                solar system’s health but also contribute positively to the
-                environment you rely on for clean energy.
+                Our team manages the complete technical and legal process, including
+                approvals, wheeling agreements, and utility coordination. We ensure
+                smooth integration with the grid, so you can focus on running your
+                business while enjoying uninterrupted access to clean energy at
+                your chosen sites. This end-to-end support simplifies a complex
+                process into a hassle-free solution.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-[#82C701]">Scheduled Services</h2>
+              <h2 className="text-xl font-semibold text-[#82C701]">Cost Savings & Reliability</h2>
               <p>
-                Consistency is key to long-term solar efficiency. That’s why we offer
-                scheduled cleaning and maintenance plans tailored to your needs.
-                Whether you prefer monthly, quarterly, or seasonal cleanings,
-                our team ensures your panels stay spotless and fully functional.
-                This proactive approach prevents energy loss, saves you the hassle
-                of irregular maintenance, and provides peace of mind knowing
-                your solar investment is always protected and performing at its best.
+                By generating power at lower-cost locations and consuming it where
+                electricity rates are higher, wheeling allows you to reduce overall
+                energy expenses. Businesses can lock in predictable solar power
+                costs, avoiding tariff fluctuations. At the same time, it ensures
+                reliability, as your energy is sourced directly from your own
+                solar generation rather than depending solely on expensive grid power.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-[#82C701]">Maximized Efficiency</h2>
+              <h2 className="text-xl font-semibold text-[#82C701]">Sustainability & Growth</h2>
               <p>
-                Clean panels capture more sunlight, which directly translates
-                into higher energy generation and greater savings on electricity bills.
-                Studies show that dirty panels can reduce output by up to 30%,
-                which means regular cleaning is essential for maximizing efficiency.
-                Our services ensure that every panel is spotless, so your solar system
-                delivers peak performance. With increased output, you not only save
-                money but also contribute more clean energy back to the grid,
-                making your investment more valuable in the long run.
+                Solar wheeling is not just about savings—it’s about creating a
+                sustainable future. By replacing fossil fuel–based electricity
+                with renewable energy across multiple facilities, your organization
+                significantly reduces its carbon footprint. This strengthens your
+                ESG (Environmental, Social, and Governance) profile and supports
+                long-term business growth while contributing to a cleaner,
+                greener Pakistan.
               </p>
             </div>
           </div>

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { PhoneIcon, ChevronDownIcon, XMarkIcon, Bars3Icon } from '@heroicons/react/24/outline';
+import path from 'path';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,16 +16,14 @@ export default function Navbar() {
 
   const navItems = [
     { name: '', path: '/' },
-    { name: 'About Us', path: '/about' },
-    {
-      name: 'Solar Packages',
-      path: '#',
-      submenu: [
-        { name: 'Solar Hybrid', path: '/solar-packages/solar-hybrid' },
-        { name: 'Solar On-Grid System', path: '/solar-packages/solar-ongrid' },
-        { name: 'Solar OFF-Grid System', path: '/solar-packages/solar-offgrid' },
-      ],
-    },
+    { name: 'About Us', path: '/about',
+      submenu:[
+        {name:'Mission', path:'/about#mission'},
+        {name:'Vision', path:'/about#vision'},
+        {name:'Team', path:'/about#team'},
+      ]
+     },
+   
     {
       name: 'Products',
       path: '#',
@@ -32,56 +31,50 @@ export default function Navbar() {
         { name: 'Solar Panels', path: '/products/solar-panels' },
         { name: 'Solar Inverters', path: '/products/inverters' },
         { name: 'Solar Batteries', path: '/products/batteries' },
+        { name: 'Solar Hybrid', path: '/products/solar-hybrid' },
+        { name: 'Solar On-Grid System', path: '/products/solar-ongrid' },
+        { name: 'Solar OFF-Grid System', path: '/products/solar-offgrid' },
       ],
     },
-    {
-      name: 'Solar Solutions',
-      path: '#',
-      submenu: [
-        { name: 'Why Solar Energy?', path: '/solar-solutions/why-solar-solution' },
-        {
-          name: 'Domestic',
-          path: '#',
-          submenu: [
-            { name: '3kW Solar System', path: '/solar-solutions/domestic/3kwsolar-system' },
-            { name: '5kW Solar System', path: '/solar-solutions/domestic/5kwsolar-system' },
-            { name: '10kW Solar System', path: '/solar-solutions/domestic/10kwsolar-system' },
-          ],
-        },
-        { name: 'Industrial ', path: '/solar-solutions/industrial' },
-        { name: 'Commercial ', path: '/solar-solutions/commercial' },
-        { name: 'Agricalture', path: '/solar-solutions/agricalture' },
+    // {
+    //   name: 'Solar Solutions',
+    //   path: '#',
+    //   submenu: [
+    //     { name: 'Why Solar Energy?', path: '/solar-solutions/why-solar-solution' },
+    //     {
+    //       name: 'Domestic',
+    //       path: '#',
+    //       submenu: [
+    //         { name: '3kW Solar System', path: '/solar-solutions/domestic/3kwsolar-system' },
+    //         { name: '5kW Solar System', path: '/solar-solutions/domestic/5kwsolar-system' },
+    //         { name: '10kW Solar System', path: '/solar-solutions/domestic/10kwsolar-system' },
+    //       ],
+    //     },
+    //     { name: 'Industrial ', path: '/solar-solutions/industrial' },
+    //     { name: 'Commercial ', path: '/solar-solutions/commercial' },
+    //     { name: 'Agricalture', path: '/solar-solutions/agricalture' },
         
-      ],
-    },
+    //   ],
+    // },
     {name:'Services',
       path:'/services',
       submenu: [
          { name: 'EPC', path: '/services#epc' },
         { name: 'Solar Consultancy', path: '/services#solar-consultancy' },  
         { name: 'Solar Maintenance', path: '/services#solar-maintenance' },
-        { name: 'Solar System Cleaning', path: '/services#solar-cleaning' },
+        { name: 'Solar Wheeling Services', path: '/services#solar-wheeling' },
         { name: 'Net Metering', path: '/services/net-metering' },
         
       ],
     },
     { name: 'Projects', path: '/projects' },
+    {
+      name:'Contact Us', path:'/contact-us'},
   ];
 
   return (
     <>
-      {/* Top Contact Bar */}
-      <div className="bg-#D7D6D6 text-#3F94DA text-sm py-4 px-4 border-t-3 border-t-green-500 border-b border-b-gray-100">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <a href="tel:+923001234567" className="flex items-center hover:text-green-200">
-              <PhoneIcon className="h-4 w-4 mr-1" /> +923322332249
-            </a>
-            <a href="" className="text-[#82c701] font-bold ">GO GREEN </a>
-          </div>
-        </div>
-      </div>
-
+    
       {/* Main Navigation */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-sm'}`}>
         <div className="container mx-auto px-4">

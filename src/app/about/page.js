@@ -21,9 +21,9 @@ const About = () => {
             </h2>
             <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-[#82C701]">
               <p className="text-gray-700 leading-relaxed text-lg">
-                <b className='text-[#82c701]'>GO GREEN</b> was established in 2022 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision for over 10 years.
+                <b className='text-[#82c701]'>GO GREEN</b> was established in 2020 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision for over 10 years.
                 <br /><br />
-                Pakistan's heavy reliance on imported fossil fuels for electricity production not only makes electricity expensive but also contributes to the pollution of an already devastated climate. Alpha Solar has always been curious about finding ways to save both money and the environment. Our solar solutions are the answer, as they not only enhance the air quality of cities like Lahore and Karachi but also enable you to generate your own electricity and save thousands of rupees every month.
+                Pakistan's heavy reliance on imported fossil fuels for electricity production not only makes electricity expensive but also contributes to the pollution of an already devastated climate. GO GREEN  has always been curious about finding ways to save both money and the environment. Our solar solutions are the answer, as they not only enhance the air quality of cities like Lahore and Karachi but also enable you to generate your own electricity and save thousands of rupees every month.
                 <br /><br />
                 We are dedicated to delivering excellent customer service. Our team is available to address your enquiries and assist you in selecting the appropriate solar solution for your requirements.
               </p>
@@ -31,12 +31,12 @@ const About = () => {
           </div>
 
           {/* Mission Section */}
-          <div className="flex flex-col md:flex-row gap-8 items-center mb-16">
+          <div id="mission" className=" scroll-mt-24 flex flex-col md:flex-row gap-8 items-center mb-16">
             <div className="md:w-1/2">
               <div className="rounded-xl overflow-hidden shadow-xl border-2 border-[#82C701]">
                 <img
-                  src="/solar.jpg"
-                  alt="Solar Installation"
+                  src="/our-mission.png"
+                  alt="mission"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -48,6 +48,35 @@ const About = () => {
               </p>
             </div>
           </div>
+
+         {/*our vision */}
+          <div id="vision" className="scroll-mt-24 flex flex-col md:flex-row gap-8 items-center mb-16">
+            <div className="md:w-1/2 bg-white p-8 rounded-xl shadow-md border-t-4 border-[#082E6F]">
+              <h2 className="text-2xl font-bold text-[#082E6F] mb-4">Our Vision</h2>
+              <p className="text-gray-700 leading-relaxed">
+                To promote the adoption of solar energy as a sustainable solution for reducing energy costs, combating global warming, and mitigating climate change caused by fossil fuel dependency. We strive to increase the share of solar energy in Pakistan’s energy mix by driving innovation and growth in the sector. Our commitment is to make solar adoption simple and convenient, enabling customers to pay less for their energy needs while ensuring high satisfaction. At the same time, we aim to give back to the community and contribute to a cleaner, brighter future for Pakistan
+              </p>
+            </div>
+             <div className="md:w-1/2">
+              <div className="rounded-xl overflow-hidden shadow-xl border-2 border-[#82C701]">
+                <img
+                  src="/our-vision.png"
+                  alt="vision"
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+          
+          <div id='team' className="scroll-mt-24 text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#082E6F] mb-4">Our Team</h2>
+            <div className="w-24 h-1 bg-[#82C701] mx-auto rounded"></div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+
+          </div>
+
+
         </div>
 
         {/* Signature Services */}

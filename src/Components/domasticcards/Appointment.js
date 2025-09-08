@@ -1,5 +1,6 @@
 'use client';
 import { React, useState } from 'react';
+import swal from 'sweetalert';
 
 const AppointmentForm = () => {
   const [errors, setErrors] = useState({});
@@ -57,7 +58,13 @@ const AppointmentForm = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("✅ " + data.message);
+        swal({
+          title: "Good job!",
+          text: "Pakage added successfully!",
+          icon: "success",
+          button: true,
+          timer: 2000
+        })
         setFormData({
           name: "",
           email: "",
@@ -68,7 +75,14 @@ const AppointmentForm = () => {
         });
         setErrors({});
       } else {
-        alert("❌ " + data.error);
+        swal({
+          title: "Error!",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+          button: true,
+          timer: 2000
+        });
+
       }
     } catch (error) {
       console.error("Error submitting quote:", error);
@@ -155,7 +169,7 @@ const AppointmentForm = () => {
           </div>
 
           <button
-            onClick={handleSubmit} 
+            onClick={handleSubmit}
             type="button"
             className="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors duration-300 uppercase tracking-wider"
           >
