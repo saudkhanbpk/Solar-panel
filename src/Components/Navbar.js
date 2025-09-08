@@ -21,6 +21,8 @@ export default function Navbar() {
         {name:'Mission', path:'/about#mission'},
         {name:'Vision', path:'/about#vision'},
         {name:'Team', path:'/about#team'},
+        {name:'Our Goals', path:'/about#our-goals'},
+        {name:'Core-Values', path:'/about#Core-value'},
       ]
      },
    

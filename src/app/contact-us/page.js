@@ -28,7 +28,7 @@ export default function Contact() {
                 📍 <span className="font-semibold">Address:</span> Islamabad, Pakistan
               </p>
               <p>
-                📞 <span className="font-semibold">Phone:</span> +92 300 1234567
+                📞 <span className="font-semibold">Phone:</span> 03322332249
               </p>
               <p>
                 📧 <span className="font-semibold">Email:</span> info@gogreen.com
