@@ -9,7 +9,7 @@ const coreValues = [
   { id: 4, icon: <FaBriefcase />, title: "We are professional in all we do", color: "bg-green-500" },
   { id: 5, icon: <FaShieldAlt />, title: "We have integrity and keep our commitments", color: "bg-green-600" },
   { id: 6, icon: <FaComments />, title: "We listen to learn and communicate effectively", color: "bg-green-400" },
-  { id: 7, icon: <FaLightbulb />, title: "We are world-class innovators", color: "bg-lime-500" },
+  { id: 7, icon: <FaLightbulb />, title: "we Grow Together  As a Team ", color: "bg-lime-500" },
   { id: 8, icon: <FaPeopleCarry />, title: "We celebrate the successes of one another", color: "bg-yellow-500" },
   { id: 9, icon: <FaTools />, title: "We take pride in our workmanship", color: "bg-yellow-600" },
   { id: 10, icon: <FaHandsHelping />, title: "We take personal ownership and responsibility", color: "bg-orange-500" },
