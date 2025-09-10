@@ -38,31 +38,12 @@ export default function Navbar() {
         { name: 'Solar OFF-Grid System', path: '/products/solar-offgrid' },
       ],
     },
-    // {
-    //   name: 'Solar Solutions',
-    //   path: '#',
-    //   submenu: [
-    //     { name: 'Why Solar Energy?', path: '/solar-solutions/why-solar-solution' },
-    //     {
-    //       name: 'Domestic',
-    //       path: '#',
-    //       submenu: [
-    //         { name: '3kW Solar System', path: '/solar-solutions/domestic/3kwsolar-system' },
-    //         { name: '5kW Solar System', path: '/solar-solutions/domestic/5kwsolar-system' },
-    //         { name: '10kW Solar System', path: '/solar-solutions/domestic/10kwsolar-system' },
-    //       ],
-    //     },
-    //     { name: 'Industrial ', path: '/solar-solutions/industrial' },
-    //     { name: 'Commercial ', path: '/solar-solutions/commercial' },
-    //     { name: 'Agricalture', path: '/solar-solutions/agricalture' },
-        
-    //   ],
-    // },
+   
     {name:'Services',
       path:'/services',
       submenu: [
          { name: 'EPC', path: '/services#epc' },
-        { name: 'Solar Consultancy', path: '/services#solar-consultancy' },  
+        { name: 'Solar Consultancy /Aduits', path: '/services#solar-consultancy' },  
         { name: 'Solar Maintenance', path: '/services#solar-maintenance' },
         { name: 'Solar Wheeling Services', path: '/services#solar-wheeling' },
         { name: 'Net Metering', path: '/services/net-metering' },

@@ -98,12 +98,12 @@ const About = () => {
           {/* Example placeholder */}
           <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
             <img
-              src="/abbas.png"
+              src="/amir.png"
               alt="Team Member"
               className="w-40 h-40 mx-auto object-contain rounded-full border-4 border-[#82C701] shadow-md"
             />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Ali Khan</h3>
-            <p className="text-sm text-gray-600 font-semibold">Project Manager</p>
+            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Amir Ali</h3>
+            <p className="text-sm text-gray-600 font-semibold">Revenue Growth Expert</p>
           </div>
 
           {/* Example placeholder */}
