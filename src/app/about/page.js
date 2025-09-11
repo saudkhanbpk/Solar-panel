@@ -109,12 +109,12 @@ const About = () => {
           {/* Example placeholder */}
           <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
             <img
-              src="/abbas.png"
+              src="/zahid.png"
               alt="Team Member"
-              className="w-40 h-40 mx-auto object-contain rounded-full border-4 border-[#82C701] shadow-md"
+              className="w-40 h-40 mx-auto object-cover rounded-full border-4 border-[#82C701] shadow-md"
             />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Bilal Ahmed</h3>
-            <p className="text-sm text-gray-600 font-semibold">Engineer</p>
+            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">M Zahid Khan</h3>
+            <p className="text-sm text-gray-600 font-semibold">IT Expert</p>
           </div>
         </div>
 
