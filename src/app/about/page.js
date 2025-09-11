@@ -21,7 +21,7 @@ const About = () => {
           </h2>
           <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-[#82C701]">
             <p className="text-gray-700 leading-relaxed text-lg">
-              <b className='text-[#82c701]'>GO GREEN</b> was established in 2020 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision for over 10 years.
+              <b className='text-[#82c701]'>GO GREEN</b> was established in 2020 with a vision to revolutionize solar energy in Pakistan by offering top-notch, technologically advanced, and affordable solar solutions to individuals and organizations. With passion, hard work, dedication, commitment, advanced resources, continuous learning, customer-centric approach and our dedication to staying up-to-date with the latest solar technologies, we've been successfully pursuing our vision.
               <br /><br />
               Pakistan's heavy reliance on imported fossil fuels for electricity production not only makes electricity expensive but also contributes to the pollution of an already devastated climate. GO GREEN  has always been curious about finding ways to save both money and the environment. Our solar solutions are the answer, as they not only enhance the air quality of cities like Lahore and Karachi but also enable you to generate your own electricity and save thousands of rupees every month.
               <br /><br />
@@ -98,12 +98,12 @@ const About = () => {
           {/* Example placeholder */}
           <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
             <img
-              src="/amir.png"
+              src="/fahree.png"
               alt="Team Member"
-              className="w-40 h-40 mx-auto object-contain rounded-full border-4 border-[#82C701] shadow-md"
+              className="w-40 h-40 mx-auto object-cover bg-white rounded-full border-4 border-[#82C701] shadow-md"
             />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Amir Ali</h3>
-            <p className="text-sm text-gray-600 font-semibold">Revenue Growth Expert</p>
+            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Fahre-Alam</h3>
+            <p className="text-sm text-gray-600 font-semibold">CEO</p>
           </div>
 
           {/* Example placeholder */}
@@ -136,7 +136,6 @@ const About = () => {
               <li>Provide affordable, cost-efficient, high-quality solar home solutions to the masses in Pakistan.</li>
               <li>Grow into a successful utility-scale EPC company delivering commercial and industrial solar solutions.</li>
               <li>Become a leading knowledge center for solar energy in Pakistan.</li>
-              <li>Support implementation of the ARET Policy 2020 targets — expanding on-grid ARET capacity (20x25 and 30x30 goals) by 2030.</li>
               <li>Contribute to national efforts to reduce greenhouse gas (GHG) emissions in Pakistan.</li>
             </ul>
           </div>

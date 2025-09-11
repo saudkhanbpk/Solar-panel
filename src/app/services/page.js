@@ -149,7 +149,7 @@ const Page = () => {
             <h2 className="text-xl font-semibold text-[#82C701]">Local Expertise</h2>
             <p>
               With years of experience in Pakistan’s solar energy sector,
-              <b className="text-[#082E6F]"> GO GREEN </b> understands the specific climate conditions,
+              <b className="text-[#82C701]"> GO GREEN </b> understands the specific climate conditions,
               local regulations, and power challenges faced by homeowners and businesses.
               Our consultancy not only analyzes your location and energy requirements
               but also provides in-depth recommendations on system sizing, panel placement,
@@ -163,7 +163,7 @@ const Page = () => {
             <p>
               From small residential rooftops to large-scale industrial solar farms,
               we have successfully delivered a wide range of projects.
-              <b className="text-[#082E6F]"> GO GREEN </b> brings technical know-how,
+              <b className="text-[#82C701]"> GO GREEN </b> brings technical know-how,
               proven methodologies, and hands-on project management to every client.
               Our experience allows us to anticipate potential challenges,
               optimize system performance, and ensure that your investment
@@ -180,7 +180,7 @@ const Page = () => {
               and carefully evaluate all equipment before recommending it.
               Every solution we propose is designed with durability,
               energy efficiency, and long-term reliability in mind.
-              <b className="text-[#082E6F]"> GO GREEN </b> ensures that you not only
+              <b className="text-[#82C701]"> GO GREEN </b> ensures that you not only
               achieve energy independence but also enjoy a sustainable,
               worry-free solar system that continues to deliver results
               year after year.
@@ -190,7 +190,7 @@ const Page = () => {
           <div>
             <h2 className="text-xl font-semibold text-[#82C701]">Customer-Centric Approach</h2>
             <p>
-              At <b className="text-[#082E6F]"> GO GREEN POWER WITH SUN </b>, our clients are at the heart of everything we do.
+              At <b className="text-[#82C701]"> GO GREEN </b>, our clients are at the heart of everything we do.
               We don’t just consult — we listen, understand, and design solutions
               tailored to your energy needs, budget, and future goals.
               Our experts guide you from the initial consultation to final installation
