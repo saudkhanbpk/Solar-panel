@@ -68,57 +68,6 @@ const About = () => {
           </div>
         </div>
 
-        <div id='team' className="scroll-mt-24 text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#082E6F] mb-4">Our Team</h2>
-          <div className="w-24 h-1 bg-[#82C701] mx-auto rounded"></div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-12 px-6 bg-gradient-to-b from-blue-50 to-green-50">
-          {/* Team Member */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
-            <img
-              src="/saud.png"
-              alt="CEO"
-              className="w-40 h-40 mx-auto object-cover rounded-full border-4 border-[#82C701] shadow-md"
-            />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Saud Khan</h3>
-            <p className="text-sm text-gray-600 font-semibold">Chief Executive Officer</p>
-          </div>
-
-          {/* Team Member */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
-            <img
-              src="/abbas.png"
-              alt="HR"
-              className="w-40 h-40 mx-auto object-contain rounded-full border-4 border-[#82C701] shadow-md"
-            />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Abbas Khan</h3>
-            <p className="text-sm text-gray-600 font-semibold">HR Manager</p>
-          </div>
-
-          {/* Example placeholder */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
-            <img
-              src="/fahree.png"
-              alt="Team Member"
-              className="w-40 h-40 mx-auto object-cover bg-white rounded-full border-4 border-[#82C701] shadow-md"
-            />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Fahre-Alam</h3>
-            <p className="text-sm text-gray-600 font-semibold">CEO</p>
-          </div>
-
-          {/* Example placeholder */}
-          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
-            <img
-              src="/zahid.png"
-              alt="Team Member"
-              className="w-40 h-40 mx-auto object-cover rounded-full border-4 border-[#82C701] shadow-md"
-            />
-            <h3 className="mt-4 text-xl font-bold text-[#082E6F]">M Zahid Khan</h3>
-            <p className="text-sm text-gray-600 font-semibold">IT Expert</p>
-          </div>
-        </div>
-
-
         <div id="our-goals" className=" scroll-mt-24 flex flex-col md:flex-row gap-8 items-center mb-16">
           <div className="md:w-1/2 pt-4">
             <div className=" rounded-xl overflow-hidden shadow-xl border-2 border-[#82C701]">
@@ -146,6 +95,56 @@ const About = () => {
       <div className='scroll-mt-24'>
         <CoreValues />
       </div>
+
+      <div id='team' className="scroll-mt-24 text-center mb-12">
+        <h2 className="text-3xl font-bold text-[#082E6F] mb-4">Our Team</h2>
+        <div className="w-24 h-1 bg-[#82C701] mx-auto rounded"></div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-12 px-6 bg-gradient-to-b from-blue-50 to-green-50">
+
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
+          <img
+            src="/fahree.png"
+            alt="Team Member"
+            className="w-40 h-40 mx-auto object-cover bg-white rounded-full border-4 border-[#82C701] shadow-md"
+          />
+          <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Fahre-Alam</h3>
+          <p className="text-sm text-gray-600 font-semibold">CEO</p>
+        </div>
+
+        {/* Team Member */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
+          <img
+            src="/saud.png"
+            alt="CEO"
+            className="w-40 h-40 mx-auto object-cover rounded-full border-4 border-[#82C701] shadow-md"
+          />
+          <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Saud Khan</h3>
+          <p className="text-sm text-gray-600 font-semibold">Chief Technical Officer (CTO)</p>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
+          <img
+            src="/zahid.png"
+            alt="Team Member"
+            className="w-40 h-40 mx-auto object-cover rounded-full border-4 border-[#82C701] shadow-md"
+          />
+          <h3 className="mt-4 text-xl font-bold text-[#082E6F]">M Zahid Khan</h3>
+          <p className="text-sm text-gray-600 font-semibold">HOD(IT)</p>
+        </div>
+
+        {/* Team Member */}
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
+          <img
+            src="/abbas.png"
+            alt="HR"
+            className="w-40 h-40 mx-auto object-contain rounded-full border-4 border-[#82C701] shadow-md"
+          />
+          <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Abbas Khan</h3>
+          <p className="text-sm text-gray-600 font-semibold">HR Manager</p>
+        </div>
+      </div>
+
 
       {/* Signature Services */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

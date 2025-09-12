@@ -20,9 +20,10 @@ export default function Navbar() {
       submenu:[
         {name:'Mission', path:'/about#mission'},
         {name:'Vision', path:'/about#vision'},
-        {name:'Team', path:'/about#team'},
-        {name:'Our Goals', path:'/about#our-goals'},
+         {name:'Our Goals', path:'/about#our-goals'},
         {name:'Core-Values', path:'/about#Core-value'},
+        {name:'Team', path:'/about#team'},
+       
       ]
      },
    

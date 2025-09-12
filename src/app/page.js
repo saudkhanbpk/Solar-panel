@@ -36,6 +36,11 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col gap-8 p-4">
+      <div className="flex flex-col items-center justify-center text-center ">
+        <h1 className="text-3xl font-extrabold text-[#082E6F] border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-lg ">
+          <b className="text-[#82c701] font-heading">GO GREEN</b> – Your Reliable Partner for Solar Solutions
+        </h1>
+      </div>
 
       <div className="card lg:card-side bg-[#EBF9EA] shadow-sm min-h-[200px] rounded-xl overflow-hidden">
         {/* Content Section */}
@@ -56,11 +61,11 @@ const HomePage = () => {
 
 
             <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed px-2">
-              <b className="text-[#82c701]">GO GREEN</b>, one of Pakistan's pioneers in solar energy, offers
+              <b className="text-[#82c701]">GO GREEN</b>, Among Pakistan’s most respected solar energy companies, offers
               <span className="font-medium text-emerald-700 dark:text-emerald-400"> cost-effective </span>
               and
-              <span className="font-medium text-emerald-700 dark:text-emerald-400"> top-notch solar solutions </span>
-              to residential, commercial and agricultural entities.
+              <span className="font-medium text-emerald-700 dark:text-emerald-400"> complete solar solutions  </span>
+              to meet every requirement
             </p>
           </div>
         </div>
@@ -79,22 +84,28 @@ const HomePage = () => {
         </figure>
       </div>
 
-      <div className="w-full p-4 bg-white rounded-xl shadow-sm mt-6">
-        <CustomSlider settings={mainSliderSettings}>
-          {mainlogo.map((item) => (
-            <div key={`main-${item}`} className="px-2 ">
-              <div className="h-40 flex items-center justify-center">
-                <img
-                  src={item}
-                  alt="Logo"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </CustomSlider>
+      <div className="brand text-center">
+        <h1 className=' text-3xl font-extrabold text-[#082E6F] mb-8 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-lg'>
+          Top Brands We Trust for Your Solar System Needs
+        </h1>
+        <div className="trustedbrand">
+          <div className="w-full  bg-white dark:bg-gray-800 rounded-xl shadow-sm ">
+            <CustomSlider settings={gridSliderSettings}>
+              {images.map((item) => (
+                <div key={`grid-${item}`} className="px-2 mt-2 mb-2">
+                  <div className="h-40 flex items-center justify-center">
+                    <img
+                      src={item}
+                      alt="Logo"
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </CustomSlider>
+          </div>
+        </div>
       </div>
-
       <div className='max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         {/* Centered Heading */}
         <div className='text-center mb-16'>
@@ -147,80 +158,6 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="FAQ">
-        <div className="flex flex-col items-center justify-center text-center p-6">
-          <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white px-2 mb-4">
-            <b className="text-[#82c701]">GO GREEN</b> – Your Reliable Partner for Solar Solutions
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
-            Leading the Way – A Pioneer in Pakistan's Solar Industry
-          </p>
-        </div>
-
-        <div className="FAQ-content">
-          <div className="max-w-6xl mx-auto px-4 py-16">
-            <div className="flex flex-col md:flex-row gap-10">
-              {/* Questions Box */}
-              <div className="w-full md:w-1/2 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
-                <div className="space-y-4">
-                  {faqs.map((faq, index) => (
-                    <div
-                      key={index}
-                      onClick={() => setActiveIndex(index)}
-                      className={`p-4 cursor-pointer rounded-md transition-all ${activeIndex === index
-                        ? 'bg-[#82c701] text-white'
-                        : 'bg-white dark:bg-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600'
-                        }`}
-                    >
-                      {faq.question}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Divider - Hidden on mobile */}
-              <div className="hidden md:block border-l border-gray-200 dark:border-gray-600"></div>
-
-              {/* Answers Box */}
-              <div className="w-full md:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600">
-                <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-md min-h-[240px] flex items-center">
-                  <p className="text-gray-700 dark:text-gray-200 text-lg">
-                    {faqs[activeIndex].answer}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="brand">
-        <h1 className="text-center text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 px-2 mb-8">
-          Top Brands We Trust for Your Solar System Needs
-        </h1>
-        <div className="trustedbrand">
-          <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm mt-10">
-            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
-              Our Services Grid
-            </h2>
-            <CustomSlider settings={gridSliderSettings}>
-              {images.map((item) => (
-                <div key={`grid-${item}`} className="px-2 mt-2 mb-2">
-                  <div className="h-40 flex items-center justify-center">
-                    <img
-                      src={item}
-                      alt="Logo"
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-                </div>
-              ))}
-            </CustomSlider>
-          </div>
-        </div>
-      </div>
-
       <div className="solution">
         <h1 className='text-center text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white px-2 mb-10'>SOLAR SOLUTION</h1>
         <div className='card'>
@@ -228,18 +165,16 @@ const HomePage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Hybrid Solution Card */}
               <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
-                <figure className="h-52 bg-gray-100 flex items-center justify-center">
-                  <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                <figure className=" h-40 bg-gray-100 flex items-center justify-center">
+                  <img src="/hybri.png" alt="" />
                 </figure>
-                <div className="card-body p-6">
+                <div className="card-body ">
                   <h3 className="text-xl font-bold text-center text-gray-800">Hybrid Solution</h3>
                   <p className="text-gray-600 text-center mt-3 text-lg">
                     Combines solar with battery storage and grid connection for maximum efficiency and backup power.
                   </p>
                   <div className="mt-6 text-center">
-                    <button onClick={() => router.push("/solar-packages/solar-hybrid")}
+                    <button onClick={() => router.push("/products/solar-hybrid")}
                       className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
@@ -249,18 +184,18 @@ const HomePage = () => {
 
               {/* Parallel Solution Card */}
               <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
-                <figure className="h-52 bg-gray-100 flex items-center justify-center">
+                <figure className="h-40 bg-gray-100 flex items-center justify-center">
                   <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                   </svg>
                 </figure>
-                <div className="card-body p-6">
+                <div className="card-body ">
                   <h3 className="text-xl font-bold text-center text-gray-800">ON-GRID SOLAR</h3>
                   <p className="text-gray-600 text-center mt-3 text-lg">
                     Reduce Your Electricity Bills with GO GREEN On-Grid System Packages
                   </p>
                   <div className="mt-6 text-center">
-                    <button onClick={() => router.push("/solar-packages/solar-ongrid")}
+                    <button onClick={() => router.push("/products/solar-ongrid")}
                       className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
                       Learn More
                     </button>
@@ -270,12 +205,12 @@ const HomePage = () => {
 
               {/* Series Solution Card */}
               <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
-                <figure className="h-52 bg-gray-100 flex items-center justify-center">
+                <figure className="h-40 bg-gray-100 flex items-center justify-center">
                   <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 6L9 17l-5-5" />
                   </svg>
                 </figure>
-                <div className="card-body p-6">
+                <div className="card-body">
                   <h3 className="text-xl font-bold text-center text-gray-800">NET-METERING</h3>
                   <p className="text-gray-600 text-center mt-3 text-lg">
                     Net Metering in Pakistan
@@ -288,19 +223,134 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
+                {/* Top Icon / Image */}
+                <figure className="h-40 bg-gray-100 flex items-center justify-center">
+                  {/* Replace this SVG with your icon */}
+                  <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18m9-9H3" />
+                  </svg>
+                </figure>
+
+                {/* Content */}
+                <div className="card-body ">
+                  <h3 className="text-xl font-bold text-center text-gray-800">
+                    Solar System Consultancy
+                  </h3>
+                  <p className="text-gray-600 text-center  text-lg">
+                    We provide expert consultancy to help you choose the best solar system according to your energy needs and budget.
+                  </p>
+                  <p className="text-gray-600 text-center  text-lg">
+                    Our guidance ensures maximum efficiency and long-term savings on your investment in renewable energy.
+                  </p>
+
+                  <div className=" text-center">
+                    <button
+                      onClick={() => router.push("/services/#consultancy")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
+                {/* Top Icon / Image */}
+                <figure className="h-40 bg-gray-100 flex items-center justify-center">
+                  {/* Replace the SVG below with an appropriate maintenance/repair icon */}
+                  <svg
+                    className="w-24 h-24 text-[#82c701]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 10h11M9 21V9m0 0V3l6 6H9z"
+                    />
+                  </svg>
+                </figure>
+
+                {/* Content */}
+                <div className="card-body">
+                  <h3 className="text-xl font-bold text-center text-gray-800">
+                    Solar System Maintenance
+                  </h3>
+                  <p className="text-gray-600 text-center  text-lg">
+                    Regular maintenance helps keep your solar system running at its best,
+                    ensuring consistent performance.
+                  </p>
+                  <p className="text-gray-600 text-center  text-lg">
+                    We provide scheduled checkups, repairs, and upgrades to extend the lifespan
+                    of your solar equipment.
+                  </p>
+
+                  <div className=" text-center">
+                    <button
+                      onClick={() => router.push("/services/#maintenance")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
+                {/* Top Icon / Image */}
+                <figure className="h-40 bg-gray-100 flex items-center justify-center">
+                  {/* Replace the SVG below with an icon that represents wheeling/grid transfer */}
+                  <svg
+                    className="w-24 h-24 text-[#82c701]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 12h3m12 0h3M12 3v18m-6-6l6 6 6-6"
+                    />
+                  </svg>
+                </figure>
+
+                {/* Content */}
+                <div className="card-body ">
+                  <h3 className="text-xl font-bold text-center text-gray-800">
+                    Solar Wheeling Services
+                  </h3>
+
+                  <p className="text-gray-600 text-center text-lg">
+                    Our <b>wheeling solutions</b> let you produce solar power at one site and use it at another through the national grid.
+                    We handle all the steps so you can transfer energy easily, cut costs and get the most from your investment.
+                  </p>
+                  <div className=" text-center">
+                    <button
+                      onClick={() => router.push("/services/#solar-wheeling")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <Calltoexpert />
+      </div>
       <StatsSection />
 
       <div className="my-10">
         <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
           Our Project Work Flow Process
         </h2>
-        <p className="text-gray-600 dark:text-white text-lg md:text-xl mb-8 text-center">
+        <p className="text-gray-600 dark:text-white font-bold text-xl md:text-2xl mb-8 text-center">
           How We Work
         </p>
 
@@ -316,7 +366,46 @@ const HomePage = () => {
         </figure>
       </div>
 
-      <div className="my-12">
+      <div className="FAQ-content">
+        <p className="mt-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-600 dark:text-gray-300">
+          Leading the Way – Advancing Pakistan’s Solar Industry
+        </p>
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="flex flex-col md:flex-row gap-10">
+            {/* Questions Box */}
+            <div className="w-full md:w-1/2 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setActiveIndex(index)}
+                    className={`p-4 cursor-pointer rounded-md transition-all ${activeIndex === index
+                      ? 'bg-[#82c701] text-white'
+                      : 'bg-white dark:bg-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600'
+                      }`}
+                  >
+                    {faq.question}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Divider - Hidden on mobile */}
+            <div className="hidden md:block border-l border-gray-200 dark:border-gray-600"></div>
+
+            {/* Answers Box */}
+            <div className="w-full md:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600">
+              <div className="p-6 bg-gray-50 dark:bg-gray-700 rounded-md min-h-[240px] flex items-center">
+                <p className="text-gray-700 dark:text-gray-200 text-lg">
+                  {faqs[activeIndex].answer}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="">
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center dark:text-white text-gray-800 mb-8'>Clients' Reviews</h1>
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -353,8 +442,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="my-12">
-        <div className="max-w-5xl mx-auto px-4 py-12 gap-6">
+      <div className="">
+        <div className="max-w-5xl mx-auto px-4 py-8 gap-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Card 1 */}
             <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 
@@ -440,7 +529,7 @@ const HomePage = () => {
       {/* <ApplicationForm /> */}
       <GetQuoteModal />
 
-      <div className="text-center px-6 py-12 md:py-16 lg:py-20 bg-white shadow-md rounded-xl max-w-7xl mx-auto my-10 md:my-14">
+      <div className="text-center  md:py-16 lg:py-20 bg-white shadow-md rounded-xl max-w-7xl mx-auto ">
         <div className="mx-auto">
           <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl text-gray-800 mb-6 md:mb-8">
             Meet Our Clients
@@ -451,7 +540,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="w-full p-6 bg-white rounded-xl shadow-sm mt-10">
+      <div className="w-full p-6 bg-white rounded-xl shadow-sm ">
         <CustomSlider settings={mainSliderSettings}>
           {mainlogo.map((item) => (
             <div key={`main-${item}`} className="px-2">
@@ -466,6 +555,7 @@ const HomePage = () => {
           ))}
         </CustomSlider>
       </div>
+      <Calltoexpert />
     </div >
   );
 };
