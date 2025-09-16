@@ -334,6 +334,35 @@ const Page = () => {
               </p>
             </div>
           </div>
+          <h1
+            id="BEeS-Solution-for-C&I"
+            className="scroll-mt-24 text-center text-3xl font-bold text-[#082E6F] my-8 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-sm"
+          >
+            BEeS Solution for C&I
+          </h1>
+          <div>
+            <div className="space-y-6 text-gray-700">
+              <h2 className="text-xl font-semibold text-[#82C701]">
+                Reliable, Flexible Energy Storage
+              </h2>
+              <p>
+                Our Battery Energy Storage System (BESS) solutions enable commercial and industrial (C&amp;I) customers to store excess solar energy and use it whenever it’s needed. By integrating advanced lithium-ion or other high-efficiency battery technologies, businesses gain reliable, flexible energy storage.
+              </p>
+              <h2 className="text-xl font-semibold text-[#82C701]">
+                Cost Savings & Energy Optimization
+              </h2>
+              <p>
+                These systems help reduce peak demand charges, lower electricity bills, and maintain uninterrupted operations during grid outages. They also optimize solar energy usage, ensuring maximum savings and better return on investment.
+              </p>
+              <h2 className="text-xl font-semibold text-[#82C701]">
+                Backup Power & Sustainability
+              </h2>
+              <p>
+                With our BESS solutions, your business benefits from reliable backup power, improved energy efficiency, and greater control over energy costs — all while achieving sustainability targets and supporting a greener future.
+              </p>
+            </div>
+
+          </div>
         </div>
 
         <Calltoexpert className='m-8 bg-none' />

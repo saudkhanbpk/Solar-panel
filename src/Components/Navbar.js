@@ -16,17 +16,18 @@ export default function Navbar() {
 
   const navItems = [
     { name: '', path: '/' },
-    { name: 'About Us', path: '/about',
-      submenu:[
-        {name:'Mission', path:'/about#mission'},
-        {name:'Vision', path:'/about#vision'},
-         {name:'Our Goals', path:'/about#our-goals'},
-        {name:'Core-Values', path:'/about#Core-value'},
-        {name:'Team', path:'/about#team'},
-       
+    {
+      name: 'About Us', path: '/about',
+      submenu: [
+        { name: 'Mission', path: '/about#mission' },
+        { name: 'Vision', path: '/about#vision' },
+        { name: 'Our Goals', path: '/about#our-goals' },
+        { name: 'Core-Values', path: '/about#Core-value' },
+        { name: 'Team', path: '/about#team' },
+
       ]
-     },
-   
+    },
+
     {
       name: 'Products',
       path: '#',
@@ -39,26 +40,29 @@ export default function Navbar() {
         { name: 'Solar OFF-Grid System', path: '/products/solar-offgrid' },
       ],
     },
-   
-    {name:'Services',
-      path:'/services',
+
+    {
+      name: 'Services',
+      path: '/services',
       submenu: [
-         { name: 'EPC', path: '/services#epc' },
-        { name: 'Solar Consultancy /Aduits', path: '/services#solar-consultancy' },  
+        { name: 'EPC', path: '/services#epc' },
+        { name: 'Solar Consultancy /Aduits', path: '/services#solar-consultancy' },
         { name: 'Solar Maintenance', path: '/services#solar-maintenance' },
         { name: 'Solar Wheeling Services', path: '/services#solar-wheeling' },
+        {name:'BEeS Solution for C&I',path:'/services#BEeS-Solution-for-C&I'},
         { name: 'Net Metering', path: '/services/net-metering' },
-        
+
       ],
     },
     { name: 'Projects', path: '/projects' },
     {
-      name:'Contact Us', path:'/contact-us'},
+      name: 'Contact Us', path: '/contact-us'
+    },
   ];
 
   return (
     <>
-    
+
       {/* Main Navigation */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-sm'}`}>
         <div className="container mx-auto px-4">

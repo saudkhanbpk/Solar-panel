@@ -39,17 +39,18 @@ const page = () => {
       </div>
 
       {/* Bifacial Section */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <h1 className='text-center text-3xl font-extrabold text-[#082E6F] pb-2.5 mb-8 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-lg'>
           Different Types of Highly Efficient Solar Panels
         </h1>
 
         <div className='flex flex-col md:flex-row gap-8 items-center'>
-          <div className='md:w-1/2'>
-            <h2 className='text-2xl font-bold text-[#082E6F] mb-4'>Bifacial solar panels</h2>
-            <p className='text-base leading-relaxed text-gray-700'>
-              Bifacial solar panels have the ability to generate electricity from both sides of the module, making them the most popular solar panels in Pakistan at the moment. They are highly efficient and produce more electricity per watt compared to other technologies in the market. While the price of bifacial solar panels in Pakistan is a bit higher than mono panels, their high production rate makes them the top choice for many.
-            </p>
+             <div className='md:w-1/2'>
+            <img
+              src="/MONOCRYSTALLINE-SOLAR.png"
+              alt="MONOCRYSTALLINE-SOLAR"
+              className='w-full h-full object-cover rounded-lg shadow-lg border-2 border-[#082E6F]'
+            />
           </div>
           <div className='md:w-1/2'>
             <img
@@ -59,29 +60,8 @@ const page = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* Mono Section */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        <div className='flex flex-col md:flex-row gap-8 items-center'>
-          <div className='md:w-1/2'>
-            <img
-              src="/MONOCRYSTALLINE-SOLAR.png"
-              alt="MONOCRYSTALLINE-SOLAR"
-              className='w-full h-full object-cover rounded-lg shadow-lg border-2 border-[#082E6F]'
-            />
-          </div>
-          <div className='md:w-1/2'>
-            <h2 className='text-2xl font-bold text-[#082E6F] mb-4'>Monocrystalline solar panels</h2>
-            <p className='text-base leading-relaxed text-gray-700'>
-              Monocrystalline solar panels, despite generating electricity from only one side facing the sun, continue to dominate the solar landscape in Pakistan due to their exceptional electricity production. Recognized for their superior efficiency, these panels feature a single crystal structure of high-purity silicon. This technology guarantees reliable and effective energy generation, making them a popular and enduring choice in the country.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Expert */}
-      <Calltoexpert />
 
       {/* Brands Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -91,12 +71,13 @@ const page = () => {
 
         {/* Canadian Solar */}
         <div className='flex flex-col md:flex-row gap-8 items-center'>
-          <div className='md:w-1/2'>
-            <h2 className='text-2xl font-bold text-[#082E6F] mb-4'>Canadian Solar Panels</h2>
-            <p className='text-base leading-relaxed text-gray-700'>
-              Bifacial solar panels have the ability to generate electricity from both sides of the module, making them the most popular solar panels in Pakistan at the moment. They are highly efficient and produce more electricity per watt compared to other technologies in the market. While the price of bifacial solar panels in Pakistan is a bit higher than mono panels, their high production rate makes them the top choice for many.
-            </p>
-          </div>
+        <div className='md:w-1/2'>
+              <img
+                src="/longisolar.png"
+                alt="Longi Solar panels"
+                className='w-full h-full object-cover rounded-lg shadow-lg border-2 border-[#082E6F]'
+              />
+            </div>
           <div className='md:w-1/2'>
             <img
               src="/canadian.png"
@@ -107,7 +88,7 @@ const page = () => {
         </div>
 
         {/* Longi Solar */}
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+        {/* <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
           <div className='flex flex-col md:flex-row gap-8 items-center'>
             <div className='md:w-1/2'>
               <img
@@ -123,15 +104,16 @@ const page = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Jinko Solar */}
         <div className='flex flex-col md:flex-row gap-8 items-center'>
-          <div className='md:w-1/2'>
-            <h2 className='text-2xl font-bold text-[#082E6F] mb-4'>Bifacial solar panels</h2>
-            <p className='text-base leading-relaxed text-gray-700'>
-              Bifacial solar panels have the ability to generate electricity from both sides of the module, making them the most popular solar panels in Pakistan at the moment. They are highly efficient and produce more electricity per watt compared to other technologies in the market. While the price of bifacial solar panels in Pakistan is a bit higher than mono panels, their high production rate makes them the top choice for many.
-            </p>
+           <div className='md:w-1/2'>
+            <img
+              src="/jasolar.png"
+              alt="JA Solar panels"
+              className='w-full h-full object-cover rounded-lg shadow-lg border-2 border-[#082E6F]'
+            />
           </div>
           <div className='md:w-1/2'>
             <img
@@ -143,7 +125,7 @@ const page = () => {
         </div>
 
         {/* JA Solar */}
-        <div className='flex flex-col md:flex-row gap-8 items-center mt-12'>
+        {/* <div className='flex flex-col md:flex-row gap-8 items-center mt-12'>
           <div className='md:w-1/2'>
             <img
               src="/jasolar.png"
@@ -157,12 +139,18 @@ const page = () => {
               Monocrystalline solar panels, despite generating electricity from only one side facing the sun, continue to dominate the solar landscape in Pakistan due to their exceptional electricity production. Recognized for their superior efficiency, these panels feature a single crystal structure of high-purity silicon. This technology guarantees reliable and effective energy generation, making them a popular and enduring choice in the country.
             </p>
           </div>
-        </div>
+        </div> */}
+         {/* Call to Expert */}
+         <div className='mt-6'>
+           <Calltoexpert />
+         </div>
+      
+
       </div>
 
       {/* CTA Button */}
       <div className="flex justify-center mb-8">
-        <div className='mt-6  text-center '>
+        <div className='  text-center '>
           <GetQuoteModal />
         </div>
       </div>

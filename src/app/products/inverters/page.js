@@ -33,7 +33,7 @@ const page = () => {
       {/* Intro Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <h1 className='text-center text-3xl font-bold text-[#082E6F] mb-8 border-l-[5px] border-r-[5px] border-[#82C701] inline-block px-6'>
-          Solar Panels
+          Solar Inverters
         </h1>
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <p>
@@ -48,8 +48,6 @@ const page = () => {
 
         </div>
       </div>
-
-      <Calltoexpert />
 
       {/* On-Grid Inverters Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -91,7 +89,7 @@ const page = () => {
         <div className='flex flex-col md:flex-row gap-8 items-center'>
           <div className='md:w-1/2'>
             <img
-              src="/HYBRID-INVERTERS.png"
+              src="/hybridinverters.png"
               alt="Hybrid inverters"
               className='w-full h-full object-cover rounded-lg shadow-lg border border-[#82C701]/20'
             />
@@ -114,7 +112,7 @@ const page = () => {
           </div>
         </div>
       </div>
-
+     <Calltoexpert />
       {/* CTA Button */}
       <div className="flex justify-center mb-8">
         <div className='mt-6 text-center '>

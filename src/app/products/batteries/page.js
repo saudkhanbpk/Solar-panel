@@ -42,7 +42,6 @@ const page = () => {
         </p>
       </div>
 
-      <Calltoexpert />
 
       {/* Trusted Brands Section - Better responsive spacing */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12'>
@@ -51,8 +50,8 @@ const page = () => {
         </h1>
 
         {/* Tubular Batteries - Improved mobile layout */}
-        <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-center mb-12 sm:mb-16'>
-          {/* Left side - Text content */}
+        {/* <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-center mb-12 sm:mb-16'>
+        
           <div className='w-full lg:w-1/2 order-2 lg:order-1'>
             <h2 className='text-xl sm:text-2xl font-bold text-[#82C701] mb-3 sm:mb-4 text-center lg:text-left'>
               TUBULAR BATTERIES
@@ -67,7 +66,6 @@ const page = () => {
             </ul>
           </div>
 
-          {/* Right side - Image */}
           <div className='w-full lg:w-1/2 order-1 lg:order-2'>
             <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
               <Image
@@ -78,11 +76,11 @@ const page = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Lithium Ion Batteries - Improved mobile layout */}
-        <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-center'>
-          {/* Left - Image */}
+        {/* <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 items-center'>
+          
           <div className='w-full lg:w-1/2'>
             <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
               <Image
@@ -94,7 +92,7 @@ const page = () => {
             </div>
           </div>
 
-          {/* Right - Content */}
+          
           <div className='w-full lg:w-1/2'>
             <h2 className='text-xl sm:text-2xl font-bold text-[#82C701] mb-3 sm:mb-4 text-center lg:text-left'>
               LITHIUM ION BATTERIES
@@ -107,8 +105,41 @@ const page = () => {
               <li>PylonTech</li>
             </ul>
           </div>
-        </div>
+        </div> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Image
+              src="/LITHIUM-ION-BATTERIES.png"
+              alt="Lithium Ion solar batteries"
+              width={600}
+              height={400}
+              className="object-cover w-full h-auto rounded-xl "
+            />
+            <Image
+              src="/L.png"
+              alt="Lithium Ion solar batteries"
+              width={600}
+              height={400}
+              className="object-cover w-full h-auto rounded-xl "
+            />
+            <Image
+              src="/containerbattery.png"
+              alt="Container battery"
+              width={600}
+              height={400}
+              className="object-cover w-full h-auto rounded-xl "
+            />
+             <Image
+              src="/residen.png"
+              alt="residen battery"
+              width={600}
+              height={400}
+              className="object-cover w-full h-auto rounded-xl "
+            />
+          </div>
+
       </div>
+
+      <Calltoexpert />
 
       {/* Button - Better responsive spacing */}
       <div className="flex justify-center mb-6 sm:mb-8 px-4">
