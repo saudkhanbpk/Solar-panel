@@ -63,7 +63,7 @@ const HomePage = () => {
       <section className="relative w-screen h-[70vh] overflow-hidden">
         {/* Background image */}
         <Image
-          src="/home.png"
+          src="/homecover.png"
           alt="Solar energy solutions"
           fill
           priority
@@ -116,7 +116,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-8 w-full max-w-7xl">
             {/* Card 1 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Domestic.png" alt="Domestic" className='h-44 w-full object-contain mx-auto' />
+              <img src="/domlogo.png" alt="Domestic" className='h-44 w-full  object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">DOMESTIC</h2>
               </div>
@@ -124,7 +124,7 @@ const HomePage = () => {
 
             {/* Card 2 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Commercial.png" alt="commercial" className='h-44 w-full object-contain mx-auto' />
+              <img src="/Commerlogo.png" alt="commercial" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">COMMERCIAL</h2>
               </div>
@@ -132,7 +132,7 @@ const HomePage = () => {
 
             {/* Card 3 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Industrial.png" alt="Industrial" className='h-44 w-full object-contain mx-auto' />
+              <img src="/Industlogo.png" alt="Industrial" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">INDUSTRIAL</h2>
               </div>
@@ -140,7 +140,7 @@ const HomePage = () => {
 
             {/* Card 4 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Agriculture.png" alt="agriculture" className='h-44 w-full object-contain mx-auto' />
+              <img src="/agrilogo.png" alt="agriculture" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">AGRICULTURE</h2>
               </div>
@@ -148,7 +148,7 @@ const HomePage = () => {
 
             {/* Card 5 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Services.png" alt="services" className='h-44 w-full object-contain mx-auto' />
+              <img src="/serlogo.png" alt="services" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">SERVICES</h2>
               </div>
