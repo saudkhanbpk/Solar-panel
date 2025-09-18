@@ -116,7 +116,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-8 w-full max-w-7xl">
             {/* Card 1 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/domlogo.png" alt="Domestic" className='h-44 w-full  object-contain mx-auto' />
+              <img src="/domlogo.png" alt="Domestic" className='h-40 w-full  object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">DOMESTIC</h2>
               </div>
@@ -124,7 +124,7 @@ const HomePage = () => {
 
             {/* Card 2 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Commerlogo.png" alt="commercial" className='h-44 w-full object-contain mx-auto' />
+              <img src="/commerlogo.png" alt="commercial" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">COMMERCIAL</h2>
               </div>
@@ -132,7 +132,7 @@ const HomePage = () => {
 
             {/* Card 3 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/Industlogo.png" alt="Industrial" className='h-44 w-full object-contain mx-auto' />
+              <img src="/industlogo.png" alt="Industrial" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">INDUSTRIAL</h2>
               </div>
@@ -148,7 +148,7 @@ const HomePage = () => {
 
             {/* Card 5 */}
             <div className="card bg-base-100 mx-auto w-64">
-              <img src="/serlogo.png" alt="services" className='h-44 w-full object-contain mx-auto' />
+              <img src="/serlogo.png" alt="services" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-5">
                 <h2 className="text-base text-center font-semibold">SERVICES</h2>
               </div>
@@ -165,7 +165,7 @@ const HomePage = () => {
               {/* Hybrid Solution Card */}
               <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
                 <figure className=" h-40 bg-gray-100 flex items-center justify-center">
-                  {/* <img src="/hycard.png" alt="" /> */}
+                  <img src="/hybcard.png" alt="" />
                   {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-20 w-20 text-[#82c701]"
