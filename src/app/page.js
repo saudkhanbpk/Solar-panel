@@ -92,11 +92,11 @@ const HomePage = () => {
             </h1>
 
             <p className="mt-4 text-gray-100 dark:text-gray-300 text-lg md:text-xl leading-relaxed px-2">
-              <b className="text-[#82c701]">GO GREEN</b>, Among Pakistan’s most respected solar energy companies, offers
-              <span className="font-medium text-emerald-200 dark:text-emerald-400"> cost-effective </span>
-              and
-              <span className="font-medium text-emerald-200 dark:text-emerald-400"> complete solar solutions </span>
-              to meet every requirement
+              <b className="text-[#82c701]">GO GREEN</b>-trusted across Pakistan for solar excellence—offers
+              <span className="font-medium text-emerald-200 dark:text-emerald-400"> smart, </span>
+              affordable, 
+              <span className="font-medium text-emerald-200 dark:text-emerald-400"> and </span>
+              complete solar solutions designed to power every need.
             </p>
           </div>
         </div>
