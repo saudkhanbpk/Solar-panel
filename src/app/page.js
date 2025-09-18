@@ -163,66 +163,79 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Hybrid Solution Card */}
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
-                <figure className=" h-40 bg-gray-100 flex items-center justify-center">
-                  <img src="/hybcard.png" alt="" />
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-20 w-20 text-[#82c701]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 3v9m0 0l-3-3m3 3l3-3m-6 6h6a9 9 0 100-18 9 9 0 000 18z"
-                    />
-                  </svg> */}
-                </figure>
-                <div className="card-body ">
-                  <h3 className="text-xl font-bold text-center text-gray-800">Hybrid Solution</h3>
-                  <p className="text-gray-600 text-center mt-3 text-lg">
-                    Combines solar with battery storage and grid connection for maximum efficiency and backup power.
-                  </p>
-                  <div className="mt-6 text-center">
-                    <button onClick={() => router.push("/products/solar-hybrid")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
+              <div className="card bg-white shadow-lg h-96 rounded-lg overflow-hidden border border-[#82c701] flex flex-col">
+                {/* Image section */}
+                <div className="flex-none h-1/2 bg-gray-100 flex items-center justify-center">
+                  <img
+                    src="/hylogo.png"
+                    alt="Hybrid Solution"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+
+                {/* Content section */}
+                <div className="card-body flex-1 flex flex-col justify-between px-4 py-3">
+                  <div>
+                    <h3 className="text-xl font-bold text-center text-gray-800">
+                      Hybrid Solution
+                    </h3>
+                    <p className="text-gray-600 text-center mt-3 text-lg">
+                      Combines solar with battery storage and grid connection for maximum
+                      efficiency and backup power.
+                    </p>
+                  </div>
+                  <div className="mt-1 text-center">
+                    <button
+                      onClick={() => router.push("/products/solar-hybrid")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-2 px-6 rounded-lg transition-all"
+                    >
                       Learn More
                     </button>
                   </div>
                 </div>
               </div>
 
-              {/* Parallel Solution Card */}
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
-                <figure className="h-40 bg-gray-100 flex items-center justify-center">
-                  <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                  </svg>
-                </figure>
-                <div className="card-body ">
-                  <h3 className="text-xl font-bold text-center text-gray-800">ON-GRID SOLAR</h3>
-                  <p className="text-gray-600 text-center mt-3 text-lg">
-                    Reduce Your Electricity Bills with GO GREEN On-Grid System Packages
-                  </p>
-                  <div className="mt-6 text-center">
-                    <button onClick={() => router.push("/products/solar-ongrid")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
+
+
+              <div className="card bg-white shadow-lg h-96 rounded-lg overflow-hidden border border-[#82c701] flex flex-col">
+                {/* Image section */}
+                <div className="flex-none h-1/2 bg-gray-100 flex items-center justify-center">
+                  <img
+                    src="/ongride.png"
+                    alt="ON-GRID SOLAR"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+
+                {/* Content section */}
+                <div className="card-body flex-1 flex flex-col justify-between px-4 py-3">
+                  <div>
+                    <h3 className="text-xl font-bold text-center text-gray-800">
+                      ON-GRID SOLAR
+                    </h3>
+                    <p className="text-gray-600 text-center mt-3 text-lg">
+                      Reduce Your Electricity Bills with GO GREEN On-Grid System Packages
+                    </p>
+                  </div>
+                  <div className="mt-4 text-center">
+                    <button
+                      onClick={() => router.push("/products/solar-ongrid")}
+                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-2 px-6 rounded-lg transition-all"
+                    >
                       Learn More
                     </button>
                   </div>
                 </div>
               </div>
 
-              {/* Series Solution Card */}
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
-                <figure className="h-40 bg-gray-100 flex items-center justify-center">
-                  <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 6L9 17l-5-5" />
-                  </svg>
-                </figure>
+
+
+              <div className="card bg-white shadow-lg h-96 rounded-lg overflow-hidden border border-[#82c701]">
+                 <img
+                    src="/meter.png"
+                    alt="net metering Solution"
+                    className="max-h-full max-w-full object-contain"
+                  />
                 <div className="card-body">
                   <h3 className="text-xl font-bold text-center text-gray-800">NET-METERING</h3>
                   <p className="text-gray-600 text-center mt-3 text-lg">
@@ -241,9 +254,7 @@ const HomePage = () => {
                 {/* Top Icon / Image */}
                 <figure className="h-40 bg-gray-100 flex items-center justify-center">
                   {/* Replace this SVG with your icon */}
-                  <svg className="w-24 h-24 text-[#82c701]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v18m9-9H3" />
-                  </svg>
+                  <img src="/consultancy.png" alt="" />
                 </figure>
 
                 {/* Content */}
@@ -272,20 +283,7 @@ const HomePage = () => {
               <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
                 {/* Top Icon / Image */}
                 <figure className="h-40 bg-gray-100 flex items-center justify-center">
-                  {/* Replace the SVG below with an appropriate maintenance/repair icon */}
-                  <svg
-                    className="w-24 h-24 text-[#82c701]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 10h11M9 21V9m0 0V3l6 6H9z"
-                    />
-                  </svg>
+                  <img src="/maintanance.png" alt="" />
                 </figure>
 
                 {/* Content */}
