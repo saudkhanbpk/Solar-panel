@@ -63,7 +63,7 @@ const HomePage = () => {
       <section className="relative w-screen h-[70vh] overflow-hidden">
         {/* Background image */}
         <Image
-          src="/solarpanel.jpg"
+          src="/home.png"
           alt="Solar energy solutions"
           fill
           priority
@@ -88,7 +88,7 @@ const HomePage = () => {
                    dark:from-green-400 dark:to-green-200
                    bg-clip-text text-transparent"
             >
-              Power Up With The Sun
+              Power Up <span className='text-green-600'>With Sun</span>
             </h1>
 
             <p className="mt-4 text-gray-100 dark:text-gray-300 text-lg md:text-xl leading-relaxed px-2">
@@ -165,8 +165,8 @@ const HomePage = () => {
               {/* Hybrid Solution Card */}
               <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701]">
                 <figure className=" h-40 bg-gray-100 flex items-center justify-center">
-                  {/* <img src="/hybri.png" alt="" /> */}
-                  <svg
+                  {/* <img src="/hycard.png" alt="" /> */}
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-20 w-20 text-[#82c701]"
                     fill="none"
@@ -179,7 +179,7 @@ const HomePage = () => {
                       strokeLinejoin="round"
                       d="M12 3v9m0 0l-3-3m3 3l3-3m-6 6h6a9 9 0 100-18 9 9 0 000 18z"
                     />
-                  </svg>
+                  </svg> */}
                 </figure>
                 <div className="card-body ">
                   <h3 className="text-xl font-bold text-center text-gray-800">Hybrid Solution</h3>
