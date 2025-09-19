@@ -375,7 +375,7 @@ const HomePage = () => {
                      transform transition-all duration-300 ease-in-out 
                      hover:shadow-xl hover:scale-[1.02] hover:border-[#82c701]">
               <div className="p-6">
-                <p className="text-gray-600 text-lg">I reached out to GO GREEN POWER WITH SUN through their social media platform just for information, but their professional behavior, guidance, and command of their skills and experience in dealing with customers was phenomenal. It made me not look anywhere else for my solar panel installation. The system they installed is working perfectly and producing the exact amount they promised it would. GO GREEN POWER WITH SUN is the best, and I'm very pleased with their work.</p>
+                <p className="text-gray-600 text-lg">I reached out to GO GREEN through their social media platform just for information, but their professional behavior, guidance, and command of their skills and experience in dealing with customers was phenomenal. It made me not look anywhere else for my solar panel installation. The system they installed is working perfectly and producing the exact amount they promised it would. GO GREEN is the best, and I'm very pleased with their work.</p>
                 <h4 className="text-xl font-semibold text-gray-800 mt-4">Olympia Mills</h4>
               </div>
             </div>
@@ -385,7 +385,7 @@ const HomePage = () => {
                      transform transition-all duration-300 ease-in-out 
                      hover:shadow-xl hover:scale-[1.02] hover:border-[#82c701]">
               <div className="p-6">
-                <p className="text-gray-600 text-lg">I had a great experience working with GO GREEN POWER WITH SUN. They're a very professional and honest team. They gave me really good advice right from the beginning, which made the whole process really easy. They also paid attention to what I wanted and made sure the installation was done well and on time. I'm really happy with everything they did for me and I would definitely recommend them to anyone who wants a reliable and professional solar solution.</p>
+                <p className="text-gray-600 text-lg">I had a great experience working with GO GREEN. They're a very professional and honest team. They gave me really good advice right from the beginning, which made the whole process really easy. They also paid attention to what I wanted and made sure the installation was done well and on time. I'm really happy with everything they did for me and I would definitely recommend them to anyone who wants a reliable and professional solar solution.</p>
                 <h4 className="text-xl font-semibold text-gray-800 mt-4">Legend Hotels</h4>
               </div>
             </div>
@@ -395,7 +395,7 @@ const HomePage = () => {
                      transform transition-all duration-300 ease-in-out 
                      hover:shadow-xl hover:scale-[1.02] hover:border-[#82c701]">
               <div className="p-6">
-                <p className="text-gray-600 text-lg">GO GREEN POWER WITH SUN answered all my questions about solar panel installation, product brands, and quality. They even provided detailed guidance on how the system works and its long-term benefits. Their knowledgeable, professional, and educated team did a great job with my installation. GO GREEN POWER WITH SUN offers fair prices for their products and installation, and the system has helped me save on my monthly bills. I highly recommend GO GREEN POWER WITH SUN for their excellent service.</p>
+                <p className="text-gray-600 text-lg">GO GREEN answered all my questions about solar panel installation, product brands, and quality. They even provided detailed guidance on how the system works and its long-term benefits. Their knowledgeable, professional, and educated team did a great job with my installation. GO GREEN offers fair prices for their products and installation, and the system has helped me save on my monthly bills. I highly recommend GO GREEN for their excellent service.</p>
                 <h4 className="text-xl font-semibold text-gray-800 mt-4">Col Qasim</h4>
               </div>
             </div>
