@@ -23,8 +23,7 @@ const page = () => {
           Our off-grid systems are designed with high-performance inverters and long-life batteries, 
           ensuring 24/7 power backup. These systems allow you to enjoy energy independence, reduce 
           reliance on the utility grid, and secure a consistent power supply for your home or workplace. 
-          Every installation comes with a <span className="text-[#082E6F] font-semibold">10-year battery warranty</span> 
-          and a <span className="text-[#82C701] font-semibold">2-year workmanship warranty</span> for peace of mind.
+          Every installation comes with warranty and 1 year workmanship warranty (or as per in contract) for peace of mind.
         </p>
       </div>
 

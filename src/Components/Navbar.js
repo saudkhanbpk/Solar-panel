@@ -35,9 +35,9 @@ export default function Navbar() {
         { name: 'Solar Panels', path: '/products/solar-panels' },
         { name: 'Solar Inverters', path: '/products/inverters' },
         { name: 'Solar Batteries', path: '/products/batteries' },
-        { name: 'Solar Hybrid', path: '/products/solar-hybrid' },
-        { name: 'Solar On-Grid System', path: '/products/solar-ongrid' },
-        { name: 'Solar OFF-Grid System', path: '/products/solar-offgrid' },
+        // { name: 'Solar Hybrid', path: '/products/solar-hybrid' },
+        // { name: 'Solar On-Grid System', path: '/products/solar-ongrid' },
+        // { name: 'Solar OFF-Grid System', path: '/products/solar-offgrid' },
       ],
     },
 
