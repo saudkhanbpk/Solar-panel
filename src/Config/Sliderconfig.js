@@ -30,7 +30,7 @@ export const gridSliderSettings = {
   slidesToScroll: 1,
   // rows: 3,
   autoplay: true,
-  speed: 1000,
+  speed: 2000,
   autoplaySpeed: 1000,
   cssEase: "linear",
   responsive: [

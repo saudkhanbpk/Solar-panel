@@ -7,7 +7,8 @@ const page = () => {
   return (
     <div className="bg-gradient-to-b from-[#f9fdf6] to-white">
       {/* Banner Section */}
-      <div className="flex justify-center text-center items-center bg-[url(/Cover-OffGrid.png)] bg-cover bg-center h-64 shadow-lg">
+      <div className="flex justify-center text-center items-center bg-[url(/.png)] bg-full bg-green-100 bg-center  shadow-lg">
+        <img src="/offgrid.png" alt="" className='h-[60vh] w-full mx-auto object-fill '/>
       </div>
 
       {/* Intro Section */}
