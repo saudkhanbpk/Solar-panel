@@ -26,8 +26,8 @@ const StatsSection = () => {
       }, 16);
     };
 
-    animateValue(0, 1250, setSystemsInstalled);
-    animateValue(0, 25.5, setMegawatts);
+    animateValue(0, 370, setSystemsInstalled);
+    animateValue(0, 16, setMegawatts);
     animateValue(0, 950, setCustomers);
   }, []);
 
@@ -70,7 +70,7 @@ const StatsSection = () => {
           {/* Total Customers */}
           <div className="bg-white rounded-xl shadow-md p-8 text-center border-t-4 border-[#5AA86C]">
             <div className="text-4xl md:text-5xl font-bold text-[#5AA86C] mb-2">
-              {customers.toLocaleString()}+
+              {customers.toLocaleString()}%
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Satisfied Customers

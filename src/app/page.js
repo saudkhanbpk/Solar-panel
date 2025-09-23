@@ -108,162 +108,84 @@ const HomePage = () => {
       </div>
       <hr className="border-t border-gray-300" />
       <div className="solution">
-        <h1 className='text-center text-3xl md:text-3xl lg:text-4xl font-black text-[#82c701] dark:text-white px-2 mb-10'>SOLAR SOLUTION</h1>
+        <h1 className='text-center text-3xl md:text-3xl lg:text-4xl font-black text-[#82c701] dark:text-white px-2 mb-10'>Services We Offer</h1>
         <div className='card'>
           <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Hybrid Solution Card */}
-              <div className="card bg-white shadow-lg h-96 rounded-lg overflow-hidden border border-[#82c701] flex flex-col">
-                {/* Image section */}
-                <div className="flex-none h-1/2 bg-gray-100 flex items-center justify-center">
+              <div className="card bg-gray-100 h-70 shadow-lg rounded-lg overflow-hidden  flex flex-col items-center">
+                <div>
                   <img
                     src="/hylogo.png"
-                    alt="Hybrid Solution"
-                    className="max-h-full max-w-full object-contain"
-                  />
+                    alt="Hybrid Solar"
+                    className='h-full w-full object-contain'
+                    />
                 </div>
-
-                {/* Content section */}
-                <div className="card-body flex-1 flex flex-col justify-between px-4 py-3">
-                  <div>
-                    <h3 className="text-xl font-bold text-center text-gray-800">
-                      Hybrid Solution
-                    </h3>
-                    <p className="text-gray-600 text-center mt-3 text-lg">
-                      Combines solar with battery storage and grid connection for maximum
-                      efficiency and backup power.
-                    </p>
-                  </div>
-                  <div className="mt-1 text-center">
-                    <button
-                      onClick={() => router.push("/products/solar-hybrid")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-2 px-6 rounded-lg transition-all"
-                    >
-                      Learn More
-                    </button>
-                  </div>
+                <div className=''>
+                  <h3 className="text-xl font-bold text-center text-gray-800 mt-10 ">
+                   HYBRID SOLAR
+                  </h3>
                 </div>
               </div>
-
-
-
-              <div className="card bg-white shadow-lg h-96 rounded-lg overflow-hidden border border-[#82c701] flex flex-col">
+              <div className="card bg-gray-100 shadow-lg h-70 rounded-lg overflow-hidden  flex flex-col items-center">
                 {/* Image section */}
-                <div className="flex-none h-1/2 bg-gray-100 flex items-center justify-center">
+                <div>
                   <img
                     src="/ongride.png"
                     alt="ON-GRID SOLAR"
-                    className="max-h-full max-w-full object-contain"
+                    className=" w-full object-contain "
                   />
                 </div>
-
-                {/* Content section */}
-                <div className="card-body flex-1 flex flex-col justify-between px-4 py-3">
                   <div>
-                    <h3 className="text-xl font-bold text-center text-gray-800">
+                    <h3 className="text-xl font-bold text-center  text-gray-800 ">
                       ON-GRID SOLAR
                     </h3>
-                    <p className="text-gray-600 text-center mt-3 text-lg">
-                      Reduce Your Electricity Bills with GO GREEN On-Grid System Packages
-                    </p>
+                   
                   </div>
-                  <div className="mt-4 text-center">
-                    <button
-                      onClick={() => router.push("/products/solar-ongrid")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-2 px-6 rounded-lg transition-all"
-                    >
-                      Learn More
-                    </button>
-                  </div>
+              </div>
+              <div className="card bg-gray-100 shadow-lg h-70 rounded-lg overflow-hidden ">
+                <img
+                  src="/meter.png"
+                  alt="net metering Solution"
+                  className="max-h-full max-w-full object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-center text-gray-800  mt-14">NET-METERING</h3>
                 </div>
               </div>
 
-
-
-              <div className="card bg-white shadow-lg h-96 rounded-lg overflow-hidden border border-[#82c701]">
-                 <img
-                    src="/meter.png"
-                    alt="net metering Solution"
-                    className="max-h-full max-w-full object-contain"
-                  />
-                <div className="card-body">
-                  <h3 className="text-xl font-bold text-center text-gray-800">NET-METERING</h3>
-                  <p className="text-gray-600 text-center mt-3 text-lg">
-                    Net Metering in Pakistan
-                  </p>
-                  <div className="mt-6 text-center">
-                    <button onClick={() => router.push("/services/net-metering")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
+              <div className="card bg-gray-100 shadow-lg rounded-lg overflow-hidden h-70 ">
                 {/* Top Icon / Image */}
-                <figure className="h-40 bg-gray-100 flex items-center justify-center">
-                  {/* Replace this SVG with your icon */}
+                <figure className=" bg-gray-100 flex items-center justify-center">
+            
                   <img src="/consultancy.png" alt="" />
                 </figure>
 
                 {/* Content */}
                 <div className="card-body ">
-                  <h3 className="text-xl font-bold text-center text-gray-800">
+                  <h3 className="text-xl font-bold text-center text-gray-800 p-1">
                     Solar System Consultancy
                   </h3>
-                  <p className="text-gray-600 text-center  text-lg">
-                    We provide expert consultancy to help you choose the best solar system according to your energy needs and budget.
-                  </p>
-                  <p className="text-gray-600 text-center  text-lg">
-                    Our guidance ensures maximum efficiency and long-term savings on your investment in renewable energy.
-                  </p>
-
-                  <div className=" text-center">
-                    <button
-                      onClick={() => router.push("/services/#consultancy")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all"
-                    >
-                      Learn More
-                    </button>
-                  </div>
                 </div>
               </div>
 
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
-                {/* Top Icon / Image */}
-                <figure className="h-40 bg-gray-100 flex items-center justify-center">
+              <div className="card bg-gray-100 h-70 shadow-lg rounded-lg overflow-hidden">
+               
+                <figure className="bg-gray-100 flex items-center justify-center">
                   <img src="/maintanance.png" alt="" />
                 </figure>
 
-                {/* Content */}
+                
                 <div className="card-body">
                   <h3 className="text-xl font-bold text-center text-gray-800">
                     Solar System Maintenance
                   </h3>
-                  <p className="text-gray-600 text-center  text-lg">
-                    Regular maintenance helps keep your solar system running at its best,
-                    ensuring consistent performance.
-                  </p>
-                  <p className="text-gray-600 text-center  text-lg">
-                    We provide scheduled checkups, repairs, and upgrades to extend the lifespan
-                    of your solar equipment.
-                  </p>
-
-                  <div className=" text-center">
-                    <button
-                      onClick={() => router.push("/services/#maintenance")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all"
-                    >
-                      Learn More
-                    </button>
-                  </div>
                 </div>
               </div>
 
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden border border-[#82c701] max-w-sm mx-auto">
+              <div className="card bg-gray-100 shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto">
                 {/* Top Icon / Image */}
-                <figure className="h-40 bg-gray-100 flex items-center justify-center">
+                <figure className="bg-gray-100 flex items-center justify-center">
                   {/* Replace the SVG below with an icon that represents wheeling/grid transfer */}
                   <img src="/wheel.png" alt="solar wheel" />
                 </figure>
@@ -273,21 +195,9 @@ const HomePage = () => {
                   <h3 className="text-xl font-bold text-center text-gray-800">
                     Solar Wheeling Services
                   </h3>
-
-                  <p className="text-gray-600 text-center text-lg">
-                    Our <b>wheeling solutions</b> let you produce solar power at one site and use it at another through the national grid.
-                    We handle all the steps so you can transfer energy easily, cut costs and get the most from your investment.
-                  </p>
-                  <div className=" text-center">
-                    <button
-                      onClick={() => router.push("/services/#solar-wheeling")}
-                      className="bg-[#82c701] hover:bg-[#6daa01] text-white font-medium py-3 px-8 rounded-lg transition-all"
-                    >
-                      Learn More
-                    </button>
-                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -314,7 +224,7 @@ const HomePage = () => {
           />
         </figure>
       </div>
-       <hr className="border-t border-gray-300" />
+      <hr className="border-t border-gray-300" />
       <div className="brand text-center mt-2">
         <h1 className=' text-3xl font-extrabold text-[#82c701] dark:text-white mb-8 border-l-[6px] border-r-[6px] border-[#82C701] inline-block px-4 py-2 rounded-lg shadow-lg'>
           Our Business Partners
@@ -364,7 +274,7 @@ const HomePage = () => {
           ))}
         </CustomSlider>
       </div> */}
-    {/* <hr className="border-t border-gray-300" /> */}
+      {/* <hr className="border-t border-gray-300" /> */}
       <div className="mt-10">
         <hr className="border-t border-gray-300" />
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center dark:text-white text-[#82c701] mb-4 mt-4'>Clients' Reviews</h1>
