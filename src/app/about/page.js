@@ -82,7 +82,7 @@ const About = () => {
             <h2 className="text-2xl font-bold text-[#082E6F] mb-4">Our Goals</h2>
 
             <ul className='list-decimal'>
-              <li>Provide affordable, cost-efficient, high-quality solar home solutions to the masses in Pakistan.</li>
+              <li>Provide affordable, cost-efficient, high-quality solar solutions to the masses in Pakistan.</li>
               <li>Grow into a successful utility-scale EPC company delivering commercial and industrial solar solutions.</li>
               <li>Become a leading knowledge center for solar energy in Pakistan.</li>
               <li>Contribute to national efforts to reduce greenhouse gas (GHG) emissions in Pakistan.</li>

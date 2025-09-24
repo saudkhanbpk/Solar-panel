@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="space-y-3">
               <h2 className="text-[#82c701] font-bold text-lg">GO GREEN</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm max-w-sm">
-                One of Pakistan's pioneers in solar energy, offering cost-effective and top-notch
+                One of Pakistan's trusted in solar energy, offering cost-effective and top-notch
                 solar solutions to residential, commercial and agricultural entities.
               </p>
             </div>
