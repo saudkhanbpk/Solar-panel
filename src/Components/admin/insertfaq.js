@@ -2,16 +2,14 @@
 import { useEffect, useState } from "react";
 import swal from 'sweetalert';
 
-const CATEGORIES = ["industrial", "commercial", "agriculture", "net-metering", "Filling station"];
 
 export default function AdminFaqs() {
     const [faqs, setFaqs] = useState([]);
     const [form, setForm] = useState({
         question: "",
         answer: "",
-        category: "",
         order: 0,
-        isPublished: true,
+        
     });
     const [loading, setLoading] = useState(false);
     const [msg, setMsg] = useState("");
@@ -48,7 +46,7 @@ export default function AdminFaqs() {
                     button: true,
                     // timer: 2000
                 })
-                setForm({ question: "", answer: "", category: "", order: 0, isPublished: true });
+                setForm({ question: "", answer: "", order: 0, });
                 fetchFaqs();
             } else {
                 setMsg("❌ Failed: " + (data.error || ""));
@@ -104,24 +102,6 @@ export default function AdminFaqs() {
         }
     };
 
-    const togglePublish = async (id, currentStatus) => {
-        try {
-            const res = await fetch(`/api/faq/${id}/publish`, {
-                method: "PATCH",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ isPublished: !currentStatus }),
-            });
-            const data = await res.json();
-            if (data.success) {
-                setMsg("✅ Publish status updated");
-                fetchFaqs();
-            } else {
-                setMsg("❌ Failed to update publish status");
-            }
-        } catch (err) {
-            setMsg("❌ Error: " + err.message);
-        }
-    };
 
 
 
@@ -149,18 +129,7 @@ export default function AdminFaqs() {
                     required
                 />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <select
-                        name="category"
-                        value={form.category}
-                        onChange={onChange}
-                        className="border p-2 rounded"
-                    >
-                        {CATEGORIES.map((c) => (
-                            <option key={c} value={c}>
-                                {c}
-                            </option>
-                        ))}
-                    </select>
+                   
                     <input
                         type="number"
                         name="order"
@@ -169,15 +138,7 @@ export default function AdminFaqs() {
                         placeholder="Order"
                         className="border p-2 rounded"
                     />
-                    <label className="flex items-center gap-2">
-                        <input
-                            type="checkbox"
-                            name="isPublished"
-                            checked={form.isPublished}
-                            onChange={onChange}
-                        />
-                        Published
-                    </label>
+                    
                 </div>
                 <button
                     type="submit"
@@ -197,9 +158,8 @@ export default function AdminFaqs() {
                         <thead>
                             <tr className="bg-gray-100 text-left">
                                 <th className="p-3 border">Question</th>
-                                <th className="p-3 border">Category</th>
+                            
                                 <th className="p-3 border">Order</th>
-                                <th className="p-3 border">Published</th>
                                 <th className="p-3 border">Actions</th>
                             </tr>
                         </thead>
@@ -207,16 +167,9 @@ export default function AdminFaqs() {
                             {faqs.map((faq) => (
                                 <tr key={faq._id} className="border-t">
                                     <td className="p-3 border">{faq.question}</td>
-                                    <td className="p-3 border capitalize">{faq.category}</td>
+                                    
                                     <td className="p-3 border">{faq.order}</td>
-                                    <td className="p-3 border">
-                                        <button
-                                            onClick={() => togglePublish(faq._id, faq.isPublished)}
-                                            className="text-blue-600 hover:underline cursor-pointer"
-                                        >
-                                            {faq.isPublished ? "Unpublish" : "Publish"}
-                                        </button>
-                                    </td>
+                                   
                                     <td className="p-3 border">
                                         <button
                                             onClick={() => deleteFaq(faq._id)}

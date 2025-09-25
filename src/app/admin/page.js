@@ -2,7 +2,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
-import SolarSystemForm from '../../Components/admin/pakagesform'
 import { Trash2 } from "lucide-react";
 import { calculateOrdersGrowth } from "../../Components/calculatordergrowth";
 import AdminFaqs from "../../Components/admin/insertfaq"
@@ -192,32 +191,7 @@ const Page = () => {
               </button>
             </li>
 
-            <li>
-              <button
-                onClick={() => handleTabChange('packages')}
-                className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${activeTab === 'packages'
-                  ? 'bg-white text-[#82c701] shadow-lg transform scale-105'
-                  : 'hover:bg-white/10 hover:translate-x-2 hover:shadow-md'
-                  }`}
-              >
-                <div className={`p-2 rounded-lg transition-colors ${activeTab === 'packages' ? 'bg-[#82c701]/10' : 'group-hover:bg-white/10'
-                  }`}>
-                  <i className="fas fa-box text-lg"></i>
-                </div>
-                <span>Packages</span>
-                <span className={`ml-auto px-2 py-1 text-xs rounded-full font-semibold ${activeTab === 'packages'
-                  ? 'bg-[#82c701] text-white'
-                  : 'bg-white/20 text-white'
-                  }`}>
-                  New
-                </span>
-                {activeTab === 'packages' && (
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#82c701] rounded-r-full"></div>
-                )}
-              </button>
-            </li>
-
-            <li>
+           <li>
               <button
                 onClick={() => handleTabChange('orders')}
                 className={`w-full text-left p-4 rounded-xl font-medium transition-all duration-200 flex items-center space-x-3 group relative overflow-hidden ${activeTab === 'orders'
@@ -478,11 +452,7 @@ const Page = () => {
             </div>
           )}
 
-          {activeTab === 'packages' && (
-            <div >
-              <SolarSystemForm />
-            </div>
-          )}
+          
 
 
 

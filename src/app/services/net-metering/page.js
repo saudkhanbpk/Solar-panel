@@ -192,7 +192,7 @@ const page = () => {
 
         {/* FAQ */}
         <div className="items-center">
-          <FAQ category="net-metering" />
+          <FAQ />
         </div>
       </div>
     </div>

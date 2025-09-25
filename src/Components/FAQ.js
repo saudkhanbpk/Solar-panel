@@ -14,7 +14,7 @@ const Chevron = ({ open }) => (
   </svg>
 );
 
-export default function FAQ({ category }) {
+export default function FAQ() {
 
   const [faqs, setFaqs] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -35,17 +35,17 @@ export default function FAQ({ category }) {
         console.error("Error loading FAQs:", err);
       }
     }
-    if (category) fetchFAQs();
-  }, [category]);
+     fetchFAQs();
+  }, []);
 
-  const filteredFaqs = faqs.filter((faq) => faq.category === category);
+  // const filteredFaqs = faqs.filter((faq) => faq.category === category);
 
   return (
     <section className="mx-auto max-w-4xl px-4 py-10">
       <h2 className="mb-6 text-3xl font-bold text-gray-900 text-center">FAQs</h2>
 
       <div className="rounded-2xl border border-gray-200 bg-white">
-        {filteredFaqs.map((faq, index) => {
+        {faqs.map((faq, index) => {
           const open = activeIndex === index;
           return (
             <div
