@@ -11,6 +11,8 @@ export default function UploadPic() {
   useEffect(() => {
     const fetchImages = async () => {
       const res = await fetch("/api/image");
+
+      
       const data = await res.json();
       setImages(data.images || []);
     };
