@@ -125,6 +125,16 @@ const About = () => {
 
         <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
           <img
+            src="/abbass.png"
+            alt="CEO"
+            className="w-40 h-40 mx-auto object-contain rounded-full border-4 border-[#82C701] shadow-md"
+          />
+          <h3 className="mt-4 text-xl font-bold text-[#082E6F]">Abbas Khan</h3>
+          <p className="text-sm text-gray-600 font-semibold">Business Development Rep(UK)</p>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 p-4 text-center">
+          <img
             src="/zahid.png"
             alt="Team Member"
             className="w-40 h-40 mx-auto object-cover rounded-full border-4 border-[#82C701] shadow-md"
@@ -185,7 +195,7 @@ const About = () => {
         <h2 className="text-center text-3xl font-bold text-[#082E6F] mb-10">Why Choose <b className='text-[#82c701]'>GO GREEN</b> </h2>
         <figure className="w-[80vw] bg-white shadow-2xl mx-auto rounded-xl overflow-hidden border-4 border-[#82C701]">
           <Image
-            src="/choosealpa.jpg"
+            src="/choosealpa.png"
             alt="Our project workflow diagram"
             width={1920}
             height={1080}

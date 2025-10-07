@@ -93,11 +93,25 @@ const Footer = () => {
           </p>
 
           <div className="flex space-x-3">
+            <a
+              href="https://www.linkedin.com/company/105144331/admin/dashboard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 bg-[#82c701] rounded-full flex items-center justify-center hover:bg-[#6daa01] transition-colors"
+            >
+              <svg
+                className="w-4 h-4 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zm-11.3 20.5H3.5V9h4.2v11.5zM5.6 7.5C4.3 7.5 3.2 6.4 3.2 5s1.1-2.5 2.4-2.5 2.4 1.1 2.4 2.5S6.9 7.5 5.6 7.5zM20.5 20.5h-4.2v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6h-4.2V9h4v1.6h.1c.6-1.1 2-2.3 4-2.3 4.3 0 5.1 2.8 5.1 6.3v5.9z" />
+              </svg>
+            </a>
             {/* Social icons here */}
             <a href="#" className="w-8 h-8 bg-[#82c701] rounded-full flex items-center justify-center hover:bg-[#6daa01] transition-colors">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392..."/></svg>
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392..." /></svg>
             </a>
-            {/* Add other icons */}
+            
           </div>
         </div>
       </div>

@@ -36,10 +36,11 @@ const HomePage = () => {
                     p-6 lg:p-8">
             <h1
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold px-2 
-                   bg-gradient-to-r from-[#82c701] to-emerald-800 
-                   dark:from-green-400 dark:to-green-200
-                   bg-clip-text text-transparent"
+                 text-green-600 "
             >
+               {/* bg-gradient-to-r from-[#82c701] to-emerald-800  */}
+                   {/* dark:from-green-400 dark:to-green-200 */}
+                   {/* bg-clip-text text-transparent */}
               Power Up <span className='text-green-600'>With Sun</span>
             </h1>
 
@@ -92,7 +93,7 @@ const HomePage = () => {
             <div className="card bg-base-100 mx-auto w-64">
               <img src="/agrilogo.png" alt="agriculture" className='h-44 w-full object-contain mx-auto' />
               <div className="card-body p-5">
-                <h2 className="text-base text-center font-semibold">AGRICULTURE</h2>
+                <h2 className="text-base text-center font-semibold">AGRICULTURAL</h2>
               </div>
             </div>
 
@@ -100,7 +101,7 @@ const HomePage = () => {
             <div className="card bg-base-100 mx-auto w-64">
               <img src="/serlogo.png" alt="services" className='h-40 w-full object-contain mx-auto' />
               <div className="card-body p-5">
-                <h2 className="text-base text-center font-semibold">SERVICES</h2>
+                <h2 className="text-base text-center font-semibold">AFTER SALE SERVICES</h2>
               </div>
             </div>
           </div>
@@ -164,7 +165,7 @@ const HomePage = () => {
                 {/* Content */}
                 <div className="card-body ">
                   <h3 className="text-xl font-bold text-center text-gray-800 p-1">
-                    Solar System Consultancy
+                    Solar System Consultancy / Audits
                   </h3>
                 </div>
               </div>

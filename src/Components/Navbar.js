@@ -46,7 +46,7 @@ export default function Navbar() {
         { name: 'Solar Consultancy /Aduits', path: '/services#solar-consultancy' },
         { name: 'Solar Maintenance', path: '/services#solar-maintenance' },
         { name: 'Solar Wheeling Services', path: '/services#solar-wheeling' },
-        {name:'BEeS Solution for C&I',path:'/services#BEeS-Solution-for-C&I'},
+        {name:'BEES Solution for C&I',path:'/services#BEeS-Solution-for-C&I'},
         { name: 'Net Metering', path: '/services/net-metering' },
 
       ],
